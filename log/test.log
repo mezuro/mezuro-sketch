@@ -1,0 +1,1 @@
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-16 18:11:54', '2010-03-16 18:11:54', 'value for repository_url', 'value for description')[0m
