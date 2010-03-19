@@ -122,3 +122,108 @@ Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/projects/new]
 Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 11:51:50) [GET]
 Rendering projects/new
 Completed in 24ms (View: 11, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:11:21) [GET]
+Rendering projects/new
+Completed in 264ms (View: 228, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:29:49) [GET]
+Rendering projects/new
+Completed in 30ms (View: 17, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:31:53) [GET]
+Rendering projects/new
+Completed in 30ms (View: 17, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:37:04) [GET]
+Rendering projects/new
+Completed in 32ms (View: 19, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:37:04) [GET]
+Rendering projects/new
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:37:57) [GET]
+Rendering projects/new
+Completed in 32ms (View: 19, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:43:39) [GET]
+Rendering projects/new
+Completed in 32ms (View: 19, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:47:08) [GET]
+Rendering projects/new
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:48:13) [GET]
+Rendering projects/new
+Completed in 33ms (View: 20, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:51:06) [GET]
+Rendering projects/new
+Completed in 35ms (View: 21, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-03-19 14:51:10) [POST]
+  Parameters: {"commit"=>"submit", "authenticity_token"=>"2/UAerZgzQA8O0flqI4WE6o7YFNyu/Vte6hbGwMqCDI=", "project"=>{"name"=>"", "repository_url"=>"", "description"=>""}}
+
+ActionController::UnknownAction (No action responded to create. Actions: new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:51:45) [GET]
+Rendering projects/new
+
+ActionView::TemplateError (undefined method `reverse_merge' for "OK":String) on line #13 of app/views/projects/new.html.erb:
+10:   <%= form.label :description, "Description" %>
+11:   <%= form.text_field :description %>
+12: 
+13:   <%= form.submit :submit, "OK" %>
+14: <% end %>
+
+    app/views/projects/new.html.erb:13
+    app/views/projects/new.html.erb:3
+
+Rendered rescues/_trace (64.6ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:52:26) [GET]
+Rendering projects/new
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-03-19 14:52:28) [POST]
+  Parameters: {"commit"=>"Create Project", "authenticity_token"=>"2/UAerZgzQA8O0flqI4WE6o7YFNyu/Vte6hbGwMqCDI=", "project"=>{"name"=>"", "repository_url"=>"", "description"=>""}}
+
+ActionController::UnknownAction (No action responded to create. Actions: new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2010-03-19 14:52:30) [POST]
+  Parameters: {"commit"=>"Create Project", "authenticity_token"=>"2/UAerZgzQA8O0flqI4WE6o7YFNyu/Vte6hbGwMqCDI=", "project"=>{"name"=>"", "repository_url"=>"", "description"=>""}}
+
+ActionController::UnknownAction (No action responded to create. Actions: new):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 14:54:23) [GET]
+Rendering projects/new
+Completed in 25ms (View: 12, DB: 0) | 200 OK [http://localhost/projects/new]

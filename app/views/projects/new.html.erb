@@ -5,4 +5,10 @@
   <%= form.label :name, "Project Name" %>
   <%= form.text_field :name %>
   <%= form.label :repository_url, "Repository URL" %>
-<%  end %>
+  <%= form.text_field :repository_url %>
+
+  <%= form.label :description, "Description" %>
+  <%= form.text_field :description %>
+
+  <%= form.submit "Create Project" %>
+<% end %>

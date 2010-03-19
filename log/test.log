@@ -360,3 +360,417 @@ Rendering projects/new
 Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
 Rendering projects/new
 Rendering projects/new
+  [4;36;1mProject Create (0.8ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:14:05', '2010-03-19 17:14:05', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:14:05) [GET]
+Rendering projects/new
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:14:05) [GET]
+Rendering projects/new
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (1.0ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:14:45', '2010-03-19 17:14:45', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:14:45) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:14:45) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:17:49', '2010-03-19 17:17:49', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:17:49) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:17:49) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:22:52', '2010-03-19 17:22:52', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:22:52) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:22:52) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:25:21', '2010-03-19 17:25:21', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:25:21) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:25:21) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:28:32', '2010-03-19 17:28:32', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:28:32) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:28:32) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:30:16', '2010-03-19 17:30:16', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:30:16) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:30:16) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:30:39', '2010-03-19 17:30:39', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:30:39) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:30:39) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:30:48', '2010-03-19 17:30:48', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:30:48) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:30:48) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:31:09', '2010-03-19 17:31:09', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:31:09) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:31:09) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:33:17', '2010-03-19 17:33:17', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:33:17) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:33:17) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:34:12', '2010-03-19 17:34:12', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:34:12) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:34:12) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:34:54', '2010-03-19 17:34:54', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:34:54) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:34:54) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:35:18', '2010-03-19 17:35:18', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:35:18) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:35:18) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:35:32', '2010-03-19 17:35:32', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:35:32) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:35:32) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:35:59', '2010-03-19 17:35:59', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:35:59) [GET]
+Rendering projects/new
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:35:59) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:36:10', '2010-03-19 17:36:10', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:36:10) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:36:10) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:36:54', '2010-03-19 17:36:54', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:36:54) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:36:54) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:37:54', '2010-03-19 17:37:54', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:37:54) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:37:54) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:38:35', '2010-03-19 17:38:35', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:38:35) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:38:35) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:41:54', '2010-03-19 17:41:54', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:41:54) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:41:54) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:43:32', '2010-03-19 17:43:32', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:43:32) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:43:32) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:44:56', '2010-03-19 17:44:56', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:44:56) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:44:56) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:46:34', '2010-03-19 17:46:34', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:46:34) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:46:34) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:47:18', '2010-03-19 17:47:18', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:47:18) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:47:18) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:47:26', '2010-03-19 17:47:26', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:47:26) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:47:26) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:48:00', '2010-03-19 17:48:00', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:48:01) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:48:01) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:50:13', '2010-03-19 17:50:13', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:50:13) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:50:13) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:50:42', '2010-03-19 17:50:42', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:50:42) [GET]
+Rendering projects/new
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:50:42) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+Rendering projects/new
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:53:58) [GET]
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-19 14:53:58) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 17:53:58', '2010-03-19 17:53:58', 'value for repository_url', 'value for description')[0m
