@@ -6,9 +6,14 @@ Feature: Register a project
   periodicity.
 
   Scenario: Registering a project
-    Given I visit the project register page
-    When I fill the project form with "<project_name>", "<repository_url>",
-    "<description>", "<programming_language>" and "<application_domain>"
-    And click on the 'Register' button
-    Then the number of existent products should be increased by one <<<TERMINAR
-    And I should be sent to the new product's page <<<TERMINAR
+    Given I visit '/projects/new'
+    When I fill the project form with '<project_name>', '<repository_url>' and '<description>'
+    And I click on the 'Register Project' button
+    Then I should see the message <message>
+    
+    Exemples:
+    | project_name |          repository_url              |        description         |           message               |
+    |  Mezuro Web  | git://github.com/paulormm/mezuro.git | Metrics project analisator | Project successfully registered |
+    |    | git://github.com/paulormm/mezuro.git | Metrics project analisator | Missing projects name |
+    |  Mezuro Web  |  | Metrics project analisator | Missing projects repository_url |
+
