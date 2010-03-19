@@ -69,3 +69,56 @@ Migrating to CreateProjects (1)
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+
+
+Processing ProjectController#new (for 127.0.0.1 at 2010-03-19 10:41:18) [GET]
+
+ActionController::UnknownAction (No action responded to new. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectController#new (for 127.0.0.1 at 2010-03-19 10:47:08) [GET]
+
+ActionView::MissingTemplate (Missing template project/bla.erb in view path app/views):
+  app/controllers/project_controller.rb:4:in `new'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectController#new (for 127.0.0.1 at 2010-03-19 10:48:06) [GET]
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/project/new]
+
+
+Processing ProjectController#new (for 127.0.0.1 at 2010-03-19 11:13:40) [GET]
+Rendering project/new
+Completed in 29ms (View: 15, DB: 0) | 200 OK [http://localhost/project/new]
+
+
+Processing ProjectController#new (for 127.0.0.1 at 2010-03-19 11:21:35) [GET]
+Rendering project/new
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/project/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-19 11:46:01) [GET]
+
+ActionController::RoutingError (No route matches "/project/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 11:46:08) [GET]
+Rendering projects/new
+Completed in 99ms (View: 85, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 11:48:14) [GET]
+Rendering projects/new
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2010-03-19 11:51:50) [GET]
+Rendering projects/new
+Completed in 24ms (View: 11, DB: 0) | 200 OK [http://localhost/projects/new]
