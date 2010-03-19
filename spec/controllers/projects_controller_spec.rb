@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ProjectController do
+describe ProjectsController do
 
   def mock_project
     @mock_project ||= mock_model(Project)
