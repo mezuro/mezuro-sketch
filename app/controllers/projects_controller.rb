@@ -5,7 +5,12 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    Project.create(params[:project])
+    @project  = Project.new(params[:project])
+    if @project.save
+      
+    else
+      render :new
+    end
   end
   
 end

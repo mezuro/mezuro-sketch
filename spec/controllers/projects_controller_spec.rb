@@ -35,8 +35,8 @@ describe ProjectsController do
         :description => nil,
         :repository_url => nil}
       Project.find_by_name(nil).should be_nil
+      response.should render_template(:new)
     end
-
 
   end
 
