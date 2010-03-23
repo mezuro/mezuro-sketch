@@ -1,0 +1,10 @@
+<h3> Metric Results </h3>
+<table>
+  <% @metrics.each do |metric, value| %>
+    <tr id="tr_<%= metric %>">
+      <td> <%= metric %> </td>
+      <td> <%= value %> </td>
+    </tr>
+  <% end %>
+</table>
+

@@ -1299,3 +1299,462 @@ Rendering projects/new
 Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
   [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
   [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-19 19:14:14', '2010-03-19 19:14:14', 'value for repository_url', 'value for description')[0m
+  [4;36;1mProject Create (1.0ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-23 16:35:20', '2010-03-23 16:35:20', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 13:35:20) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 16:35:20', '2010-03-23 16:35:20', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 15ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.8ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 13:35:20) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 13:35:21) [GET]
+Rendering projects/new
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 13:35:21) [GET]
+Rendering projects/new
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-23 16:42:36', '2010-03-23 16:42:36', 'value for repository_url', 'value for description')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-23 16:43:48', '2010-03-23 16:43:48', 'value for repository_url', 'value for description')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-23 16:44:18', '2010-03-23 16:44:18', 'value for repository_url', 'value for description')[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:41:49) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:41:49', '2010-03-23 17:41:49', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 28ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:41:49) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:41:49) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:41:49) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:43:09) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:43:09) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:43:09', '2010-03-23 17:43:09', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:43:09) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:43:09) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:43:09) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:43:37) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:43:37) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:43:37', '2010-03-23 17:43:37', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 24ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:43:37) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:43:37) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:43:37) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:44:25) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:44:25) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:44:25', '2010-03-23 17:44:25', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:44:25) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:44:25) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:44:25) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:45:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:45:38) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:45:38', '2010-03-23 17:45:38', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:45:38) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:45:38) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:45:38) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:50:28) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:50:28', '2010-03-23 17:50:28', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 24ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:50:28) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:50:28) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:50:28) [GET]
+Rendering projects/new
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:50:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:50:49) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:50:49', '2010-03-23 17:50:49', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:50:49) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:50:49) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:50:49) [GET]
+Rendering projects/new
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:51:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:51:21) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:51:21', '2010-03-23 17:51:21', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 18ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:51:21) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:51:21) [GET]
+Rendering projects/new
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:51:21) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:52:28) [GET]
+  Parameters: {"id"=>"1001"}
+  [4;36;1mSQL (4.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:52:28) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:52:28', '2010-03-23 17:52:28', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 17ms (View: 1, DB: 5) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:52:28) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:52:28) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:52:28) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:54:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:54:23) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:54:23', '2010-03-23 17:54:23', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 17ms (View: 1, DB: 2) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:54:23) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:54:23) [GET]
+Rendering projects/new
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:54:23) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 14:59:08) [GET]
+  Parameters: {"id"=>"1"}
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:59:08) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 17:59:08', '2010-03-23 17:59:08', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 14:59:08) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:59:08) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 14:59:08) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 15:03:17) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 15:03:17) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 18:03:17', '2010-03-23 18:03:17', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 20ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 15:03:17) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 15:03:17) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 15:03:17) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 15:06:33) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 15:06:33) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-23 18:06:33', '2010-03-23 18:06:33', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 15:06:33) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 15:06:33) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 15:06:33) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show
+Rendering projects/show

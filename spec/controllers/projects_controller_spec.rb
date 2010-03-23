@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe ProjectsController do
 
-  def mock_project
-    @mock_project ||= mock_model(Project)
+  def mock_project(stubs = {})
+    @mock_project ||= mock_model(Project, stubs)
   end
 
   context "GET new" do
@@ -22,7 +22,7 @@ describe ProjectsController do
 
   end
   
-  describe "POST create" do
+  context "POST create" do
     it "should create a project given valid attributes" do
       post :create, :project => {:name => 'Projeto Mezuro',
         :description => 'Projeto para visualização de métricas',
@@ -38,6 +38,18 @@ describe ProjectsController do
       response.should render_template(:new)
     end
 
+  end
+
+  context "GET show" do
+    before :each do
+      @expected = {"noa" => 4, "loc" => 10, "nom" => 2}
+      Project.stub!(:find).and_return(mock_project({:metrics => @expected}))
+    end
+
+    it "should assign to @metrics the metrics hash" do
+      get :show, :id => 1
+      assigns[:metrics].should == @expected
+    end
   end
 
 end

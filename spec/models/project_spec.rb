@@ -30,4 +30,14 @@ describe Project do
       project.save.should == false
     end
   end
+
+  context "giving metrics" do
+    it "should be 10 to loc, 2 to nom and 4 to noa" do
+      project = Project.new valid_attributes
+      project.metrics.should == {"loc" => 10,
+                                 "nom" => 2,
+                                 "noa" => 4
+      }
+    end
+  end
 end
