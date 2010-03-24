@@ -5,9 +5,6 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    puts "-----------------------------\n\n\n\n\n"
-    puts params.inspect
-    puts "\n\n\n\n\n+++++++++++++++++++++++++++++"
     @project  = Project.new(params[:project])
     if @project.save
       
