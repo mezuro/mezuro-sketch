@@ -1,4 +1,4 @@
-require File.expand_path(File.join(File.dirname(__FILE__), "..", "suport", "paths"))
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "suport"))
 
 Given /^I visit (.+)$/ do |page_name|
     visit path_to(page_name)
