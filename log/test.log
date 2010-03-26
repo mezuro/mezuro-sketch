@@ -1931,3 +1931,973 @@ Rendering projects/show
 Rendering projects/show
 Rendering projects/new
 Rendering projects/new
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-24 01:07:16', '2010-03-24 01:07:16', 'value for repository_url', 'value for description')[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-24 01:07:16', '2010-03-24 01:07:16', NULL, 'pika', 'gordo', 'pika@agilbits.com')[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-23 22:07:16) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 22:07:16) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('Projeto Mezuro', '2010-03-24 01:07:16', '2010-03-24 01:07:16', 'git://github.com/paulormm/mezuro.git', 'Projeto para visualização de métricas')[0m
+Rendering projects/create
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-23 22:07:16) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+Rendering projects/new
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 22:07:16) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-23 22:07:16) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Create (0.9ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-26 13:24:43', '2010-03-26 13:24:43', 'value for repository_url', 'value for description')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "repository_url", "description") VALUES('value for name', '2010-03-26 13:25:38', '2010-03-26 13:25:38', 'value for repository_url', 'value for description')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:22:30', '2010-03-26 17:22:30', NULL, 'value for repository_url', NULL, NULL)[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:22:30', '2010-03-26 17:22:30', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:22:34', '2010-03-26 17:22:34', NULL, 'value for repository_url', NULL, NULL)[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:22:34', '2010-03-26 17:22:34', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.7ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:25:15', '2010-03-26 17:25:15', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:26:18', '2010-03-26 17:26:18', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:26:48', '2010-03-26 17:26:48', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:28:07', '2010-03-26 17:28:07', NULL, 'value for repository_url', NULL, 'Letra')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:28:07', '2010-03-26 17:28:07', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:35:38', '2010-03-26 17:35:38', NULL, 'value for repository_url', NULL, 'Letra')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:35:38', '2010-03-26 17:35:38', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:40:31', '2010-03-26 17:40:31', NULL, 'value for repository_url', NULL, 'Letra')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:40:31', '2010-03-26 17:40:31', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:40:55', '2010-03-26 17:40:55', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:44:17', '2010-03-26 17:44:17', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:44:50', '2010-03-26 17:44:50', NULL, 'value for repository_url', NULL, 'letra-separada')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:44:50', '2010-03-26 17:44:50', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:45:43', '2010-03-26 17:45:43', NULL, 'value for repository_url', NULL, 'letra-separada')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:45:43', '2010-03-26 17:45:43', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:02', '2010-03-26 17:46:02', NULL, 'value for repository_url', NULL, 'letra2010')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:02', '2010-03-26 17:46:02', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:30', '2010-03-26 17:46:30', NULL, 'value for repository_url', NULL, 'letra-separada')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:30', '2010-03-26 17:46:30', NULL, 'value for repository_url', NULL, 'letra2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:30', '2010-03-26 17:46:30', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:53', '2010-03-26 17:46:53', NULL, 'value for repository_url', NULL, 'letra-separada')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:53', '2010-03-26 17:46:53', NULL, 'value for repository_url', NULL, 'letra2010ab')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:53', '2010-03-26 17:46:53', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:59', '2010-03-26 17:46:59', NULL, 'value for repository_url', NULL, 'letra-separada')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:59', '2010-03-26 17:46:59', NULL, 'value for repository_url', NULL, 'letra2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:46:59', '2010-03-26 17:46:59', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (1.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:48:17', '2010-03-26 17:48:17', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:48:17', '2010-03-26 17:48:17', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:48:17', '2010-03-26 17:48:17', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:52:39', '2010-03-26 17:52:39', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:52:39', '2010-03-26 17:52:39', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:52:39', '2010-03-26 17:52:39', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:52:51', '2010-03-26 17:52:51', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:52:51', '2010-03-26 17:52:51', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:52:51', '2010-03-26 17:52:51', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:03', '2010-03-26 17:53:03', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:03', '2010-03-26 17:53:03', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:03', '2010-03-26 17:53:03', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:33', '2010-03-26 17:53:33', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:33', '2010-03-26 17:53:33', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:33', '2010-03-26 17:53:33', NULL, 'value for repository_url', NULL, 'letter-2010-project')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:33', '2010-03-26 17:53:33', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:46', '2010-03-26 17:53:46', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:46', '2010-03-26 17:53:46', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:53:46', '2010-03-26 17:53:46', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:55:12', '2010-03-26 17:55:12', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:55:12', '2010-03-26 17:55:12', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:55:12', '2010-03-26 17:55:12', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:55:55', '2010-03-26 17:55:55', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:55:55', '2010-03-26 17:55:55', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:55:55', '2010-03-26 17:55:55', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:56:48', '2010-03-26 17:56:48', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:56:48', '2010-03-26 17:56:48', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:56:48', '2010-03-26 17:56:48', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 17:56:49', '2010-03-26 17:56:49', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:00:41', '2010-03-26 18:00:41', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:00:41', '2010-03-26 18:00:41', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:00:41', '2010-03-26 18:00:41', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:00:41', '2010-03-26 18:00:41', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:00:41', '2010-03-26 18:00:41', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:01:23', '2010-03-26 18:01:23', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:01:23', '2010-03-26 18:01:23', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:01:23', '2010-03-26 18:01:23', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:01:23', '2010-03-26 18:01:23', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:01:23', '2010-03-26 18:01:23', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:04', '2010-03-26 18:02:04', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:04', '2010-03-26 18:02:04', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:04', '2010-03-26 18:02:04', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:04', '2010-03-26 18:02:04', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:04', '2010-03-26 18:02:04', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:15', '2010-03-26 18:02:15', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:15', '2010-03-26 18:02:15', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:15', '2010-03-26 18:02:15', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:15', '2010-03-26 18:02:15', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:15', '2010-03-26 18:02:15', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:15', '2010-03-26 18:02:15', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:47', '2010-03-26 18:02:47', NULL, 'value for repository_url', NULL, 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:47', '2010-03-26 18:02:47', NULL, 'value for repository_url', NULL, 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:47', '2010-03-26 18:02:47', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:47', '2010-03-26 18:02:47', NULL, 'value for repository_url', NULL, 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:02:47', '2010-03-26 18:02:47', NULL, 'value for repository_url', NULL, 'identifier')[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:03:42', '2010-03-26 18:03:42', NULL, 'value for repository_url', 'value for description', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:03:42', '2010-03-26 18:03:42', NULL, 'value for repository_url', 'value for description', 'letter2010')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:03:42', '2010-03-26 18:03:42', NULL, 'value for repository_url', 'value for description', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:03:42', '2010-03-26 18:03:42', NULL, 'value for repository_url', 'value for description', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('value for name', '2010-03-26 18:03:42', '2010-03-26 18:03:42', NULL, 'value for repository_url', 'value for description', 'identifier')[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:05:01', '2010-03-26 18:05:01', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:05:01', '2010-03-26 18:05:01', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:05:01', '2010-03-26 18:05:01', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:05:01', '2010-03-26 18:05:01', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:05:01', '2010-03-26 18:05:01', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:07:57', '2010-03-26 18:07:57', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:07:57', '2010-03-26 18:07:57', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:07:57', '2010-03-26 18:07:57', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:07:57', '2010-03-26 18:07:57', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.4ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:07:57', '2010-03-26 18:07:57', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-26 18:07:57', '2010-03-26 18:07:57', NULL, 'pika', 'gordo', 'pika@agilbits.com')[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:07:57) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 5) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:07:57) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:07:57) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:07:57) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:07:57) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/new
+Rendering projects/new
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:08:31) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:08:31) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "repository_url"=>"git://github.com/paulormm/mezuro.git", "identifier"=>"identifier"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:08:31', '2010-03-26 18:08:31', NULL, 'git://github.com/paulormm/mezuro.git', NULL, 'identifier')[0m
+Rendering projects/create
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bidentifier%5D=identifier&project%5Bname%5D=Mezuro+Project&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:08:31) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:08:31) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:08:31) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.4ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:09:02', '2010-03-26 18:09:02', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:09:02', '2010-03-26 18:09:02', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:09:02', '2010-03-26 18:09:02', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:09:02', '2010-03-26 18:09:02', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:09:02', '2010-03-26 18:09:02', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-26 18:09:02', '2010-03-26 18:09:02', NULL, 'pika', 'gordo', 'pika@agilbits.com')[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:09:03) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 4) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:09:03) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "repository_url"=>"git://github.com/paulormm/mezuro.git", "identifier"=>"identifier"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:09:03', '2010-03-26 18:09:03', NULL, 'git://github.com/paulormm/mezuro.git', NULL, 'identifier')[0m
+Rendering projects/create
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bidentifier%5D=identifier&project%5Bname%5D=Mezuro+Project&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:09:03) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:09:03) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:09:03) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/new
+Rendering projects/new
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (1.0ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:10:07', '2010-03-26 18:10:07', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:10:07', '2010-03-26 18:10:07', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:10:07', '2010-03-26 18:10:07', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:10:07', '2010-03-26 18:10:07', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:10:07', '2010-03-26 18:10:07', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-26 18:10:07', '2010-03-26 18:10:07', NULL, 'pika', 'gordo', 'pika@agilbits.com')[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:10:07) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 5) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:10:07) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "description"=>"Projeto para visualização de métricas"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:10:07) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:10:07) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:10:07) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/new
+Rendering projects/new
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:15:05) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:15:05) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "identifier"=>"Projeto para visualização de métricas"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Projeto para visualização de métricas') LIMIT 1[0m
+Rendering projects/new
+Completed in 20ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bidentifier%5D=Projeto+para+visualiza%C3%A7%C3%A3o+de+m%C3%A9tricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:15:05) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:15:05) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:15:05) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:15:55) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:15:55) [POST]
+  Parameters: {"project"=>{"name"=>"Projeto Mezuro", "repository_url"=>"git://github.com/paulormm/mezuro.git", "identifier"=>"projeto-para-visualizacao-de-metricas"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'projeto-para-visualizacao-de-metricas') LIMIT 1[0m
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Projeto Mezuro', '2010-03-26 18:15:55', '2010-03-26 18:15:55', NULL, 'git://github.com/paulormm/mezuro.git', NULL, 'projeto-para-visualizacao-de-metricas')[0m
+Rendering projects/create
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bidentifier%5D=projeto-para-visualizacao-de-metricas&project%5Bname%5D=Projeto+Mezuro&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Projeto Mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:15:55) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:15:55) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:15:56) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:17:51) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:17:51) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "repository_url"=>"git://github.com/paulormm/mezuro.git", "identifier"=>"identifier"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:17:51', '2010-03-26 18:17:51', NULL, 'git://github.com/paulormm/mezuro.git', NULL, 'identifier')[0m
+Rendering projects/create
+Completed in 25ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bidentifier%5D=identifier&project%5Bname%5D=Mezuro+Project&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;36;1mProject Load (0.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:17:51) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:17:51) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:17:51) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:18:29', '2010-03-26 18:18:29', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:18:29', '2010-03-26 18:18:29', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:18:29', '2010-03-26 18:18:29', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:18:29', '2010-03-26 18:18:29', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:18:29', '2010-03-26 18:18:29', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-26 18:18:29', '2010-03-26 18:18:29', NULL, 'pika', 'gordo', 'pika@agilbits.com')[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:18:29) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 4) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:18:29) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "repository_url"=>"git://github.com/paulormm/mezuro.git", "identifier"=>"identifier"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:18:29', '2010-03-26 18:18:29', NULL, 'git://github.com/paulormm/mezuro.git', NULL, 'identifier')[0m
+Rendering projects/create
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bidentifier%5D=identifier&project%5Bname%5D=Mezuro+Project&project%5Brepository_url%5D=git%3A%2F%2Fgithub.com%2Fpaulormm%2Fmezuro.git]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:18:29) [POST]
+  Parameters: {"project"=>{"name"=>nil, "repository_url"=>nil, "description"=>nil}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=&project%5Bname%5D=&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:18:29) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:18:29) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/new
+Rendering projects/new
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:24:07) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:24:07) [POST]
+  Parameters: {"project"=>{"name"=>"super_project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep@rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"identifier"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:24:07', '2010-03-26 18:24:07', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+Rendering projects/create
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=identifier&project%5Bname%5D=super_project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%40rep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:24:07) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:24:07) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:25:30) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:25:30) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:25:30', '2010-03-26 18:25:30', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:25:30) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" IS NULL) LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:25:30) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:25:30) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:25:59) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:25:59) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:25:59', '2010-03-26 18:25:59', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:25:59) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:25:59) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:25:59) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:26:44) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:26:44) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:26:44', '2010-03-26 18:26:44', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 26ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:26:44) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:26:44) [POST]
+  Parameters: {"project"=>{"name"=>"", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:26:44) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:26:44) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:27:47) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:27:47) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:27:47', '2010-03-26 18:27:47', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:27:47) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:27:47) [POST]
+  Parameters: {"project"=>{"name"=>"", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:27:47) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>nil}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:27:47) [POST]
+  Parameters: {"project"=>{"name"=>"", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:27:47) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:27:47) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:28:07) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:07) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;35;1mProject Create (0.5ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:28:07', '2010-03-26 18:28:07', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 22ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:07) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:07) [POST]
+  Parameters: {"project"=>{"name"=>"", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:07) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>nil}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:07) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>""}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:28:07) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:28:07) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:28:53) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.3ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;35;1mProject Create (0.6ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:28:53', '2010-03-26 18:28:53', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>"", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>nil}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>""}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>nil, "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:28:53) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:28:53) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:28:53) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'Letter') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'seperate-letter') LIMIT 1[0m
+  [4;36;1mProject Create (0.5ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:29:03', '2010-03-26 18:29:03', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'seperate-letter')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter2010') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:29:03', '2010-03-26 18:29:03', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter2010')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:29:03', '2010-03-26 18:29:03', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Create (0.2ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:29:03', '2010-03-26 18:29:03', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'letter.2010.project')[0m
+  [4;35;1mProject Load (0.3ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'letter.2010.project') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Load (0.1ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'identifier') LIMIT 1[0m
+  [4;35;1mProject Create (0.3ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('super_project', '2010-03-26 18:29:03', '2010-03-26 18:29:03', 'http://mywebpage.com', 'rep@rep.com/myrepo', 'This project is awesome', 'identifier')[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-26 18:29:03', '2010-03-26 18:29:03', NULL, 'pika', 'gordo', 'pika@agilbits.com')[0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2010-03-26 15:29:03) [GET]
+  Parameters: {"id"=>"1"}
+Rendering projects/show
+Completed in 5ms (View: 1, DB: 4) | 200 OK [http://test.host/projects/1]
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+  [4;36;1mProject Create (0.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "personal_webpage", "repository_url", "description", "identifier") VALUES('Mezuro Project', '2010-03-26 18:29:03', '2010-03-26 18:29:03', 'http://mywebpage.com', 'rep://rep.com/myrepo', 'This project is awesome', 'mezuro')[0m
+Rendering projects/create
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>nil, "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 1) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>"", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>nil}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" IS NULL) LIMIT 1[0m
+Rendering projects/new
+Completed in 59ms (View: 8, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"rep://rep.com/myrepo", "description"=>"This project is awesome", "identifier"=>""}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = '') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=rep%3A%2F%2Frep.com%2Fmyrepo]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."name" = 'Mezuro Project') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>nil, "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2010-03-26 15:29:03) [POST]
+  Parameters: {"project"=>{"name"=>"Mezuro Project", "personal_webpage"=>"http://mywebpage.com", "repository_url"=>"", "description"=>"This project is awesome", "identifier"=>"mezuro"}}
+  [4;36;1mProject Load (0.2ms)[0m   [0;1mSELECT "projects".id FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+Rendering projects/new
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://test.host/projects?project%5Bdescription%5D=This+project+is+awesome&project%5Bidentifier%5D=mezuro&project%5Bname%5D=Mezuro+Project&project%5Bpersonal_webpage%5D=http%3A%2F%2Fmywebpage.com&project%5Brepository_url%5D=]
+  [4;35;1mProject Load (0.2ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."identifier" = 'mezuro') LIMIT 1[0m
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:29:03) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2010-03-26 15:29:03) [GET]
+Rendering projects/new
+Completed in 1ms (View: 1, DB: 0) | 200 OK [http://test.host/projects/new]
+Rendering projects/show
+Rendering projects/show
+Rendering projects/new
+Rendering projects/new

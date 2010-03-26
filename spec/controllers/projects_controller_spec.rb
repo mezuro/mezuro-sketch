@@ -6,6 +6,16 @@ describe ProjectsController do
     @mock_project ||= mock_model(Project, stubs)
   end
 
+  def valid_attributes(attributes={})
+    {
+      :name => "Mezuro Project",
+      :identifier => "mezuro",
+      :repository_url => "rep://rep.com/myrepo",
+      :description => "This project is awesome",
+      :personal_webpage => "http://mywebpage.com"
+    }.merge attributes
+  end
+
   context "GET new" do
     before :each do
       Project.stub!(:new).and_return(mock_project)
@@ -24,17 +34,37 @@ describe ProjectsController do
   
   context "POST create" do
     it "should create a project given valid attributes" do
-      post :create, :project => {:name => 'Projeto Mezuro',
-        :description => 'Projeto para visualização de métricas',
-        :repository_url => 'git://github.com/paulormm/mezuro.git'}
-      Project.find_by_name("Projeto Mezuro").should_not be_nil
+      post :create, :project => valid_attributes
+      Project.find_by_name("Mezuro Project").should_not be_nil
     end
 
-    it "should not create a project given nil attributes" do
-      post :create, :project => {:name => nil,
-        :description => nil,
-        :repository_url => nil}
-      Project.find_by_name(nil).should be_nil
+    it "should not create a project given nil or empty name" do
+      post :create, :project => valid_attributes(:name => nil)
+      Project.find_by_identifier('mezuro').should be_nil
+      response.should render_template(:new)
+
+      post :create, :project => valid_attributes(:name => "")
+      Project.find_by_identifier('mezuro').should be_nil
+      response.should render_template(:new)
+    end
+
+    it "should not create a project given nil or empty identifier" do
+      post :create, :project => valid_attributes(:identifier => nil)
+      Project.find_by_name('Mezuro Project').should be_nil
+      response.should render_template(:new)
+
+      post :create, :project => valid_attributes(:identifier => "")
+      Project.find_by_name('Mezuro Project').should be_nil
+      response.should render_template(:new)
+    end
+
+    it "should not create a project given nil or empty repository url" do
+      post :create, :project => valid_attributes(:repository_url => nil)
+      Project.find_by_identifier('mezuro').should be_nil
+      response.should render_template(:new)
+
+      post :create, :project => valid_attributes(:repository_url => "")
+      Project.find_by_identifier('mezuro').should be_nil
       response.should render_template(:new)
     end
 

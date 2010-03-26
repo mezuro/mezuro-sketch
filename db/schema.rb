@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 3) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 2) do
     t.string   "repository_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "identifier"
+    t.string   "personal_webpage"
   end
 
   create_table "users", :force => true do |t|
