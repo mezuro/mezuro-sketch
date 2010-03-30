@@ -69,16 +69,6 @@ describe ProjectsController do
       response.should render_template(:new)
     end
 
-    it "should not create a project given nil or empty repository url" do
-      post :create, :project => valid_attributes(:repository_url => nil)
-      Project.find_by_identifier('mezuro').should be_nil
-      response.should render_template(:new)
-
-      post :create, :project => valid_attributes(:repository_url => "")
-      Project.find_by_identifier('mezuro').should be_nil
-      response.should render_template(:new)
-    end
-
     it "should redirect to project show when create is success" do
       post :create, :project => valid_attributes
       project = Project.find_by_name("Mezuro Project")
