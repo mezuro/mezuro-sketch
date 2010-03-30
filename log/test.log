@@ -3496,3 +3496,61 @@ Rendering projects/show
 Rendering projects/new
 Rendering projects/new
 Rendering projects/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (8.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (2.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Create (3.7ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:26:45', '2010-03-30 18:26:45', NULL, 'user_login', 'user_password', 'name@place.com')[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '') LIMIT 1[0m
+  [4;36;1mUser Load (2.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Create (12.2ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:27:32', '2010-03-30 18:27:32', NULL, 'user_login', 'user_password', 'name@place.com')[0m
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '') LIMIT 1[0m
+  [4;36;1mUser Load (6.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (3.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (5.8ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Create (15.2ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:28:45', '2010-03-30 18:28:45', NULL, 'user_login', 'user_password', 'name@place.com')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '') LIMIT 1[0m
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (3.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Create (3.7ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:29:18', '2010-03-30 18:29:18', NULL, 'user_login', 'user_password', 'name@place.com')[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = '') LIMIT 1[0m
+  [4;35;1mUser Load (2.8ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (4.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (2.6ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Create (17.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:34:10', '2010-03-30 18:34:10', NULL, 'user_login', 'user_password', 'name@place.com')[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'pika') LIMIT 1[0m
+  [4;35;1mUser Create (4.5ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:36:41', '2010-03-30 18:36:41', NULL, 'pika', 'user_password', 'name@place.com')[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'pika') LIMIT 1[0m
+  [4;35;1mUser Load (12.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (9.7ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = '') LIMIT 1[0m
+  [4;36;1mUser Load (7.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (10.9ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;36;1mUser Load (6.6ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."login" = 'user_login') LIMIT 1[0m
+  [4;35;1mUser Create (13.0ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "homepage", "login", "password", "email") VALUES('2010-03-30 18:36:41', '2010-03-30 18:36:41', NULL, 'user_login', 'user_password', 'name@place.com')[0m
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
+Rendering users/new
