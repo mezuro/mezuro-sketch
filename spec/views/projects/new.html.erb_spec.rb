@@ -17,8 +17,8 @@ describe "/projects/new" do
         with_tag("input[id=?][type=?]", "project_name", "text")
         with_tag("label", "Repository URL")
         with_tag("input[id=?][type=?]", "project_repository_url", "text")
-        with_tag("label", "Description")
-        with_tag("input[id=?][type=?]", "project_description", "text")
+        with_tag("label", "Identifier")
+        with_tag("input[id=?][type=?]", "project_identifier", "text")
         with_tag("input[id=?][type=?]", "project_submit", "submit")
       end
     end
