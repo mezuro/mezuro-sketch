@@ -1,11 +1,5 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyText
-  repository_url: MyString
-
-two:
-  name: MyString
-  description: MyText
-  repository_url: MyString
+a_project:
+  name: 'My Project Name'
+  identifier: 'my-project'
+  repository_url: 'git@github.com/my-project'
