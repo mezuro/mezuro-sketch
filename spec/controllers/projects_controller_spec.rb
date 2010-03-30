@@ -38,6 +38,14 @@ describe ProjectsController do
       response.should render_template(:new)
     end
 
+    it "should redirect to project show when create is success" do
+      post :create, :project => {:name => 'Projeto Mezuro',
+        :description => 'Projeto para visualização de métricas',
+        :repository_url => 'git://github.com/paulormm/mezuro.git'}
+      project = Project.find_by_name("Projeto Mezuro")
+      response.should redirect_to(project_path(project))
+    end
+
   end
 
   context "GET show" do
@@ -50,6 +58,12 @@ describe ProjectsController do
       get :show, :id => 1
       assigns[:metrics].should == @expected
     end
+
+    it "should assign to @project the project" do
+      get :show, :id => 1
+      assigns[:project].should == mock_project({:metrics => @expected})
+    end
+
   end
 
 end
