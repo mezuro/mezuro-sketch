@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ProjectsController do
+  fixtures :projects
 
   def mock_project(stubs = {})
     @mock_project ||= mock_model(Project, stubs)
@@ -73,12 +74,16 @@ describe ProjectsController do
   context "GET show" do
     before :each do
       @expected = {"noa" => 4, "loc" => 10, "nom" => 2}
-      Project.stub!(:find).and_return(mock_project({:metrics => @expected}))
     end
 
     it "should assign to @metrics the metrics hash" do
-      get :show, :id => 1
+      get :show, :identifier => projects(:a_project).identifier
       assigns[:metrics].should == @expected
+    end
+
+    it "should assign to @metrics the metrics hash" do
+      get :show, :identifier => 'unknown'
+      assigns[:metrics].should be_nil
     end
   end
 

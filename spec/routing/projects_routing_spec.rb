@@ -8,4 +8,10 @@ describe ProjectsController do
     route_for(:action => 'new', :controller => 'projects').should == '/projects/new'
   end
 
+  it "should map project identifiers to its url" do
+    route_for(:action => 'show', :controller => 'projects', :identifier => 'project-name').should == '/projects/project-name'
+
+    params_from(:get, '/projects/project-test').should == {:controller => 'projects', :action => 'show', :identifier => 'project-test'}
+  end
+
 end
