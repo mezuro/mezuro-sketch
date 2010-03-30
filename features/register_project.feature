@@ -14,6 +14,6 @@ periodicity.
   Examples:
     | project_name |          repository_url              | identifier |           message               |
     |  Mezuro Web  | git://github.com/paulormm/mezuro.git | mezuro-web | Project successfully registered |
-    |              | git://github.com/paulormm/mezuro.git | anything   | Missing projects name           |
-    |  Mezuro Web  |                                      | mezuro-any | Missing projects repository_url |
+    |              | git://github.com/paulormm/mezuro.git | anything   | Name can't be blank             |
+    |  Mezuro Web  |                                      | mezuro-any | Repository url can't be blank   |
 

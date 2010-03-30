@@ -37,6 +37,7 @@ describe ProjectsController do
     it "should create a project given valid attributes" do
       post :create, :project => valid_attributes
       Project.find_by_name("Mezuro Project").should_not be_nil
+      flash[:message].should == "Project successfully registered"
     end
 
     it "should not create a project given nil or empty name" do

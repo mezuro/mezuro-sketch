@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
   def create
     @project  = Project.new(params[:project])
     if @project.save
+      flash[:message] = "Project successfully registered"
       redirect_to(project_path(@project.identifier))
     else
       render :new
