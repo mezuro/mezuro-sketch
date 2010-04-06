@@ -19,4 +19,8 @@ class ProjectsController < ApplicationController
     @metrics = @project.metrics if @project != nil
   end
 
+  def index
+    @projects = Project.find :all
+  end
+
 end

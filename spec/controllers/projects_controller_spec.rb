@@ -84,7 +84,7 @@ describe ProjectsController do
     end
 
     it "should assign to @metrics the metrics hash" do
-      get :show, :identifier => projects(:a_project).identifier
+      get :show, :identifier => projects(:my_project).identifier
       assigns[:metrics].should == @expected
     end
 
@@ -94,8 +94,15 @@ describe ProjectsController do
     end
 
     it "should assign to @project the project" do
-      get :show, :identifier => projects(:a_project).identifier
-      assigns[:project].should == projects(:a_project)
+      get :show, :identifier => projects(:my_project).identifier
+      assigns[:project].should == projects(:my_project)
+    end
+  end
+
+  context "GET index" do
+    it "should assign to @projects all the projects" do
+      get :index
+      (assigns[:projects] - [projects(:my_project), projects(:analizo)]).should == []
     end
   end
 end
