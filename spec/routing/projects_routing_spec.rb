@@ -14,4 +14,8 @@ describe ProjectsController do
     params_from(:get, '/projects/project-test').should == {:controller => 'projects', :action => 'show', :identifier => 'project-test'}
   end
 
+  it "should route root to project index" do
+    params_from(:get, "/").should == {:controller => "projects", :action => "index"}
+  end
+  
 end

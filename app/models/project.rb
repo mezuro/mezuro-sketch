@@ -24,4 +24,10 @@ class Project < ActiveRecord::Base
 
     hash
   end
+
+  def run_analizo
+    project_path = "#{RAILS_ROOT}/tmp/#{identifier}"
+    raise "Missing project folder" unless File.exists? project_path
+    `analizo-metrics #{project_path}`
+  end
 end
