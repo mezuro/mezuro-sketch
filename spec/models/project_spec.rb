@@ -2,6 +2,9 @@ require 'spec_helper'
 require 'resources/hello_world_output'
 
 describe Project do
+  before :all do
+    FileUtils.mkdir "#{RAILS_ROOT}/tmp" unless File.exists? "#{RAILS_ROOT}/tmp"
+  end
 
   def valid_attributes(attributes={})
     {
@@ -85,6 +88,11 @@ describe Project do
   end
 
   context "downloading project source code" do
+    before :all do
+      require "resources/svn_mock"
+    end
+
+
     it "should delete project diretory if it exists" do
       source = "#{RAILS_ROOT}/spec/resources/hello-world"
       destination = "#{RAILS_ROOT}/tmp/hello-world"
@@ -92,30 +100,36 @@ describe Project do
       
       project = Project.new(valid_attributes)
       project.download_prepare
-      (File.exists? destination).should == false      
+      File.exists? (destination).should == false
     end
     
     it "should download a project source-code to /tmp" do
-      pending
+      project = Project.new(valid_attributes(:identifier => "projeto1"))
+      project.download_source_code
+      File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}").should == true
+    end
+
+    it "should check, delete and create a project directory" do
+      project = Project.new(valid_attributes(:identifier => "projeto1"))
+      FileUtils.mkdir_p "#{RAILS_ROOT}/tmp/#{project.identifier}/src"
+
+      project.metrics
+
+      File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}/src").should == false
+      File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}").should == true
+      FileUtils.rm_rf "#{RAILS_ROOT}/tmp/#{project.identifier}"
     end
     
     it "should report an error with invalid repository_url" do
       pending
-    end
-    
-    it "should download a project source code with a valid repository_url" do      
-      pending
-      project = Project.new(valid_attributes(:repository_url => "http://svn.agilbits.com.br/publico/tzEditora"))
-      project.download_source_code
-        
-    end
-    
-    
-    
+    end  
   end
 
 
   context "giving metrics" do
+    before :all do
+      require "resources/svn_mock"
+    end
     before :each do
       @source = "#{RAILS_ROOT}/spec/resources/hello-world"
       @destination = "#{RAILS_ROOT}/tmp/hello-world"

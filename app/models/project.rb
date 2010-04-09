@@ -6,11 +6,13 @@ class Project < ActiveRecord::Base
   validates_uniqueness_of :identifier
 
   def metrics
+    download_source_code
     {"noa" => 4, "loc" => 10, "nom" => 2}
   end
   
   def download_source_code
-    
+    download_prepare
+    Svn::Client::Context.new.checkout(repository_url, "#{RAILS_ROOT}/tmp/#{identifier}")
   end
   
   def download_prepare
