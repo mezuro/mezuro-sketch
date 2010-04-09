@@ -1,0 +1,22 @@
+<h1>User Info</h1>
+
+<table>
+  <tr id="tr_user_login">
+    <td><%= label_tag "Login" %></td>
+    <td><%= @user.login %></td>
+  </tr>
+  <tr id="tr_user_email">
+    <td><%= label_tag "Email" %></td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr id="tr_user_password">
+    <td><%= label_tag "Password" %></td>
+    <td><%= @user.password %></td>
+  </tr>
+  <tr id="tr_user_password_confirmation">
+    <td><%= label_tag "Password confirmation" %></td>
+    <td><%= @user.password_confirmation %></td>
+  </tr>
+</table>
+
+

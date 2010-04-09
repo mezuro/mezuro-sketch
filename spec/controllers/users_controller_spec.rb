@@ -69,4 +69,8 @@ describe UsersController do
     
   end
 
+  context "GET show" do    
+    
+  end
+
 end
