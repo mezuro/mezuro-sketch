@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  def valid_attributes(attributes={})
+  def valid_user_attributes(attributes={})
     {
       :login => "user_login",
       :password => "user_password",
@@ -12,46 +12,46 @@ describe User do
   end
 
   it "should create an instance given valid attributes" do
-    User.create!(valid_attributes)
+    User.create!(valid_user_attributes)
   end
 
   context "creating user with invalid attributes" do
     it "should not create an instance given invalid login" do
-      user = User.new(valid_attributes(:login => nil))
+      user = User.new(valid_user_attributes(:login => nil))
       user.save.should == false
 
-      user = User.new(valid_attributes(:login => ""))
+      user = User.new(valid_user_attributes(:login => ""))
       user.save.should == false
     end
 
     it "should not create an instance given invalid password" do
-      user = User.new(valid_attributes(:password => nil))
+      user = User.new(valid_user_attributes(:password => nil))
       user.save.should == false
 
-      user = User.new(valid_attributes(:password => ""))
+      user = User.new(valid_user_attributes(:password => ""))
       user.save.should == false
     end
 
     it "should not create an instance given invalid e-mail" do
-      user = User.new(valid_attributes(:email => nil))
+      user = User.new(valid_user_attributes(:email => nil))
       user.save.should == false
 
-      user = User.new(valid_attributes(:email => ""))
+      user = User.new(valid_user_attributes(:email => ""))
       user.save.should == false
     end     
   end
 
   context "validating e-mail" do
     it "should not create an instance when e-mail is without @" do
-      user = User.new(valid_attributes(:email => "name_at_place.com"))
+      user = User.new(valid_user_attributes(:email => "name_at_place.com"))
       user.save.should == false      
     end
   end
 
   context "validating login" do
     it "should only create an instance given an unique login" do
-      User.create!(valid_attributes(:login => "pikachu"))
-      user = User.new(valid_attributes(:login => "pikachu"))
+      User.create!(valid_user_attributes(:login => "pikachu"))
+      user = User.new(valid_user_attributes(:login => "pikachu"))
       user.save.should == false
     end
   end
