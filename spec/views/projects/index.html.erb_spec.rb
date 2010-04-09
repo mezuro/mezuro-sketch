@@ -26,4 +26,8 @@ describe "/projects/index" do
   it "should have a link to create a new project" do
     response.should have_tag("a[href=?]", new_project_path)
   end
+
+  it "should have a link to create an user" do
+    response.should have_tag("a[href=?]", new_user_path)
+  end
 end

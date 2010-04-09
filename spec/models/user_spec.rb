@@ -7,6 +7,7 @@ describe User do
       :login => "user_login",
       :password => "user_password",
       :email => "name@place.com",
+      :password_confirmation => "user_password"
     }.merge attributes
   end
 
@@ -49,8 +50,8 @@ describe User do
 
   context "validating login" do
     it "should only create an instance given an unique login" do
-      User.create!(valid_attributes(:login => "pika"))
-      user = User.new(valid_attributes(:login => "pika"))
+      User.create!(valid_attributes(:login => "pikachu"))
+      user = User.new(valid_attributes(:login => "pikachu"))
       user.save.should == false
     end
   end

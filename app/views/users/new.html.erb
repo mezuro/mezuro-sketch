@@ -5,8 +5,12 @@
 
   <%= form.label :login, "User Login" %>
   <%= form.text_field :login %>
+
   <%= form.label :password, "Password" %>
-  <%= form.text_field :password %>
+  <%= form.password_field :password %>
+
+  <%= form.label :password_confirmation, "Password Confirmation" %>
+  <%= form.password_field :password_confirmation %>
 
   <%= form.label :email, "e-mail" %>
   <%= form.text_field :email %>

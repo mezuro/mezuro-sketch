@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "cucumber", :lib => false, :version => ">= 0.6.3"
   config.gem "webrat", :lib => false, :version => ">= 0.7.0"
   config.gem "database_cleaner", :lib => false, :version => ">= 0.5.0"
-
+  config.gem "authlogic"
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
