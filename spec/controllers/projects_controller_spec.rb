@@ -7,7 +7,7 @@ describe ProjectsController do
     @mock_project ||= mock_model(Project)
   end
 
-  def valid_attributes(attributes={})
+  def valid_project_attributes(attributes={})
     {
       :name => "Mezuro Project",
       :identifier => "mezuro",
@@ -35,43 +35,43 @@ describe ProjectsController do
   
   context "POST create" do
     it "should create a project given valid attributes" do
-      post :create, :project => valid_attributes
+      post :create, :project => valid_project_attributes
       Project.find_by_name("Mezuro Project").should_not be_nil
       flash[:message].should == "Project successfully registered"
     end
 
     it "should not create a project given nil or empty name" do
-      post :create, :project => valid_attributes(:name => nil)
+      post :create, :project => valid_project_attributes(:name => nil)
       Project.find_by_identifier('mezuro').should be_nil
       response.should render_template(:new)
 
-      post :create, :project => valid_attributes(:name => "")
+      post :create, :project => valid_project_attributes(:name => "")
       Project.find_by_identifier('mezuro').should be_nil
       response.should render_template(:new)
     end
 
     it "should not create a project given nil or empty identifier" do
-      post :create, :project => valid_attributes(:identifier => nil)
+      post :create, :project => valid_project_attributes(:identifier => nil)
       Project.find_by_name('Mezuro Project').should be_nil
       response.should render_template(:new)
 
-      post :create, :project => valid_attributes(:identifier => "")
+      post :create, :project => valid_project_attributes(:identifier => "")
       Project.find_by_name('Mezuro Project').should be_nil
       response.should render_template(:new)
     end
 
     it "should not create a project given nil or empty repository url" do
-      post :create, :project => valid_attributes(:repository_url => nil)
+      post :create, :project => valid_project_attributes(:repository_url => nil)
       Project.find_by_identifier('mezuro').should be_nil
       response.should render_template(:new)
 
-      post :create, :project => valid_attributes(:repository_url => "")
+      post :create, :project => valid_project_attributes(:repository_url => "")
       Project.find_by_identifier('mezuro').should be_nil
       response.should render_template(:new)
     end
 
     it "should redirect to project show when create is success" do
-      post :create, :project => valid_attributes
+      post :create, :project => valid_project_attributes
       project = Project.find_by_name("Mezuro Project")
       response.should redirect_to(project_path(project.identifier))
     end
