@@ -35,6 +35,7 @@ describe UsersController do
     it "should create a user given valid attributes" do
       post :create, :user => valid_attributes
       User.find_by_login("pika").should_not be_nil
+      response.should redirect_to(root_url)
     end
 
     it "should not create a user given nil or empty login" do

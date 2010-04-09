@@ -1,0 +1,12 @@
+<h1> Login </h1>
+
+<% form_for @user_session, :url => login_url do |form| %>
+
+  <%= form.label :login, "Login" %>
+  <%= form.text_field :login %>
+
+  <%= form.label :password, "Password" %>
+  <%= form.password_field :password %>
+
+  <%= form.submit "Login" %>
+<% end %>
