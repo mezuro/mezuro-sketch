@@ -90,7 +90,7 @@ describe Project do
       destination = "#{RAILS_ROOT}/tmp/hello-world"
       FileUtils.cp_r source, destination
       
-      project = Project.new(valid_attributes)
+      project = Project.new(valid_project_attributes)
       project.download_prepare
       (File.exists? destination).should == false      
     end
