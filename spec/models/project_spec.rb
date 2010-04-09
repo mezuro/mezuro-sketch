@@ -84,6 +84,37 @@ describe Project do
 
   end
 
+  context "downloading project source code" do
+    it "should delete project diretory if it exists" do
+      source = "#{RAILS_ROOT}/spec/resources/hello-world"
+      destination = "#{RAILS_ROOT}/tmp/hello-world"
+      FileUtils.cp_r source, destination
+      
+      project = Project.new(valid_attributes)
+      project.download_prepare
+      (File.exists? destination).should == false      
+    end
+    
+    it "should download a project source-code to /tmp" do
+      pending
+    end
+    
+    it "should report an error with invalid repository_url" do
+      pending
+    end
+    
+    it "should download a project source code with a valid repository_url" do      
+      pending
+      project = Project.new(valid_attributes(:repository_url => "http://svn.agilbits.com.br/publico/tzEditora"))
+      project.download_source_code
+        
+    end
+    
+    
+    
+  end
+
+
   context "giving metrics" do
     before :each do
       @source = "#{RAILS_ROOT}/spec/resources/hello-world"

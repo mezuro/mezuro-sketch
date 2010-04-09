@@ -11,6 +11,7 @@ describe UsersController do
     {
       :login => "pika",
       :password => "gordo",
+      :password_confirmation => "gordo",
       :email => "pika@agilbits.com"
     }.merge attributes
   end
