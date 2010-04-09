@@ -10,16 +10,12 @@ class Project < ActiveRecord::Base
   end
 
   def analizo_hash analizo_output
-    hash = {
-      :acc_average => "0",
-      :acc_kurtosis => "0",
-      :acc_maximum => "1",
-      :acc_median => "0.5",
-      :acc_mininum => "0"
-    }
+    hash = {}
 
-    if analizo_output =~ /acc_average: (~|(\d+)(\.\d+)?).*/
-      hash[:acc_average] = $1
+    analizo_output.lines.each do |line|
+      if line =~ /(\S+): (~|(\d+)(\.\d+)?).*/
+        hash[$1.to_sym] = $2
+      end
     end
 
     hash
