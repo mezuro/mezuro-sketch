@@ -48,3 +48,4 @@ Rails::Initializer.run do |config|
 end
 
 require "svn/core"
+require "svn/client"

@@ -104,13 +104,13 @@ describe Project do
     end
     
     it "should download a project source-code to /tmp" do
-      project = Project.new(valid_attributes(:identifier => "projeto1"))
+      project = Project.new(valid_project_attributes(:identifier => "projeto1"))
       project.download_source_code
       File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}").should == true
     end
 
     it "should check, delete and create a project directory" do
-      project = Project.new(valid_attributes(:identifier => "projeto1"))
+      project = Project.new(valid_project_attributes(:identifier => "projeto1"))
       FileUtils.mkdir_p "#{RAILS_ROOT}/tmp/#{project.identifier}/src"
 
       project.metrics
