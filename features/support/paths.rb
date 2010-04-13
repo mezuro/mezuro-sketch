@@ -12,6 +12,9 @@ module NavigationHelpers
       '/'
     when /projects\/new/
       new_project_path()
+
+    when /users\/new/
+      new_user_path()      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
