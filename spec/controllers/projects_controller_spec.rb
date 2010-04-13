@@ -80,7 +80,8 @@ describe ProjectsController do
 
   context "GET show" do
     before :each do
-      @expected = {"noa" => 4, "loc" => 10, "nom" => 2}
+      require 'resources/hello_world_output'
+      @expected = HELLO_WORLD_HASH
     end
 
     it "should assign to @metrics the metrics hash" do

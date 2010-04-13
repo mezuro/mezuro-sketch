@@ -7,7 +7,8 @@ class Project < ActiveRecord::Base
 
   def metrics
     download_source_code
-    {"noa" => 4, "loc" => 10, "nom" => 2}
+    output = run_analizo
+    analizo_hash output
   end
   
   def download_source_code

@@ -90,6 +90,7 @@ describe Project do
   context "downloading project source code" do
     before :all do
       require "resources/svn_mock"
+      require "resources/hello_world_hash"
     end
 
 
@@ -122,14 +123,18 @@ describe Project do
     
     it "should report an error with invalid repository_url" do
       pending
-    end  
+    end
+
+    it "given valid attributes return the correct hash" do
+      project = Project.new(valid_project_attributes)
+      project.metrics.should == HELLO_WORLD_HASH
+      FileUtils.rm_r "#{RAILS_ROOT}/tmp/#{project.identifier}"
+    end
+
   end
 
 
-  context "giving metrics" do
-    before :all do
-      require "resources/svn_mock"
-    end
+  context "running analizo with existent project" do
     before :each do
       @source = "#{RAILS_ROOT}/spec/resources/hello-world"
       @destination = "#{RAILS_ROOT}/tmp/hello-world"
@@ -138,14 +143,6 @@ describe Project do
 
     after :each do
       FileUtils.rm_r @destination
-    end
-
-    it "should be 10 to loc, 2 to nom and 4 to noa" do
-      project = Project.new valid_project_attributes
-      project.metrics.should == {"loc" => 10,
-                                 "nom" => 2,
-                                 "noa" => 4
-      }
     end
 
     it "should run analizo and get its output" do

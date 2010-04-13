@@ -4,7 +4,7 @@ module Svn
       def checkout(url, path, revision=nil, peg_rev=nil,
                    depth=nil, ignore_externals=false,
                    allow_unver_obstruction=false)
-        FileUtils.mkdir_p path
+        FileUtils.cp_r "#{RAILS_ROOT}/spec/resources/hello-world", path
       end
     end
   end
