@@ -71,7 +71,10 @@ describe UsersController do
   end
 
   context "GET show" do    
-    
+    it "should show user attributes given an id" do
+      get :show, :id => users(:viviane).id
+      assigns[:user].should == users(:viviane)
+    end
   end
 
 end

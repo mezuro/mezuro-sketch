@@ -23,15 +23,11 @@ describe "/users/show" do
     with_tag("tr[id=?]", "tr_user_email") do
       with_tag("td", "Email")
       with_tag("td", "pika@agilbits.com")
-    end
-    with_tag("tr[id=?]", "tr_user_password") do
-      with_tag("td", "Password")
-      with_tag("td", "gordo")
-    end
-    with_tag("tr[id=?]", "tr_user_password_confirmation") do
-      with_tag("td", "Password confirmation")
-      with_tag("td", "gordo")
-    end
+    end   
+  end
+
+  it "should have a edit button" do
+    with_tag("button", "Edit")
   end
   
 
