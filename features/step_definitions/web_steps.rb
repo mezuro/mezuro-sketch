@@ -290,3 +290,11 @@ end
 Then /^I should see the message (.*)$/ do |text|
   response.should contain(text)
 end
+
+When /^I fill the user form with '(.*?)', '(.*?)', '(.*?)' and '(.*)'$/ do |login, password, confirmation, email|
+  fill_in('user_login', :with => login)
+  fill_in('user_password', :with => password)
+  fill_in('user_password_confirmation', :with => confirmation)
+  fill_in('user_email', :with => email)
+end
+
