@@ -101,7 +101,7 @@ describe Project do
       
       project = Project.new(valid_project_attributes)
       project.download_prepare
-      File.exists? (destination).should == false
+      File.exists?(destination).should == false
     end
     
     it "should download a project source-code to /tmp" do
@@ -120,19 +120,31 @@ describe Project do
       File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}").should == true
       FileUtils.rm_rf "#{RAILS_ROOT}/tmp/#{project.identifier}"
     end
-    
-    it "should report an error with invalid repository_url" do
-      pending
-    end
 
     it "given valid attributes return the correct hash" do
       project = Project.new(valid_project_attributes)
       project.metrics.should == HELLO_WORLD_HASH
       FileUtils.rm_r "#{RAILS_ROOT}/tmp/#{project.identifier}"
     end
-
   end
 
+  context "downloading project from invalid repository" do
+    it "should raise an error when downloading source code" do
+      project = Project.new(valid_project_attributes(:repository_url => "invalid"))
+      lambda {project.download_source_code}.should raise_error(Svn::Error::WcNotDirectory)
+    end
+    
+    it "should return a hash with an error" do
+      project = Project.new(valid_project_attributes(:repository_url => "invalid"))
+      project.metrics.should == {"Error:" => "Repository not found"}
+    end
+
+    it "should raise an error when download took too long" do
+      pending
+      project = Project.new(valid_project_attributes(:repository_url => "svn://svn.linux.ime.usp.br/ticoluci/eps"))
+      lambda {project.download_source_code}.should raise_error(Svn::Error::SvnError)
+    end
+  end
 
   context "running analizo with existent project" do
     before :each do
