@@ -28,35 +28,6 @@ describe "/projects/index" do
     it "should have a link to create a new project" do
       response.should have_tag("a[href=?]", new_project_path)
     end
-
-    it "should have a link to create an user" do
-      response.should have_tag("a[href=?]", new_user_path)
-    end
-
-    it "should have a link to log in" do
-      response.should have_tag("a[href=?]", login_path)
-    end
-  end
-  
-
-  context "user logged in" do
-    before :each do
-      assigns[:projects] = [projects(:my_project), projects(:analizo)]
-      login_as 'viviane'
-      render
-    end
-
-    it "should not have a link to login" do
-      response.should_not have_tag("a[href=?]", login_path)
-    end
-
-    it "should not have a link to create an user" do
-      response.should_not have_tag("a[href=?]", new_user_path)
-    end
-
-    it "should have a link to logout" do
-      response.should have_tag("a[href=?]", logout_path)
-    end
   end
 
 end
