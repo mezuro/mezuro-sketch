@@ -6,11 +6,15 @@ class Project < ActiveRecord::Base
   validates_uniqueness_of :identifier
 
   def metrics
-    download_source_code
-    output = run_analizo
-    analizo_hash output
+    begin
+      download_source_code
+      output = run_analizo
+      return analizo_hash output
+    rescue Svn::Error::WcNotDirectory
+      return error_hash
+    end
   end
-  
+
   def download_source_code
     download_prepare
     Svn::Client::Context.new.checkout(repository_url, "#{RAILS_ROOT}/tmp/#{identifier}")
@@ -38,4 +42,10 @@ class Project < ActiveRecord::Base
     raise "Missing project folder" unless File.exists? project_path
     `analizo-metrics #{project_path}`
   end
+
+  private
+    def error_hash
+      {"Error:" => "Repository not found"}
+    end
+    
 end
