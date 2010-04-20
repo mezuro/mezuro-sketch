@@ -106,4 +106,9 @@ describe ProjectsController do
       (assigns[:projects] - [projects(:my_project), projects(:analizo)]).should == []
     end
   end
+
+  it "should count the number of created projects" do
+    get :index
+    assigns[:projects_count].should == 2
+  end
 end

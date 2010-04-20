@@ -78,5 +78,9 @@ describe "/layouts/application" do
         with_tag("a[href=?]", projects_path)
       end
     end
+
+    it "should show the number of projects already created" do
+      response.should have_tag ("p[id=?]", 'number_of_created_projects', 'projects')
+    end
   end
 end
