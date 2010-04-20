@@ -1,9 +1,14 @@
-body { background-color: #339900; color: #eee; }
+*{
+    margin: 0;
+    padding: 0;
+}
 
-body, p, ol, ul, td {
-  font-family: Verdana,Arial,Helvetica,sans-serif;
-  font-size:   14px;
-  line-height: 18px;
+body { 
+    background: #339900 url(../images/gradient_background.png) repeat-x;
+    color: black;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size:   14px;
+    line-height: 18px;
 }
 
 pre {
@@ -12,11 +17,18 @@ pre {
   font-size: 11px;
 }
 
-a { color: #eee;
+ul {
+    margin:10px;
+    margin-left: 30px;
+}
+
+a {
     text-decoration: none;
 }
-a:visited { color: #a1c7fb; }
-a:hover { color: #3081c6; background-color:#f6f5c5; }
+
+h1 {
+    margin: 10px;
+}
 
 .fieldWithErrors {
   padding: 2px;
@@ -54,3 +66,37 @@ a:hover { color: #3081c6; background-color:#f6f5c5; }
   list-style: square;
 }
 
+#content {
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+#content h1 {
+    color: black;
+}
+
+#static_links {
+    margin: 10px;
+}
+
+#static_links a {
+    color:  white;
+}
+
+label {
+    float: left;
+    width: 150px;
+    margin: 5px 0;
+}
+
+input {
+    margin: 5px 0px;
+}
+
+form {
+    width: 600px;
+    margin-left: 100px;
+}
+background: url(../images/stripes.png);
