@@ -1,10 +1,11 @@
+<html>
+  <head>
 <%= stylesheet_link_tag 'base_layout' %>
-<%= image_tag "/images/mezuro_logo.png"  %>
-<p id="flash_messages">
-  <%=  flash[:message] %>
-</p>
+  </head>
+  <body>
+<%= image_tag "/images/mezuro_logo.png" %>
 
-<div id="static_links">
+<div id="static_links">  
   <% if current_user %>
     <%= link_to "Logout", logout_path %>
   <%  else %>
@@ -13,7 +14,11 @@
   <% end %>
 </div>
 
-
+<p id="flash_messages">
+  <%=  flash[:message] %>
+</p>
 
 
 <%= yield %>
+  </body>
+</html>

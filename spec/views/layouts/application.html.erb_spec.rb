@@ -16,6 +16,7 @@ describe "/layouts/application" do
     it "should yield other views" do
       response.should include_text("layout_stub.html.erb")
     end
+   
   end
 
   context "not logged in" do
@@ -24,7 +25,7 @@ describe "/layouts/application" do
       render "/spec/resources/layout_stub.html.erb", :layout => "application"
     end
 
-    it "should have a link to log in" do   
+    it "should have a link to log in" do
       response.should have_tag("div[id=?]", 'static_links') do
         with_tag("a[href=?]", login_path)
       end
@@ -32,7 +33,7 @@ describe "/layouts/application" do
 
     it "should have a link to create an user" do
       response.should have_tag("div[id=?]", 'static_links') do
-        with_tag("a[href=?]", new_user_path)
+        with_tag("a[href=?]", new_user_path)       
       end
     end
   end

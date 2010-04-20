@@ -54,3 +54,14 @@ a:hover { color: #3081c6; background-color:#f6f5c5; }
   list-style: square;
 }
 
+#static_links {
+  float: right;
+  vertical-align: top;
+  position: relative;
+  top: -60px;
+}
+
+img {
+    clear: none;
+    display: inline;    
+}
