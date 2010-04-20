@@ -5,11 +5,16 @@
 </p>
 
 <div id="static_links">
+  <%= link_to "All Projects", projects_path %>
+  |
   <% if current_user %>
+    <%= link_to "New Project", new_project_path %>
+    |
     <%= link_to "Logout", logout_path %>
   <%  else %>
-    <%= link_to "Login", login_path %>
     <%= link_to "New User", new_user_path %>
+    |
+    <%= link_to "Login", login_path %>
   <% end %>
 </div>
 
