@@ -4,7 +4,7 @@
 }
 
 body { 
-    background-color: #339900;
+    background: #339900 url(../images/gradient_background.png) repeat-x;
     color: black;
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size:   14px;
@@ -99,4 +99,4 @@ form {
     width: 600px;
     margin-left: 100px;
 }
-
+background: url(../images/stripes.png);
