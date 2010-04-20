@@ -10,8 +10,8 @@ class Project < ActiveRecord::Base
       download_source_code
       output = run_analizo
       return analizo_hash output
-    rescue Svn::Error::WcNotDirectory
-      return error_hash
+    rescue Svn::Error => error
+      return hash_with error
     end
   end
 
@@ -44,8 +44,8 @@ class Project < ActiveRecord::Base
   end
 
   private
-    def error_hash
-      {"Error:" => "Repository not found"}
+    def hash_with error
+      {"Error:" => error.error_message}
     end
     
 end

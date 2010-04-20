@@ -24,10 +24,6 @@ describe "/projects/index" do
         end
       end
     end
-
-    it "should have a link to create a new project" do
-      response.should have_tag("a[href=?]", new_project_path)
-    end
   end
 
 end

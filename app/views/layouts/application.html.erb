@@ -6,11 +6,25 @@
 <%= image_tag "/images/mezuro_logo.png" %>
 
 <div id="static_links">  
+
+<p id="number_of_created_projects">
+  <%= "projects" %>
+</p>
+
+<p id="flash_messages">
+  <%=  flash[:message] %>
+</p>
+
+  <%= link_to "All Projects", projects_path %>
+  |
   <% if current_user %>
+    <%= link_to "New Project", new_project_path %>
+    |
     <%= link_to "Logout", logout_path %>
   <%  else %>
-    <%= link_to "Login", login_path %>
     <%= link_to "New User", new_user_path %>
+    |
+    <%= link_to "Login", login_path %>
   <% end %>
 </div>
 
@@ -19,6 +33,8 @@
 </p>
 
 
+<div id="content">
 <%= yield %>
+</div>
   </body>
 </html>

@@ -4,6 +4,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   helper_method :current_user_session, :current_user
+  before_filter :count_projects
 
   private
     def current_user_session
@@ -16,6 +17,9 @@ class ApplicationController < ActionController::Base
       @current_user = current_user_session && current_user_session.user
     end
 
+    def count_projects
+      @projects_count = Project.count
+    end
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end

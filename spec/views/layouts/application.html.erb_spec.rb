@@ -19,7 +19,7 @@ describe "/layouts/application" do
    
   end
 
-  context "not logged in" do
+  context "user not logged in" do
     before :each do
       logout
       render "/spec/resources/layout_stub.html.erb", :layout => "application"
@@ -34,6 +34,12 @@ describe "/layouts/application" do
     it "should have a link to create an user" do
       response.should have_tag("div[id=?]", 'static_links') do
         with_tag("a[href=?]", new_user_path)       
+      end
+    end
+
+    it "should have a link to list all projects" do
+      response.should have_tag("div[id=?]", 'static_links') do
+        with_tag("a[href=?]", projects_path)
       end
     end
   end
@@ -62,6 +68,20 @@ describe "/layouts/application" do
       end
     end
 
-  end
+    it "should have a link to create a new project" do
+      response.should have_tag("div[id=?]", 'static_links') do
+        with_tag("a[href=?]", new_project_path)
+      end
+    end
 
+    it "should have a link to list all projects" do
+      response.should have_tag("div[id=?]", 'static_links') do
+        with_tag("a[href=?]", projects_path)
+      end
+    end
+
+    it "should show the number of projects already created" do
+      response.should have_tag ("p[id=?]", 'number_of_created_projects', 'projects')
+    end
+  end
 end
