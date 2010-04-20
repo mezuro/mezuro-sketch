@@ -131,18 +131,18 @@ describe Project do
   context "downloading project from invalid repository" do
     it "should raise an error when downloading source code" do
       project = Project.new(valid_project_attributes(:repository_url => "invalid"))
-      lambda {project.download_source_code}.should raise_error(Svn::Error::WcNotDirectory)
+      lambda {project.download_source_code}.should raise_error(Svn::Error)
     end
     
     it "should return a hash with an error" do
       project = Project.new(valid_project_attributes(:repository_url => "invalid"))
-      project.metrics.should == {"Error:" => "Repository not found"}
+      project.metrics.should == {"Error:" => "'.' is not a working copy\nCan't open file '.svn/entries': No such file or directory"}
     end
 
-    it "should raise an error when download took too long" do
-      pending
-      project = Project.new(valid_project_attributes(:repository_url => "svn://svn.linux.ime.usp.br/ticoluci/eps"))
-      lambda {project.download_source_code}.should raise_error(Svn::Error::SvnError)
+    it "should raise an error when downloading source code that we dont have permission" do
+      project = Project.new(valid_project_attributes(:repository_url => "http://svn.xp-dev.com/svn/horus_eye/"))
+      lambda {project.download_source_code}.should raise_error(Svn::Error)
+      project.metrics.should == {"Error:" => "OPTIONS of 'http://svn.xp-dev.com/svn/horus_eye': authorization failed (http://svn.xp-dev.com)"}
     end
   end
 
