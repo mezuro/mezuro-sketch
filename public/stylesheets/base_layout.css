@@ -2,7 +2,15 @@
     margin: 0;
     padding: 0;
 }
-
+#header {
+    height: 100px;
+    width: 800px;
+    margin: auto;
+    padding: 25px;
+}
+#header img{
+    float: left;
+}
 body { 
     background: #339900 url(../images/gradient_background.png) repeat-x;
     color: black;
@@ -70,7 +78,7 @@ h1 {
   float: right;
   vertical-align: top;
   position: relative;
-  top: 20px;
+  top: 10px;
 }
 
 img {
@@ -80,6 +88,7 @@ img {
 #content {
     width: 800px;
     margin: auto;
+    margin-top: 50px;
     padding: 10px;
     background-color: white;
 }
@@ -110,4 +119,3 @@ form {
     width: 600px;
     margin-left: 100px;
 }
-background: url(../images/stripes.png);
