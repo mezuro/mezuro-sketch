@@ -1,40 +1,57 @@
 <html>
   <head>
-<%= stylesheet_link_tag 'base_layout' %>
+    <%= stylesheet_link_tag 'base_layout' %>
   </head>
   <body>
-<%= image_tag "/images/mezuro_logo.png" %>
+    <div id="header">
+      <%= image_tag "/images/mezuro_logo.png" %>
 
-<div id="static_links">  
+      <div id="static_links">
 
-<p id="number_of_created_projects">
-  <%= "projects" %>
-</p>
-
-<p id="flash_messages">
-  <%=  flash[:message] %>
-</p>
-
-  <%= link_to "All Projects", projects_path %>
-  |
-  <% if current_user %>
-    <%= link_to "New Project", new_project_path %>
-    |
-    <%= link_to "Logout", logout_path %>
-  <%  else %>
-    <%= link_to "New User", new_user_path %>
-    |
-    <%= link_to "Login", login_path %>
-  <% end %>
-</div>
-
-<p id="flash_messages">
-  <%=  flash[:message] %>
-</p>
+        <p id="flash_messages">
+          <%=  flash[:message] %>
+        </p>
 
 
-<div id="content">
-<%= yield %>
-</div>
+
+        <%= link_to "All Projects", projects_path %>
+        |
+        <% if current_user %>
+          <%= link_to "New Project", new_project_path %>
+          |
+          <%= link_to "Logout", logout_path %>
+        <%  else %>
+          <%= link_to "New User", new_user_path %>
+          |
+          <%= link_to "Login", login_path %>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="mezuro-info">
+      <p id="flash_messages">
+        <%=  flash[:message] %>
+      </p>
+
+      <h2 id="number_of_created_projects">
+        <%= "#{@projects_count} projects" %>
+      </h2>
+
+      <span class="float-right">
+      <h3 id="mezuro_slogan">
+        Software Metrics that Matters
+      </h3>
+
+      <p id="mezuro_description">
+        Monitor the metrics you care about and forget the rest
+      </p>
+      </span>
+
+    </div>
+
+    <div id="content">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

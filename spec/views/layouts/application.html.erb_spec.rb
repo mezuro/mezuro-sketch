@@ -16,12 +16,12 @@ describe "/layouts/application" do
     it "should yield other views" do
       response.should include_text("layout_stub.html.erb")
     end
-   
   end
 
   context "user not logged in" do
     before :each do
       logout
+      assigns[:projects_count] = 2
       render "/spec/resources/layout_stub.html.erb", :layout => "application"
     end
 
@@ -42,11 +42,16 @@ describe "/layouts/application" do
         with_tag("a[href=?]", projects_path)
       end
     end
+
+    it "should show the number of projects already created" do
+      response.should have_tag("h2[id=?]", 'number_of_created_projects', '2 projects')
+    end
   end
 
   context "user logged in" do
     before :each do
       login_as 'viviane'
+      assigns[:projects_count] = 2
       render "/spec/resources/layout_stub.html.erb", :layout => "application"
     end
 
@@ -81,7 +86,12 @@ describe "/layouts/application" do
     end
 
     it "should show the number of projects already created" do
-      response.should have_tag ("p[id=?]", 'number_of_created_projects', 'projects')
+      response.should have_tag("h2[id=?]", 'number_of_created_projects', '2 projects')
+    end
+
+    it "should show a description text" do
+      response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matter')
+      response.should have_tag("p[id=?]", 'mezuro_description')
     end
   end
 end
