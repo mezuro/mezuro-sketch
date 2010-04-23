@@ -90,7 +90,7 @@ describe "/layouts/application" do
     end
 
     it "should show a description text" do
-      response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matter')
+      response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matters')
       response.should have_tag("p[id=?]", 'mezuro_description')
     end
   end
