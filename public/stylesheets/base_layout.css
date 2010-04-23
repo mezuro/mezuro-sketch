@@ -11,6 +11,11 @@
 #header img{
     float: left;
 }
+#mezuro-info {
+    height: 50px;
+    width: 800px;
+    margin: auto;
+}
 body { 
     background: #339900 url(../images/gradient_background.png) repeat-x;
     color: black;
@@ -74,13 +79,6 @@ h1 {
   list-style: square;
 }
 
-#static_links {
-  float: right;
-  vertical-align: top;
-  position: relative;
-  top: 10px;
-}
-
 img {
     clear: none;
     display: inline;    
@@ -88,7 +86,6 @@ img {
 #content {
     width: 800px;
     margin: auto;
-    margin-top: 50px;
     padding: 10px;
     background-color: white;
 }
@@ -97,8 +94,13 @@ img {
     color: black;
 }
 
+
 #static_links {
-    margin: 10px;
+  float: right;
+  vertical-align: top;
+  position: relative;
+  top: 10px;
+  margin: 10px;
 }
 
 #static_links a {
@@ -118,4 +120,20 @@ input {
 form {
     width: 600px;
     margin-left: 100px;
+}
+
+#number_of_created_projects {
+    color: white;
+    float: left;
+}
+.float-right {
+    float: right;
+    text-align: right;
+}
+#mezuro_slogan {
+    color: white;
+}
+
+#mezuro_description {
+    color: white;
 }
