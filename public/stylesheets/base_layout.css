@@ -12,9 +12,10 @@
     float: left;
 }
 #mezuro-info {
-    height: 50px;
+    height: 60px;
     width: 800px;
     margin: auto;
+    color: white;
 }
 body { 
     background: #339900 url(../images/gradient_background.png) repeat-x;
@@ -130,10 +131,9 @@ form {
     float: right;
     text-align: right;
 }
-#mezuro_slogan {
-    color: white;
-}
 
-#mezuro_description {
-    color: white;
+#flash_messages {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }

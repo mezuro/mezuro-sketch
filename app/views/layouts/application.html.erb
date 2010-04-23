@@ -7,13 +7,6 @@
       <%= image_tag "/images/mezuro_logo.png" %>
 
       <div id="static_links">
-
-        <p id="flash_messages">
-          <%=  flash[:message] %>
-        </p>
-
-
-
         <%= link_to "All Projects", projects_path %>
         |
         <% if current_user %>
