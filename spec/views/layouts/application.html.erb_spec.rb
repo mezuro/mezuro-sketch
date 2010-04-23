@@ -46,6 +46,11 @@ describe "/layouts/application" do
     it "should show the number of projects already created" do
       response.should have_tag("h2[id=?]", 'number_of_created_projects', '2 projects')
     end
+    
+    it "should show a description text" do
+      response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matter')
+      response.should have_tag("p[id=?]", 'mezuro_description')
+    end
   end
 
   context "user logged in" do
@@ -90,7 +95,7 @@ describe "/layouts/application" do
     end
 
     it "should show a description text" do
-      response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matters')
+      response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matter')
       response.should have_tag("p[id=?]", 'mezuro_description')
     end
   end
