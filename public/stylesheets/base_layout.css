@@ -110,4 +110,18 @@ form {
     width: 600px;
     margin-left: 100px;
 }
-background: url(../images/stripes.png);
+
+#number_of_created_projects {
+    color: white;
+    float: left;
+}
+
+#mezuro_slogan {
+    color: white;
+    float: right;
+}
+
+#mezuro_description {
+    color: white;
+    float: right;
+}
