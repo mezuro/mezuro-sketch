@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Metric do
-  def valid_user_attributes(attributes={})
+  def valid_metric_attributes(attributes={})
     {
       :name => "acc",
-      :value => "1",
-      :project_id => ""
+      :value => 10,
+      :project_id => 1
     }.merge attributes
   end
 

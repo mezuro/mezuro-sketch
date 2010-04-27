@@ -98,12 +98,12 @@ describe Project do
       source = "#{RAILS_ROOT}/spec/resources/hello-world"
       destination = "#{RAILS_ROOT}/tmp/hello-world"
       FileUtils.cp_r source, destination
-      
+
       project = Project.new(valid_project_attributes)
       project.download_prepare
       File.exists?(destination).should == false
     end
-    
+
     it "should download a project source-code to /tmp" do
       project = Project.new(valid_project_attributes(:identifier => "projeto1"))
       project.download_source_code
@@ -133,7 +133,7 @@ describe Project do
       project = Project.new(valid_project_attributes(:repository_url => "invalid"))
       lambda {project.download_source_code}.should raise_error(Svn::Error)
     end
-    
+
     it "should return a hash with an error" do
       project = Project.new(valid_project_attributes(:repository_url => "invalid"))
       project.metrics.should == {"Error:" => "'.' is not a working copy\nCan't open file '.svn/entries': No such file or directory"}
@@ -162,7 +162,7 @@ describe Project do
       project.run_analizo.should == HELLO_WORLD_OUTPUT
     end
   end
-  
+
   context "running analizo without project folder" do
     it "should not run analizo when project folder doesnt exist" do
       project = Project.new valid_project_attributes
@@ -206,14 +206,14 @@ describe Project do
       expected = { :acc_average => "0.9" }
       project.analizo_hash(test_average).should == valid_analizo_hash(expected)
     end
-    
+
     it "should return a hash in metric_name => value with another different acc_average value" do
       project = Project.new valid_project_attributes
       test_average = "acc_average: 0.7#{@valid_analizo_output_without_average}"
       expected = { :acc_average => "0.7" }
       project.analizo_hash(test_average).should == valid_analizo_hash(expected)
     end
-    
+
     it "should return a hash in metric_name => value with a '~' as acc_average value" do
       project = Project.new valid_project_attributes
       test_average = "acc_average: ~#{@valid_analizo_output_without_average}"
@@ -236,4 +236,12 @@ describe Project do
     end
 
   end
+  
+  it "should save in database metrics calculated" do
+    project = Project.create valid_project_attributes
+    project.metrics
+    
+    Metric.find_by_project_id(project.id).should_not be_nil
+  end
+
 end
