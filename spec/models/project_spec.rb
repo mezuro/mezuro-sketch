@@ -234,6 +234,13 @@ describe Project do
       expected = { :acc_mode => "~" }
       project.analizo_hash(test_bigger_output).should == valid_analizo_hash(expected)
     end
+  end
 
+  it "should calculates metrics on create" do
+    require 'resources/project_mock'
+    project = ProjectMock.new valid_project_attributes
+    project.called_metrics.should be_false
+    project.save
+    project.called_metrics.should be_true
   end
 end
