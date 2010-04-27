@@ -1,0 +1,14 @@
+noc:
+    name: noc
+    project_id: 1
+    value: 10
+
+loc:
+    name: loc
+    project_id: 1
+    value: 5
+
+npv:
+    name: npv
+    project_id: 2
+    value: 12

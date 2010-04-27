@@ -2,9 +2,10 @@ require 'spec_helper'
 require 'resources/hello_world_output'
 
 describe Project do
-  before :all do
-    FileUtils.mkdir "#{RAILS_ROOT}/tmp" unless File.exists? "#{RAILS_ROOT}/tmp"
+  after :each do
+    FileUtils.rm_rf "#{RAILS_ROOT}/tmp/hello-world"
   end
+
 
   def valid_project_attributes(attributes={})
     {
@@ -93,7 +94,6 @@ describe Project do
       require "resources/hello_world_hash"
     end
 
-
     it "should delete project diretory if it exists" do
       source = "#{RAILS_ROOT}/spec/resources/hello-world"
       destination = "#{RAILS_ROOT}/tmp/hello-world"
@@ -102,12 +102,16 @@ describe Project do
       project = Project.new(valid_project_attributes)
       project.download_prepare
       File.exists?(destination).should == false
+
+      FileUtils.rm_rf destination
     end
     
     it "should download a project source-code to /tmp" do
       project = Project.new(valid_project_attributes(:identifier => "projeto1"))
       project.download_source_code
       File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}").should == true
+
+      FileUtils.rm_rf "#{RAILS_ROOT}/tmp/#{project.identifier}"
     end
 
     it "should check, delete and create a project directory" do
@@ -124,7 +128,7 @@ describe Project do
     it "given valid attributes return the correct hash" do
       project = Project.new(valid_project_attributes)
       project.metrics.should == HELLO_WORLD_HASH
-      FileUtils.rm_r "#{RAILS_ROOT}/tmp/#{project.identifier}"
+      FileUtils.rm_rf "#{RAILS_ROOT}/tmp/#{project.identifier}"
     end
   end
 
@@ -154,7 +158,7 @@ describe Project do
     end
 
     after :each do
-      FileUtils.rm_r @destination
+      FileUtils.rm_rf @destination
     end
 
     it "should run analizo and get its output" do
@@ -242,5 +246,18 @@ describe Project do
     project.called_metrics.should be_false
     project.save
     project.called_metrics.should be_true
+  end
+
+  context "finding if metrics are already calculated" do
+    fixtures :projects, :metrics
+    it "should not find results if metrics were not created" do
+      project = Project.new valid_project_attributes
+      (project.metrics_calculated?).should == false
+    end
+
+    it "should find results if metrics were created" do
+      project = projects(:my_project)
+      (project.metrics_calculated?).should == true
+    end
   end
 end

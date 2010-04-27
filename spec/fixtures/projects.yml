@@ -2,9 +2,11 @@ my_project:
   name: 'My Project Name'
   identifier: 'my-project'
   repository_url: 'git@github.com/my-project'
+  id: 1
 
 
 analizo:
   name: 'Analizo'
   identifier: 'analizo'
   repository_url: 'git@github.com/analizo'
+  id: 2
