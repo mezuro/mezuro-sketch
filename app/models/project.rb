@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
 
   validates_uniqueness_of :identifier
 
+  after_create :metrics
+
   def metrics
     begin
       download_source_code
@@ -50,8 +52,8 @@ class Project < ActiveRecord::Base
   end
 
   private
-    def hash_with error
-      {"Error:" => error.error_message}
-    end
+  def hash_with error
+    {"Error:" => error.error_message}
+  end
     
 end

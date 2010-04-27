@@ -10,6 +10,23 @@ describe Metric do
   end
 
   it "should create a new instance" do
-    Metric.create!()
+    Metric.create!(valid_metric_attributes)
+  end
+
+  it "should save information in database" do
+    metric = Metric.new(valid_metric_attributes)
+    metric.save.should == true
+  end
+
+  context "creating instances with invalid attributes" do
+    it "should not save a metric without name" do
+      metric = Metric.new(valid_metric_attributes(:name => nil))
+      metric.save.should == false
+    end
+
+    it "should not save a metric without project_id" do
+      metric = Metric.new(valid_metric_attributes(:project_id => nil))
+      metric.save.should == false
+    end
   end
 end
