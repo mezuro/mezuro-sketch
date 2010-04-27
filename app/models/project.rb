@@ -5,11 +5,19 @@ class Project < ActiveRecord::Base
 
   validates_uniqueness_of :identifier
 
+  after_create :metrics
+
   def metrics
     begin
       download_source_code
       output = run_analizo
-      return analizo_hash output
+      hash_from_analizo = analizo_hash output
+
+      hash_from_analizo.each do | key, value |
+        Metric.create(:name => key.to_s, :value => value.to_f, :project_id => self.id)
+      end
+
+      return hash_from_analizo
     rescue Svn::Error => error
       return hash_with error
     end
@@ -44,8 +52,8 @@ class Project < ActiveRecord::Base
   end
 
   private
-    def hash_with error
-      {"Error:" => error.error_message}
-    end
+  def hash_with error
+    {"Error:" => error.error_message}
+  end
     
 end
