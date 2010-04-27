@@ -4,8 +4,8 @@ describe Metric do
   def valid_metric_attributes(attributes={})
     {
       :name => "acc",
-      :value => "10",
-      :project_id => "1"
+      :value => 10,
+      :project_id => 1
     }.merge attributes
   end
 
