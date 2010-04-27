@@ -51,6 +51,11 @@ class Project < ActiveRecord::Base
     `analizo-metrics #{project_path}`
   end
 
+  def metrics_calculated?
+    metric = Metric.find_by_project_id(id)
+    return metric ? true : false
+  end
+
   private
   def hash_with error
     {"Error:" => error.error_message}
