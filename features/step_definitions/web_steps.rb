@@ -298,3 +298,12 @@ When /^I fill the user form with '(.*?)', '(.*?)', '(.*?)' and '(.*)'$/ do |logi
   fill_in('user_email', :with => email)
 end
 
+Given /^I should see Analizo information$/ do  
+end
+
+Given /^I should see calculated metrics$/ do
+end
+
+Given /^I should see a progress message$/ do
+  response.should contain("Wait a moment while the metrics are calculated")
+end

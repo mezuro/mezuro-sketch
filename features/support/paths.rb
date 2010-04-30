@@ -13,6 +13,9 @@ module NavigationHelpers
     when /projects\/new/
       new_project_path()
 
+    when /projects\/analizo/
+      show_path(:analizo)
+
     when /users\/new/
       new_user_path()      
     # Add more mappings here.
