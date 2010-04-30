@@ -36,4 +36,13 @@ describe Metric do
       metric.save.should == false
     end
   end
+  
+  context "handling '~' metric value case" do
+    it "should store nil as value" do
+      metric = Metric.new(valid_metric_attributes(:value => '~'))
+      metric.save.should == true
+      found_metric = Metric.find(metric.id)
+      found_metric.value.should == nil
+    end
+  end
 end
