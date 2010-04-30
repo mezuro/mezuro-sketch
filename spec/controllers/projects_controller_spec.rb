@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ProjectsController do
-  fixtures :projects
+  fixtures :projects, :metrics
 
   def mock_project()
     @mock_project ||= mock_model(Project)
@@ -81,7 +81,7 @@ describe ProjectsController do
   context "GET show" do
     before :each do
       require 'resources/hello_world_output'
-      @expected = HELLO_WORLD_HASH
+      @expected = [metrics(:npv)]
     end
 
     it "should assign to @metrics the metrics hash" do
