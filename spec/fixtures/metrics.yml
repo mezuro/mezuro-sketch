@@ -1,14 +1,14 @@
 noc:
     name: noc
     project: analizo
-    value: 10
+    value: 10.0
 
 loc:
     name: loc
     project: analizo
-    value: 5
+    value: 5.0
 
 npv:
     name: npv
     project: my_project
-    value: 12
+    value: 12.0

@@ -10,7 +10,7 @@
   </tr>
   <tr id="tr_project_repository_url">
     <td><%= label_tag "Repository address" %></td>
-    <td><%= @project.repository_url %></td>    
+    <td><%= @project.repository_url %></td>
   </tr>
 </table>
 
@@ -22,12 +22,12 @@
   </div>
 <%else%>
 
-<% if @project.metrics_calculated? %>
+  <% if @project.metrics_calculated? %>
     <table>
-      <% @metrics.each do |metric, value| %>
-        <tr id="tr_<%= metric %>">
-          <td> <%= metric %> </td>
-          <td> <%= value %> </td>
+      <% @metrics.each do |metric| %>
+        <tr id="tr_<%= metric.name %>">
+          <td> <%= metric.name %> </td>
+          <td> <%= metric.value %> </td>
         </tr>
       <% end %>
     </table>
