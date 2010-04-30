@@ -98,17 +98,29 @@ describe ProjectsController do
       get :show, :identifier => projects(:my_project).identifier
       assigns[:project].should == projects(:my_project)
     end
+    
+    it "should not assign to @svn_error the error message if the project is ok" do
+      get :show, :identifier => projects(:my_project).identifier
+      assigns[:svn_error].should == nil
+    end
+    
+    it "should assign to @svn_error the error message if the project has an error" do
+      project = projects(:project_with_error)
+      get :show, :identifier => project.identifier
+      assigns[:svn_error].should == project.svn_error
+    end
   end
 
   context "GET index" do
     it "should assign to @projects all the projects" do
+      all_projects = [projects(:my_project), projects(:analizo), projects(:project_with_error)]
       get :index
-      (assigns[:projects] - [projects(:my_project), projects(:analizo)]).should == []
+      (assigns[:projects] - all_projects).should == []
     end
   end
 
   it "should count the number of created projects" do
     get :index
-    assigns[:projects_count].should == 2
+    assigns[:projects_count].should == 3
   end
 end

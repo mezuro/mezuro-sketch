@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find_by_identifier params[:identifier]
     @metrics = @project.metrics if @project != nil
+    @svn_error = @project.svn_error if (@project != nil && @project.svn_error)
   end
 
   def index

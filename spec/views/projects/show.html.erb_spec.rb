@@ -62,5 +62,18 @@ describe "/projects/show" do
     end
   end
 
-
+  context "svn_error occured" do
+    it "should show a svn_error if the project is not ok" do
+      assigns[:svn_error] = "Blue screen of death"
+      render
+      response.should have_tag("div[id=?]", "svn_error", "Blue screen of death")
+    end
+    
+    it "should not show a svn_error if the project is ok" do
+      assigns[:svn_error] = nil
+      render
+      response.should_not have_tag("div[id=?]", "svn_error")
+    end
+    
+  end
 end
