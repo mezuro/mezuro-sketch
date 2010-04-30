@@ -6,18 +6,25 @@ class Project < ActiveRecord::Base
 
   validates_uniqueness_of :identifier
 
-  after_create :calculate_metrics
+  after_create :asynchronous_calculate_metrics
 
   def calculate_metrics
     begin
-      download_source_code
-      output = run_analizo
-      analizo_hash(output).each do | key, value |
-        Metric.create(:name => key.to_s, :value => value.to_f, :project => self)
+        download_source_code
+        output = run_analizo
+        analizo_hash(output).each do | key, value |
+          Metric.create(:name => key.to_s, :value => value.to_f, :project => self)
+        end
+      rescue Svn::Error => error
+        update_attribute :svn_error, error.error_message
       end
-    rescue Svn::Error => error
-      update_attribute :svn_error, error.error_message
+  end
+
+  def asynchronous_calculate_metrics
+    pid = Kernel.fork do
+      calculate_metrics
     end
+    Process.detach pid
   end
 
   def download_source_code
