@@ -2,6 +2,7 @@ require 'spec_helper'
 require 'resources/hello_world_output'
 
 describe Project do
+  fixtures :projects, :metrics
   after :each do
     FileUtils.rm_rf "#{RAILS_ROOT}/tmp/hello-world"
   end
@@ -49,7 +50,6 @@ describe Project do
       project.save.should == false
     end
   end
-
 
   context "validating identifier" do
     it "should not create a new instance given invalid description" do
@@ -118,16 +118,10 @@ describe Project do
       project = Project.new(valid_project_attributes(:identifier => "projeto1"))
       FileUtils.mkdir_p "#{RAILS_ROOT}/tmp/#{project.identifier}/src"
 
-      project.metrics
+      project.calculate_metrics
 
       File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}/src").should == false
       File.exists?("#{RAILS_ROOT}/tmp/#{project.identifier}").should == true
-      FileUtils.rm_rf "#{RAILS_ROOT}/tmp/#{project.identifier}"
-    end
-
-    it "given valid attributes return the correct hash" do
-      project = Project.new(valid_project_attributes)
-      project.metrics.should == HELLO_WORLD_HASH
       FileUtils.rm_rf "#{RAILS_ROOT}/tmp/#{project.identifier}"
     end
   end
@@ -138,15 +132,15 @@ describe Project do
       lambda {project.download_source_code}.should raise_error(Svn::Error)
     end
 
-    it "should return a hash with an error" do
-      project = Project.new(valid_project_attributes(:repository_url => "invalid"))
-      project.metrics.should == {"Error:" => "'.' is not a working copy\nCan't open file '.svn/entries': No such file or directory"}
+    it "should set generic svn_error on project" do
+      project = Project.create(valid_project_attributes(:repository_url => "invalid"))
+      project.svn_error.should == "'.' is not a working copy\nCan't open file '.svn/entries': No such file or directory"
     end
 
-    it "should raise an error when downloading source code that we dont have permission" do
-      project = Project.new(valid_project_attributes(:repository_url => "http://svn.xp-dev.com/svn/horus_eye/"))
+    it "should set specific error when downloading source code that we dont have permission" do
+      project = Project.create(valid_project_attributes(:repository_url => "http://svn.xp-dev.com/svn/horus_eye/"))
       lambda {project.download_source_code}.should raise_error(Svn::Error)
-      project.metrics.should == {"Error:" => "OPTIONS of 'http://svn.xp-dev.com/svn/horus_eye': authorization failed (http://svn.xp-dev.com)"}
+      project.svn_error.should == "OPTIONS of 'http://svn.xp-dev.com/svn/horus_eye': authorization failed (http://svn.xp-dev.com)"
     end
   end
 
@@ -240,14 +234,6 @@ describe Project do
     end
   end
 
-  it "should calculates metrics on create" do
-    require 'resources/project_mock'
-    project = ProjectMock.new valid_project_attributes
-    project.called_metrics.should be_false
-    project.save
-    project.called_metrics.should be_true
-  end
-
   context "finding if metrics are already calculated" do
     fixtures :projects, :metrics
     it "should not find results if metrics were not created" do
@@ -260,11 +246,22 @@ describe Project do
       (project.metrics_calculated?).should == true
     end
   end
-  
+
+  it "should calculates metrics on create" do
+    require 'resources/project_mock'
+    project_mock = ProjectMock.new valid_project_attributes
+    project_mock.called_calculate_metrics.should be_false
+    project_mock.save
+    project_mock.called_calculate_metrics.should be_true
+  end
+
   it "should save in database metrics calculated" do
     project = Project.create valid_project_attributes
-    project.metrics
+    
     Metric.find_by_project_id(project.id).should_not be_nil
   end
 
+  it "should have many metrics" do
+    projects(:analizo).metrics.should == [metrics(:loc), metrics(:noc)]
+  end
 end

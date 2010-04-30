@@ -66,3 +66,9 @@ def logout
   current_user_session = controller.current_user_session
   current_user_session.destroy unless current_user_session.nil?
 end
+
+class Project
+  def asynchronous_calculate_metrics
+    calculate_metrics
+  end
+end

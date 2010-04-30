@@ -1,26 +1,30 @@
 class Project < ActiveRecord::Base
+  has_many :metrics
   validates_presence_of :name, :repository_url, :identifier
 
   validates_format_of :identifier, :with => /^[a-z0-9|\-|\.]+$/
 
   validates_uniqueness_of :identifier
 
-  after_create :metrics
+  after_create :asynchronous_calculate_metrics
 
-  def metrics
+  def calculate_metrics
     begin
-      download_source_code
-      output = run_analizo
-      hash_from_analizo = analizo_hash output
-
-      hash_from_analizo.each do | key, value |
-        Metric.create(:name => key.to_s, :value => value.to_f, :project_id => self.id)
+        download_source_code
+        output = run_analizo
+        analizo_hash(output).each do | key, value |
+          Metric.create(:name => key.to_s, :value => value.to_f, :project => self)
+        end
+      rescue Svn::Error => error
+        update_attribute :svn_error, error.error_message
       end
+  end
 
-      return hash_from_analizo
-    rescue Svn::Error => error
-      return hash_with error
+  def asynchronous_calculate_metrics
+    pid = Kernel.fork do
+      calculate_metrics
     end
+    Process.detach pid
   end
 
   def download_source_code
@@ -56,9 +60,4 @@ class Project < ActiveRecord::Base
     return metric ? true : false
   end
 
-  private
-  def hash_with error
-    {"Error:" => error.error_message}
-  end
-    
 end

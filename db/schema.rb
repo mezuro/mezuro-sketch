@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
 
   create_table "metrics", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 8) do
     t.datetime "updated_at"
     t.string   "identifier"
     t.string   "personal_webpage"
+    t.string   "svn_error"
   end
 
   create_table "user_sessions", :force => true do |t|
