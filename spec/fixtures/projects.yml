@@ -10,3 +10,4 @@ analizo:
   identifier: 'analizo'
   repository_url: 'git@github.com/analizo'
   id: 2
+  description: 'Calculate metrics'

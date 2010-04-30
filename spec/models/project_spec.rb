@@ -264,7 +264,7 @@ describe Project do
   it "should save in database metrics calculated" do
     project = Project.create valid_project_attributes
     project.metrics
-    
     Metric.find_by_project_id(project.id).should_not be_nil
   end
+
 end

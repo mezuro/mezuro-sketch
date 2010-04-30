@@ -15,12 +15,19 @@
 </table>
 
 <h3> Metric Results </h3>
-<table>
-  <% @metrics.each do |metric, value| %>
-    <tr id="tr_<%= metric %>">
-      <td> <%= metric %> </td>
-      <td> <%= value %> </td>
-    </tr>
-  <% end %>
-</table>
+<% if @project.metrics_calculated? %>  
+  <table>
+    <% @metrics.each do |metric, value| %>
+      <tr id="tr_<%= metric %>">
+        <td> <%= metric %> </td>
+        <td> <%= value %> </td>
+      </tr>
+    <% end %>
+  </table>
+
+<%  else %>
+  <div id="progress_message">Wait a moment while the metrics are calculated
+  </div>
+<% end %>
+
 
