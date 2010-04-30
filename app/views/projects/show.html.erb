@@ -10,24 +10,33 @@
   </tr>
   <tr id="tr_project_repository_url">
     <td><%= label_tag "Repository address" %></td>
-    <td><%= @project.repository_url %></td>    
+    <td><%= @project.repository_url %></td>
   </tr>
 </table>
 
 <h3> Metric Results </h3>
-<% if @project.metrics_calculated? %>  
-  <table>
-    <% @metrics.each do |metric, value| %>
-      <tr id="tr_<%= metric %>">
-        <td> <%= metric %> </td>
-        <td> <%= value %> </td>
-      </tr>
-    <% end %>
-  </table>
 
-<%  else %>
-  <div id="progress_message">Wait a moment while the metrics are calculated
+<% if @svn_error %>
+  <div id="svn_error">
+    <%= @svn_error %>
   </div>
+<%else%>
+
+  <% if @project.metrics_calculated? %>
+    <table>
+      <% @metrics.each do |metric| %>
+        <tr id="tr_<%= metric.name %>">
+          <td> <%= metric.name %> </td>
+          <td> <%= metric.value %> </td>
+        </tr>
+      <% end %>
+    </table>
+
+  <% else %>
+    <div id="progress_message">
+      Wait a moment while the metrics are calculated
+    </div>
+  <% end %>
 <% end %>
 
 

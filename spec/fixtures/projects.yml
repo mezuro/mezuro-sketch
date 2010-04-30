@@ -8,3 +8,10 @@ analizo:
   identifier: 'analizo'
   repository_url: 'git@github.com/analizo'
   description: 'Calculate metrics'
+  
+project_with_error:
+  name: 'Error Project'
+  identifier: 'error-project'
+  repository_url: 'error'
+  description: 'Error!!!'
+  svn_error: 'Blue screen of death'
