@@ -5,7 +5,7 @@ describe "/projects/show" do
 
   before :each do
     assigns[:project] = projects(:analizo)
-    assigns[:metrics] = {"noa" => 4, "loc" => 10, "nom" => 2}
+    assigns[:metrics] = [metrics(:noc), metrics(:loc)]
   end
 
   it "should have a title: Project Info" do
@@ -39,18 +39,18 @@ describe "/projects/show" do
   it "should have a table with metric results" do
     render
     response.should have_tag("table") do
-      with_tag("tr[id=?]", "tr_noa") do
-        with_tag("td", "noa")
-        with_tag("td", "4")
+      with_tag("tr[id=?]", "tr_noc") do
+        with_tag("td", "noc")
+        with_tag("td", "10.0")
       end
       with_tag("tr[id=?]", "tr_loc") do
         with_tag("td", "loc")
-        with_tag("td", "10")
+        with_tag("td", "5.0")
       end
     end
   end
 
-  context "metrics are not calculated" do
+  context "metrics are not yet calculated" do
     before :each do
       assigns[:project] = Project.new
     end

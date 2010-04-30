@@ -17,10 +17,10 @@
 <h3> Metric Results </h3>
 <% if @project.metrics_calculated? %>  
   <table>
-    <% @metrics.each do |metric, value| %>
-      <tr id="tr_<%= metric %>">
-        <td> <%= metric %> </td>
-        <td> <%= value %> </td>
+    <% @metrics.each do |metric| %>
+      <tr id="tr_<%= metric.name %>">
+        <td> <%= metric.name %> </td>
+        <td> <%= metric.value %> </td>
       </tr>
     <% end %>
   </table>
