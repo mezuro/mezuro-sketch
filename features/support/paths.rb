@@ -13,8 +13,8 @@ module NavigationHelpers
     when /projects\/new/
       new_project_path()
 
-    when /projects\/analizo/
-      show_path(:analizo)
+    when /projects\/(.*)/
+      show_path($1)
 
     when /users\/new/
       new_user_path()      

@@ -15,3 +15,10 @@ project_with_error:
   repository_url: 'error'
   description: 'Error!!!'
   svn_error: 'Blue screen of death'
+
+in_progress:
+  name: 'Project In Progress'
+  identifier: 'in_progress'
+  repository_url: 'git@github.com/in_progress'
+  description: 'Project with metrics in progress'
+  

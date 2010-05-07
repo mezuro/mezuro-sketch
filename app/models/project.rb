@@ -21,10 +21,10 @@ class Project < ActiveRecord::Base
   end
 
   def asynchronous_calculate_metrics
-    pid = Kernel.fork do
+#    pid = Kernel.fork do
       calculate_metrics
-    end
-    Process.detach pid
+ #   end
+  #  Process.detach pid
   end
 
   def download_source_code

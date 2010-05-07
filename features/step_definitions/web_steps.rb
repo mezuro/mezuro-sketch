@@ -298,12 +298,42 @@ When /^I fill the user form with '(.*?)', '(.*?)', '(.*?)' and '(.*)'$/ do |logi
   fill_in('user_email', :with => email)
 end
 
-Given /^I should see Analizo information$/ do  
+Then /^I should see the name '(.*)'$/ do |project_name|
+  response.should have_tag("table") do
+    with_tag("tr[id=?]", "tr_project_name") do
+      with_tag("td", "Name") 
+      with_tag("td", project_name)
+    end        
+  end
 end
 
-Given /^I should see calculated metrics$/ do
+Then /^I should see the url '(.*)'$/ do |project_url|
+  response.should have_tag("tr[id=?]", "tr_project_repository_url") do
+    with_tag("td", "Repository address")
+    with_tag("td", project_url)
+  end
 end
 
-Given /^I should see a progress message$/ do
+
+Then /^I should see the description '(.*)'$/ do |project_description|
+  response.should have_tag("tr[id=?]", "tr_project_description") do
+      with_tag("td", "Description")
+      with_tag("td", project_description)
+    end
+end
+
+
+Then /^I should see metric '(.*)' with value (\d+\.\d+)$/ do |metric, value| 
+  response.should have_tag("tr[id=?]", "tr_#{metric}") do
+    with_tag("td", metric)
+    with_tag("td", value)
+  end
+end
+
+Then /^I should see a progress message$/ do
   response.should contain("Wait a moment while the metrics are calculated")
+end
+
+Then /^I should see the error message "(.*)"$/ do |error_message|
+  response.should have_tag("div[id=?]", "svn_error", error_message)
 end
