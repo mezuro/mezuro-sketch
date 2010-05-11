@@ -7,6 +7,12 @@
       <%= image_tag "/images/mezuro_logo.png" %>
 
       <div id="static_links">
+        <% if current_user %>
+          <span class="float-right">
+            <b id="user_login"><%= current_user.login %></b>
+          </span>
+          <br />
+        <% end %>
         <%= link_to "All Projects", projects_path %>
         |
         <% if current_user %>

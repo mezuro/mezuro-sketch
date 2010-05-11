@@ -13,24 +13,40 @@ describe "/projects/show" do
     response.should have_tag("h1", "Project Info")
   end
 
-  it "should have a table with project info" do
-    render
-    response.should have_tag("table") do
-      with_tag("tr[id=?]", "tr_project_name") do
-        with_tag("td", "Name") 
-        with_tag("td", "Analizo")
-      end        
+  context "Project information area" do
+    
+    it "should have a table with project info" do
+      render
+      response.should have_tag("table") do
+        with_tag("tr[id=?]", "tr_project_name") do
+          with_tag("td", "Name") 
+          with_tag("td", "Analizo")
+        end          
+      end
+      with_tag("tr[id=?]", "tr_project_description") do
+        with_tag("td", "Description")
+        with_tag("td", "Calculate metrics")
+      end
+      with_tag("tr[id=?]", "tr_project_repository_url") do
+        with_tag("td", "Repository address")
+        with_tag("td", "git@github.com/analizo")
+      end
     end
-    with_tag("tr[id=?]", "tr_project_description") do
-      with_tag("td", "Description")
-      with_tag("td", "Calculate metrics")
-    end
-    with_tag("tr[id=?]", "tr_project_repository_url") do
-      with_tag("td", "Repository address")
-      with_tag("td", "git@github.com/analizo")
-    end
-  end
 
+    it "should not show description label when project's description is nil" do
+      assigns[:project].description = nil
+      render
+      response.should_not have_tag("td", "Description")    
+    end
+    
+    it "should not show description label when project's description is empty string" do
+      assigns[:project].description = ""
+      render
+      response.should_not have_tag("td", "Description")    
+    end
+    
+  end
+  
   it "should have a title: Metric Results" do
     render
     response.should have_tag("h3", "Metric Results")
