@@ -247,17 +247,16 @@ describe Project do
     end
   end
 
-  it "should calculates metrics on create" do
+  it "should order to calculate metrics on create" do
     require 'resources/project_mock'
     project_mock = ProjectMock.new valid_project_attributes
-    project_mock.called_calculate_metrics.should be_false
     project_mock.save
-    project_mock.called_calculate_metrics.should be_true
+    project_mock.called_asynchronous_calculate_metrics
   end
 
   it "should save in database metrics calculated" do
     project = Project.create valid_project_attributes
-    
+    project.calculate_metrics
     Metric.find_by_project_id(project.id).should_not be_nil
   end
 

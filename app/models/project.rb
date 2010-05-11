@@ -19,12 +19,10 @@ class Project < ActiveRecord::Base
         update_attribute :svn_error, error.error_message
       end
   end
+  
 
   def asynchronous_calculate_metrics
-#    pid = Kernel.fork do
-      calculate_metrics
- #   end
-  #  Process.detach pid
+    Delayed::Job.enqueue CalculateMetricsJob.new(id)
   end
 
   def download_source_code
