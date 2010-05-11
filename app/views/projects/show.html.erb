@@ -1,4 +1,4 @@
-<h1>Project Info</h1>
+<h1> <%= @project.name %>'s Info</h1>
 <table>
   <tr id="tr_project_name">
     <td><%= label_tag "Name" %></td>
@@ -16,6 +16,7 @@
   </tr>
 </table>
 
+<br />
 <h3> Metric Results </h3>
 
 <% if @svn_error %>

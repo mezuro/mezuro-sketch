@@ -10,7 +10,7 @@ describe "/projects/show" do
 
   it "should have a title: Project Info" do
     render
-    response.should have_tag("h1", "Project Info")
+    response.should have_tag("h1", "Analizo's Info")
   end
 
   context "Project information area" do
@@ -18,18 +18,14 @@ describe "/projects/show" do
     it "should have a table with project info" do
       render
       response.should have_tag("table") do
-        with_tag("tr[id=?]", "tr_project_name") do
-          with_tag("td", "Name") 
-          with_tag("td", "Analizo")
-        end          
-      end
-      with_tag("tr[id=?]", "tr_project_description") do
-        with_tag("td", "Description")
-        with_tag("td", "Calculate metrics")
-      end
-      with_tag("tr[id=?]", "tr_project_repository_url") do
-        with_tag("td", "Repository address")
-        with_tag("td", "git@github.com/analizo")
+        with_tag("tr[id=?]", "tr_project_description") do
+          with_tag("td", "Description")
+          with_tag("td", "Calculate metrics")
+        end
+        with_tag("tr[id=?]", "tr_project_repository_url") do
+          with_tag("td", "Repository address")
+          with_tag("td", "git@github.com/analizo")
+        end
       end
     end
 
