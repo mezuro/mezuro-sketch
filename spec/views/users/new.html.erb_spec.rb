@@ -25,6 +25,12 @@ describe "/users/new" do
       end
     end
 
+    it "should have a back button" do
+      response.should have_tag("form") do
+        with_tag("input[type=?][value=?]", "submit", "Back")
+      end
+    end
+
   end
 end
 
