@@ -51,6 +51,10 @@ describe "/layouts/application" do
       response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matter')
       response.should have_tag("p[id=?]", 'mezuro_description')
     end
+    
+    it "should show user's login" do
+      response.should_not have_tag("b[id=?]", 'user_login')
+    end
   end
 
   context "user logged in" do
@@ -97,6 +101,10 @@ describe "/layouts/application" do
     it "should show a description text" do
       response.should have_tag("h3[id=?]", 'mezuro_slogan', 'Software Metrics that Matter')
       response.should have_tag("p[id=?]", 'mezuro_description')
+    end
+    
+    it "should show user's login" do
+      response.should have_tag("b[id=?]", 'user_login', 'viviane')
     end
   end
 end
