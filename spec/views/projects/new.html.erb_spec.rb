@@ -30,16 +30,21 @@ describe "/projects/new" do
     end
   end
 
-  context "with errors" do
-    before :each do
+  context "with errors" do    
+    it "should have an error div if 'project' contains errors" do
       project = Project.new
-      project.errors.add :name, "Missing name." 
+      project.errors.add :name, "Missing name."
       assigns[:project] = project
       render
-    end
-    
-    it "should have an error div if 'project' contains errors" do
       response.should have_tag("div[class=?]", "errorExplanation")
+    end
+
+    it "should have an error messange if 'identifier' has invalid characteres" do
+      project = Project.new(:identifier => "wrong_Identifier_")
+      project.save
+      assigns[:project] = project
+      render
+      response.should include_text("can only have a combination of lower case, number, hyphen and dot!")
     end
   end
 end

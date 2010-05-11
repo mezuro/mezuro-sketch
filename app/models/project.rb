@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
   has_many :metrics
   validates_presence_of :name, :repository_url, :identifier
 
-  validates_format_of :identifier, :with => /^[a-z0-9|\-|\.]+$/
+  validates_format_of :identifier, :with => /^[a-z0-9|\-|\.]+$/, :message => "can only have a combination of lower case, number, hyphen and dot!"
 
   validates_uniqueness_of :identifier
 
