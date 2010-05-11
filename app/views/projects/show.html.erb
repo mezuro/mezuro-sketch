@@ -4,10 +4,12 @@
     <td><%= label_tag "Name" %></td>
     <td><%= @project.name %></td>
   </tr>
+  <% if (@project.description != nil && @project.description != "" ) %>
   <tr id="tr_project_description">
     <td><%= label_tag "Description" %></td>
     <td><%= @project.description %></td>
   </tr>
+  <% end %>
   <tr id="tr_project_repository_url">
     <td><%= label_tag "Repository address" %></td>
     <td><%= @project.repository_url %></td>
