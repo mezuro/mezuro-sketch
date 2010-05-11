@@ -42,6 +42,12 @@ a {
 
 h1 {
     margin: 10px;
+    margin-left: 0px;
+}
+
+h3 {
+    margin: 5px;
+    margin-left: 0px;
 }
 
 .fieldWithErrors {
