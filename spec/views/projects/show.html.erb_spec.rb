@@ -66,6 +66,11 @@ describe "/projects/show" do
     end
   end
 
+  it "should have a back link" do
+    render
+    response.should have_tag("a", "back")
+  end
+
   context "metrics are not yet calculated" do
     before :each do
       assigns[:project] = Project.new

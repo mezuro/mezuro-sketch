@@ -11,12 +11,18 @@ describe "/user_sessions/new" do
   end
 
   it "should have a form" do
-      response.should have_tag("form") do
-        with_tag("label", "Login")
-        with_tag("input[id=?][type=?]", "user_session_login", "text")
-        with_tag("label", "Password")
-        with_tag("input[id=?][type=?]", "user_session_password", "password")
-        with_tag("input[id=?][type=?]", "user_session_submit", "submit")
-      end
+    response.should have_tag("form") do
+      with_tag("label", "Login")
+      with_tag("input[id=?][type=?]", "user_session_login", "text")
+      with_tag("label", "Password")
+      with_tag("input[id=?][type=?]", "user_session_password", "password")
+      with_tag("input[id=?][type=?]", "user_session_submit", "submit")
     end
+  end
+
+  it "should have a back button" do
+    response.should have_tag("form") do
+      with_tag("input[type=?][value=?]", "submit", "Back")
+    end
+  end
 end
