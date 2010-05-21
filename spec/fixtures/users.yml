@@ -4,6 +4,7 @@ viviane:
   password_salt: <%= salt = Authlogic::Random.hex_token %>
   crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("minhasenha" + salt) %>
   persistence_token: <%= Authlogic::Random.hex_token %>
+  id: 1
 
 
 

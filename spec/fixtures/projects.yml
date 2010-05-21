@@ -2,12 +2,14 @@ my_project:
   name: 'My Project Name'
   identifier: 'my-project'
   repository_url: 'git@github.com/my-project'
+  user_id: 1
 
 analizo:
   name: 'Analizo'
   identifier: 'analizo'
   repository_url: 'git@github.com/analizo'
   description: 'Calculate metrics'
+  user_id: 1
   
 project_with_error:
   name: 'Error Project'
@@ -15,10 +17,12 @@ project_with_error:
   repository_url: 'error'
   description: 'Error!!!'
   svn_error: 'Blue screen of death'
+  user_id: 2
 
 in_progress:
   name: 'Project In Progress'
   identifier: 'in_progress'
   repository_url: 'git@github.com/in_progress'
   description: 'Project with metrics in progress'
+  user_id: 3
   

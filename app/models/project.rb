@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  belongs_to :user
   has_many :metrics
   validates_presence_of :name, :repository_url, :identifier
 

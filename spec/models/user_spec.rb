@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe User do
+  fixtures :projects, :users
 
   def valid_user_attributes(attributes={})
     {
@@ -55,5 +56,9 @@ describe User do
       user.save.should == false
     end
   end
-
+  
+  it "should have projects" do
+    user = users(:viviane)
+    ([projects(:my_project), projects(:analizo)] - user.projects).should == []
+  end
 end
