@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'resources/hello_world_output'
 
 describe Project do
-  fixtures :projects, :metrics
+  fixtures :projects, :metrics, :users
   after :each do
     FileUtils.rm_rf "#{RAILS_ROOT}/tmp/hello-world"
   end
@@ -262,5 +262,10 @@ describe Project do
 
   it "should have many metrics" do
     projects(:analizo).metrics.should == [metrics(:loc), metrics(:noc)]
+  end
+
+  it "should know its user" do
+    project = projects(:my_project)
+    project.user.should == users(:viviane)
   end
 end

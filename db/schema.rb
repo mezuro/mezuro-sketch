@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 10) do
     t.string   "identifier"
     t.string   "personal_webpage"
     t.string   "svn_error"
+    t.integer  "user_id"
   end
 
   create_table "user_sessions", :force => true do |t|
