@@ -147,3 +147,12 @@ form {
 #progress_message {
     
 }
+
+tr.d0 td {
+    background-color: #E8E8E8;
+    color: black;
+}
+tr.d1 td {
+    background-color: #FFFFFF; 
+    color: black;
+}
