@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe UsersController do
-  fixtures :users
+  fixtures :users, :projects
 
   def mock_user()
     @mock_user ||= mock_model(User)
@@ -34,9 +34,10 @@ describe UsersController do
   context "POST create" do
     it "should create a user given valid attributes" do
       post :create, :user => valid_user_attributes
-      User.find_by_login("pika").should_not be_nil
+      user = User.find_by_login("pika")
+      user.should_not be_nil
       flash[:message].should == "User successfully created"
-      response.should redirect_to(root_url)
+      response.should redirect_to(user_path(user.id))
     end
 
     it "should not create a user given nil or empty login" do
@@ -81,6 +82,16 @@ describe UsersController do
     it "should show user attributes given an id" do
       get :show, :id => users(:viviane).id
       assigns[:user].should == users(:viviane)
+    end
+
+    it "should have an empty list in @project if user doesnt have projects" do
+      get :show, :id => users(:marcio).id
+      assigns[:projects].should == []
+    end
+
+    it "should assign the users projects" do
+      get :show, :id => users(:viviane).id
+      ([projects(:analizo), projects(:my_project)] - assigns[:projects]).should == []
     end
   end
 

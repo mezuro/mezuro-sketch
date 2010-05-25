@@ -6,6 +6,12 @@ viviane:
   persistence_token: <%= Authlogic::Random.hex_token %>
   id: 1
 
-
+marcio:
+  login: marcio
+  email: marcio@qualquercoisa.com
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("root" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  id: 4
 
 

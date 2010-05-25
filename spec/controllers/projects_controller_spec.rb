@@ -20,6 +20,7 @@ describe ProjectsController do
 
   context "GET new" do
     before :each do
+      login_as :viviane
       Project.stub!(:new).and_return(mock_project)
       get :new
     end
@@ -31,7 +32,6 @@ describe ProjectsController do
     it "should assign new project" do
       assigns[:project].should == mock_project
     end
-
   end
   
   context "POST create" do

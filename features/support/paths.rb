@@ -17,7 +17,10 @@ module NavigationHelpers
       show_path($1)
 
     when /users\/new/
-      new_user_path()      
+      new_user_path()
+
+    when /login/
+      login_path()   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
