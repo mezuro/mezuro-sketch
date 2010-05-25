@@ -103,8 +103,10 @@ describe "/layouts/application" do
       response.should have_tag("p[id=?]", 'mezuro_description')
     end
     
-    it "should show user's login" do
-      response.should have_tag("b[id=?]", 'user_login', 'viviane')
+    it "should have a link to user profile" do
+      response.should have_tag("div[id=?]", 'static_links') do
+        with_tag("a[href=?]", user_path(users(:viviane).id))
+      end
     end
   end
 end

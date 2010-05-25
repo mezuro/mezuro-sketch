@@ -27,8 +27,8 @@
 
   <% if @project.metrics_calculated? %>
     <table>
-      <% @metrics.each do |metric| %>
-        <tr id="tr_<%= metric.name %>">
+      <% @metrics.each_with_index do |metric, index| %>
+        <tr id="tr_<%= metric.name %>" class="d<%= index % 2 %>">
           <td> <%= metric.name %> </td>
           <td> <%= metric.value %> </td>
         </tr>
