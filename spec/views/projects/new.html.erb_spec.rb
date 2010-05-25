@@ -1,8 +1,11 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 describe "/projects/new" do
+  fixtures :users
+
   context "without errors" do
     before :each do
+      login_as :viviane
       assigns[:project] = Project.new
       render
     end
@@ -28,9 +31,17 @@ describe "/projects/new" do
         with_tag("input[type=?][value=?]", "submit", "Back")
       end
     end
+
+    it "should have user_id hidden field" do
+      response.should have_tag("input[id=?]", "project_user_id")
+    end
   end
 
-  context "with errors" do    
+  context "with errors" do
+    before :each do
+      login_as :viviane
+    end
+   
     it "should have an error div if 'project' contains errors" do
       project = Project.new
       project.errors.add :name, "Missing name."

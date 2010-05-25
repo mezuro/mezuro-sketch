@@ -277,6 +277,10 @@ Given /^I visit (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^I am logged in/ do
+  login
+end
+
 When /^I fill the project form with '(.*?)', '(.*?)' and '(.*)'$/ do |project_name, repository_url , identifier|
   fill_in('project_name', :with => project_name)
   fill_in('project_repository_url', :with => repository_url)
@@ -336,4 +340,11 @@ end
 
 Then /^I should see the error message "(.*)"$/ do |error_message|
   response.should have_tag("div[id=?]", "svn_error", error_message)
+end
+
+def login
+  visit path_to("login")
+  fill_in("Login", :with => "viviane")
+  fill_in("Password", :with => "minhasenha")
+  click_button("Login")
 end

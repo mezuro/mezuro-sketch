@@ -59,4 +59,5 @@ end
 
 Fixtures.create_fixtures("spec/fixtures", "projects")
 Fixtures.create_fixtures("spec/fixtures", "metrics")
+Fixtures.create_fixtures("spec/fixtures", "users")
 

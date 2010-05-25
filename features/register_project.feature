@@ -6,7 +6,8 @@ programming language, application domain. Also giving the avaliation
 periodicity.
 
   Scenario Outline: Registering a project
-  Given I visit /projects/new
+  Given I am logged in
+  And I visit /projects/new
   When I fill the project form with '<project_name>', '<repository_url>' and '<identifier>'
   And I click on the 'Register Project' button
   Then I should see the message <message>

@@ -1,6 +1,7 @@
 <h1> New Project </h1>
 
 <% form_for @project do |form| %>
+  <%= hidden_field_tag 'project[user_id]', current_user.id %>
   <%= error_messages_for 'project' %>
 
   <%= form.label :name, "Project Name" %>

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user  = User.new(params[:user])
     if @user.save
       flash[:message] = "User successfully created"
-      redirect_to(root_url)
+      redirect_to user_path(@user.id)
     else
       flash[:message] = "User not created"
       render :new
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id params[:id]
+    @projects = Project.find_all_by_user_id @user.id
   end
 
 end
