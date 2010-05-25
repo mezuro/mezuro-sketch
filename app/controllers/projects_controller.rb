@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     @project  = Project.new(params[:project])
     if @project.save
       flash[:message] = "Project successfully registered"
-      redirect_to(project_path(@project.identifier))
+      redirect_to(user_path(@project.user.id))
     else
       render :new
     end

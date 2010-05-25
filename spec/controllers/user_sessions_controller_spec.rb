@@ -33,7 +33,7 @@ describe UserSessionsController do
       user = user_session.user
       user.should == users(:viviane)
       flash[:message].should == "Successfully logged in!"
-      response.should redirect_to(users_path(user.id))
+      response.should redirect_to(user_path(user.id))
     end
 
     it "should not create a new session given invalid attributes" do

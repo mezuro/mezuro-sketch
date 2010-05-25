@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ProjectsController do
-  fixtures :projects, :metrics
+  fixtures :projects, :metrics, :users
 
   def mock_project()
     @mock_project ||= mock_model(Project)
@@ -13,7 +13,8 @@ describe ProjectsController do
       :identifier => "mezuro",
       :repository_url => "rep://rep.com/myrepo",
       :description => "This project is awesome",
-      :personal_webpage => "http://mywebpage.com"
+      :personal_webpage => "http://mywebpage.com",
+      :user_id => users(:viviane).id
     }.merge attributes
   end
 
@@ -73,7 +74,7 @@ describe ProjectsController do
     it "should redirect to project show when create is success" do
       post :create, :project => valid_project_attributes
       project = Project.find_by_name("Mezuro Project")
-      response.should redirect_to(project_path(project.identifier))
+      response.should redirect_to(user_path(users(:viviane).id))
     end
 
   end
