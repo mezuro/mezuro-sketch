@@ -83,6 +83,12 @@ describe ProjectsController do
     before :each do
       require 'resources/hello_world_output'
       @expected = [metrics(:npv)]
+      @expected_totals = [metrics(:total_modules_sorted_project),
+                          metrics(:total_nom_sorted_project),
+                          metrics(:total_tloc_sorted_project)]
+      @expected_stats = [metrics(:loc_sorted_project),
+                         metrics(:noc_sorted_project),
+                         metrics(:npv_sorted_project)]
     end
 
     it "should assign to @metrics the metrics hash" do
@@ -93,6 +99,16 @@ describe ProjectsController do
     it "should assign nil to @metrics when project is unknown" do
       get :show, :identifier => 'unknown'
       assigns[:metrics].should be_nil
+    end
+
+    it "should assign the total group metrics to @metrics_totals" do
+      get :show, :identifier => projects(:sorted_project).identifier
+      assigns[:metrics_totals].should == @expected_totals
+    end
+
+    it "should assign the statistics group metrics to @metrics_stats" do
+      get :show, :identifier => projects(:sorted_project).identifier
+      assigns[:metrics_stats].should == @expected_stats
     end
 
     it "should assign to @project the project" do

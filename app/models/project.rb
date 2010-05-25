@@ -62,4 +62,18 @@ class Project < ActiveRecord::Base
   def sorted_metrics
     return metrics.sort_by {|metric| metric.name}
   end
+
+  def metrics_totals
+    metrics_totals = metrics.select do |metric|
+      metric.name.start_with?("total")
+    end
+    return metrics_totals.sort_by {|metric| metric.name}
+  end
+
+  def metrics_stats
+    metrics_stats = metrics.select do |metric|
+      not metric.name.start_with?("total")
+    end
+    return metrics_stats.sort_by {|metric| metric.name}
+  end
 end
