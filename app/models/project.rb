@@ -59,4 +59,7 @@ class Project < ActiveRecord::Base
     return metric ? true : false
   end
 
+  def sorted_metrics
+    return metrics.sort_by {|metric| metric.name}
+  end
 end
