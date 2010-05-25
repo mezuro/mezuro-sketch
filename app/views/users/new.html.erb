@@ -6,16 +6,19 @@
   <%= form.label :login, "User Login" %>
   <%= form.text_field :login %>
   <br/>
+  <%= form.label :email, "e-mail" %>
+  <%= form.text_field :email %>
+  <br/>
   <%= form.label :password, "Password" %>
   <%= form.password_field :password %>
   <br/>
   <%= form.label :password_confirmation, "Password Confirmation" %>
   <%= form.password_field :password_confirmation %>
   <br/>
-  <%= form.label :email, "e-mail" %>
-  <%= form.text_field :email %>
-  <br/>
   <%= form.submit "Create User" %>
 <% end %>
 
 <%= button_to "Back", :back, :method => :get %>
+
+<%= javascript_tag "$('user_login').focus();" %>
+

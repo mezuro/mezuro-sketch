@@ -27,3 +27,18 @@ npv_sorted_project:
     name: npv
     project: sorted_project
     value: 12.0
+
+total_modules_sorted_project:
+    name: total_modules
+    project: sorted_project
+    value: 2
+
+total_nom_sorted_project:
+    name: total_nom
+    project: sorted_project
+    value: 5
+
+total_tloc_sorted_project:
+    name: total_tloc
+    project: sorted_project
+    value: 26
