@@ -14,7 +14,7 @@ module NavigationHelpers
       new_project_path()
 
     when /projects\/(.*)/
-      show_path($1)
+      project_path($1)
 
     when /users\/new/
       new_user_path()
