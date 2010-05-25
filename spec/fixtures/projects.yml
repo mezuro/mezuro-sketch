@@ -26,3 +26,8 @@ in_progress:
   description: 'Project with metrics in progress'
   user_id: 3
   
+sorted_project:
+  name: 'My Sorted Project Name'
+  identifier: 'my-sorted-project'
+  repository_url: 'git@github.com/my-sorted-project'
+  user_id: 4

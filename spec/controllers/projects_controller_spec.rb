@@ -90,7 +90,7 @@ describe ProjectsController do
       assigns[:metrics].should == @expected
     end
 
-    it "should assign to @metrics the metrics hash" do
+    it "should assign nil to @metrics when project is unknown" do
       get :show, :identifier => 'unknown'
       assigns[:metrics].should be_nil
     end
@@ -114,7 +114,7 @@ describe ProjectsController do
 
   context "GET index" do
     it "should assign to @projects all the projects" do
-      all_projects = [projects(:my_project), projects(:analizo), projects(:project_with_error), projects(:in_progress)]
+      all_projects = [projects(:my_project), projects(:analizo), projects(:project_with_error), projects(:in_progress), projects(:sorted_project)]
       get :index
       (assigns[:projects] - all_projects).should == []
     end
@@ -122,6 +122,6 @@ describe ProjectsController do
 
   it "should count the number of created projects" do
     get :index
-    assigns[:projects_count].should == 4
+    assigns[:projects_count].should == 5
   end
 end

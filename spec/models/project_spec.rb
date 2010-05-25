@@ -268,4 +268,10 @@ describe Project do
     project = projects(:my_project)
     project.user.should == users(:viviane)
   end
+
+  it "should get sorted metrics array" do
+    project = projects(:sorted_project)
+    (project.metrics_calculated?).should == true
+    project.sorted_metrics.should == [metrics(:loc_sorted_project), metrics(:noc_sorted_project), metrics(:npv_sorted_project)]
+  end
 end
