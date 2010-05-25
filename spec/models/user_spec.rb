@@ -39,7 +39,12 @@ describe User do
 
       user = User.new(valid_user_attributes(:email => ""))
       user.save.should == false
-    end     
+    end
+
+    it "should not create an instance given 'login' as login" do
+      user = User.new(valid_user_attributes(:login => "login"))
+      user.save.should == false
+    end
   end
 
   context "validating e-mail" do

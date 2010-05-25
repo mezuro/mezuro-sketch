@@ -12,6 +12,6 @@ marcio:
   password_salt: <%= salt = Authlogic::Random.hex_token %>
   crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("root" + salt) %>
   persistence_token: <%= Authlogic::Random.hex_token %>
-  id: 4
+  id: 10
 
 
