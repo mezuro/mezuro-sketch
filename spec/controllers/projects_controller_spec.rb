@@ -74,7 +74,7 @@ describe ProjectsController do
     it "should redirect to project show when create is success" do
       post :create, :project => valid_project_attributes
       project = Project.find_by_name("Mezuro Project")
-      response.should redirect_to(user_path(users(:viviane).id))
+      response.should redirect_to(user_path(users(:viviane).login))
     end
 
   end

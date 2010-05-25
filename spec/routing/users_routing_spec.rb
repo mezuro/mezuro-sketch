@@ -14,4 +14,9 @@ describe UsersController do
       params_from(:post, '/users').should == {:controller => 'users', :action => 'create'}
     end
 
+   it "should map /userlogin to UsersController" do
+     route_for(:action => 'show', :controller => 'users', :login => 'user-login').should == '/user-login'
+     params_from(:get, '/userlogin').should == {:controller => 'users', :action => 'show', :login => 'userlogin'}
+   end
+
 end

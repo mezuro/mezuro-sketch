@@ -37,7 +37,7 @@ describe UsersController do
       user = User.find_by_login("pika")
       user.should_not be_nil
       flash[:message].should == "User successfully created"
-      response.should redirect_to(user_path(user.id))
+      response.should redirect_to(user_path(user.login))
     end
 
     it "should not create a user given nil or empty login" do
@@ -80,17 +80,17 @@ describe UsersController do
 
   context "GET show" do    
     it "should show user attributes given an id" do
-      get :show, :id => users(:viviane).id
+      get :show, :login => users(:viviane).login
       assigns[:user].should == users(:viviane)
     end
 
     it "should have an empty list in @project if user doesnt have projects" do
-      get :show, :id => users(:marcio).id
+      get :show, :login => users(:marcio).login
       assigns[:projects].should == []
     end
 
     it "should assign the users projects" do
-      get :show, :id => users(:viviane).id
+      get :show, :login => users(:viviane).login
       ([projects(:analizo), projects(:my_project)] - assigns[:projects]).should == []
     end
   end
