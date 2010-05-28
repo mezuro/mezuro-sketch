@@ -40,7 +40,7 @@ describe UserSessionsController do
       post :create, :user_session => valid_attributes(:login => "joaomm")
       user_session = UserSession.find
       user_session.should be_nil
-      flash[:message].should == "Invalid login or password!"
+      flash[:error].should == "Invalid login or password!"
       response.should render_template(:new)
     end
   end

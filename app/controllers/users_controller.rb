@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:message] = "User successfully created"
       redirect_to user_path(@user.login)
     else
-      flash[:message] = "User not created"
+      flash[:error] = "User not created"
       render :new
     end
   end

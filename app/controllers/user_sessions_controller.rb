@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
       flash[:message] = "Successfully logged in!"
       redirect_to user_path(@user_session.user.login)
     else
-      flash[:message] = "Invalid login or password!"
+      flash[:error] = "Invalid login or password!"
       render :new
     end
   end
