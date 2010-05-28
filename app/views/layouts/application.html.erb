@@ -9,7 +9,7 @@
       <div id="static_links">
         <% if current_user %>
           <span class="float-right">
-            <%= link_to current_user.login, user_path(current_user.id) %>
+            <%= link_to current_user.login, user_path(current_user.login) %>
           </span>
           <br />
         <% end %>
@@ -28,9 +28,6 @@
     </div>
 
     <div id="mezuro-info">
-      <p id="flash_messages">
-        <%=  flash[:message] %>
-      </p>
 
       <h2 id="number_of_created_projects">
         <%= "#{@projects_count} projects" %>
@@ -49,6 +46,13 @@
     </div>
 
     <div id="content">
+      <% %w(message error).each do |type| %>
+        <% if flash[type.to_sym] %>
+          <p id="<%= type %>" class="flash">
+            <%=  flash[type.to_sym] %>
+          </p>
+        <% end %>
+      <% end %>
       <%= yield %>
     </div>
 

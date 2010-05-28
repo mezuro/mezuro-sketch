@@ -52,7 +52,7 @@ describe Project do
   end
 
   context "validating identifier" do
-    it "should not create a new instance given invalid description" do
+    it "should not create a new instance given invalid identifier" do
       project = Project.new(valid_project_attributes(:identifier => nil))
       project.save.should == false
 
@@ -231,6 +231,13 @@ describe Project do
       test_bigger_output = @valid_analizo_output_extended
       expected = { :acc_mode => "~" }
       project.analizo_hash(test_bigger_output).should == valid_analizo_hash(expected)
+    end
+    
+    it "should not have metric name accm" do
+      project = Project.new valid_project_attributes
+      hash = project.analizo_hash(HELLO_WORLD_OUTPUT)
+      hash[:accm].should be_nil
+      
     end
   end
 

@@ -15,9 +15,14 @@
   </tr> 
 </table>
 
-<button type="button">Edit</button>
+<% unless @projects == [] %>
+  <h3>List of User Projects</h3>
+<% else %>
+  <h3>
+    <%= link_to "New Project", new_project_path %> 
+  </h3>
+<% end %>
 
-<h3>List of User Projects</h3>
 
 <ul>
   <%  @projects.each do |project| %>
