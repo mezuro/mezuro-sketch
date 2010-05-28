@@ -130,7 +130,7 @@ describe ProjectsController do
 
   context "GET index" do
     it "should assign to @projects all the projects" do
-      all_projects = [projects(:my_project), projects(:analizo), projects(:project_with_error), projects(:in_progress), projects(:sorted_project)]
+      all_projects = Project.find :all
       get :index
       (assigns[:projects] - all_projects).should == []
     end
@@ -138,6 +138,6 @@ describe ProjectsController do
 
   it "should count the number of created projects" do
     get :index
-    assigns[:projects_count].should == 5
+    assigns[:projects_count].should == (Project.find :all).size
   end
 end

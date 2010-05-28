@@ -42,3 +42,29 @@ total_tloc_sorted_project:
     name: total_tloc
     project: sorted_project
     value: 26
+    
+    
+total_modules_jmeter:
+    name: total_modules
+    project: jmeter
+    value: 2
+
+total_nom_jmeter:
+    name: total_nom
+    project: jmeter
+    value: 5
+
+total_tloc_jmeter:
+    name: total_tloc
+    project: jmeter
+    value: 26
+
+accm_median_jmeter:
+    name: accm_median
+    project: jmeter
+    value: 1.45
+
+accm_average_jmeter:
+    name: accm_average
+    project: jmeter
+    value: 0.45

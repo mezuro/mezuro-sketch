@@ -26,11 +26,22 @@
 <%else%>
 
   <% if @project.metrics_calculated? %>
-    <table>
-      <% @metrics.each_with_index do |metric, index| %>
+    <h3> Total Metrics </h3>
+    <table id="metrics_totals">
+      <% @metrics_totals.each_with_index do |metric, index| %>
         <tr id="tr_<%= metric.name %>" class="d<%= index % 2 %>">
-          <td> <%= metric.name %> </td>
-          <td> <%= metric.value %> </td>
+          <td class="metric_name"> <%= metric.name %> </td>
+          <td class="metric_value"> <%= metric.value %> </td>
+        </tr>
+      <% end %>
+    </table>
+    
+    <h3> Statistical Metrics </h3>
+    <table id="metrics_stats">
+      <% @metrics_stats.each_with_index do |metric, index| %>
+        <tr id="tr_<%= metric.name %>" class="d<%= index % 2 %>">
+          <td class="metric_name"> <%= metric.name %> </td>
+          <td class="metric_value"> <%= metric.value %> </td>
         </tr>
       <% end %>
     </table>
