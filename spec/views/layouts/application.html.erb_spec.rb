@@ -10,7 +10,7 @@ describe "/layouts/application" do
     end
 
     it "should show flash messages" do
-      response.should have_tag("p[id=?]", 'flash_messages', "Test")
+      response.should have_tag("p[class=?]", 'flash', "Test")
     end
 
     it "should yield other views" do

@@ -46,9 +46,13 @@
     </div>
 
     <div id="content">
-      <p id="flash_messages">
-        <%=  flash[:message] %>
-      </p>
+      <% %w(message error).each do |type| %>
+        <% if flash[type.to_sym] %>
+          <p id="<%= type %>" class="flash">
+            <%=  flash[type.to_sym] %>
+          </p>
+        <% end %>
+      <% end %>
       <%= yield %>
     </div>
 

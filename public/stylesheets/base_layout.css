@@ -138,10 +138,21 @@ form {
     text-align: right;
 }
 
-#flash_messages {
-    font-size: 16px;
-    font-weight: bold;
-    float: right;
+.flash {
+    float:right;
+    font-size:15px;
+    font-weight:bold;
+    padding:7px;
+}
+
+#message{
+    background-color: lightGreen;
+    border:2px solid darkGreen;
+}
+
+#error{
+    background-color: lightPink;
+    border:2px solid darkRed;
 }
 
 #progress_message {
