@@ -232,6 +232,13 @@ describe Project do
       expected = { :acc_mode => "~" }
       project.analizo_hash(test_bigger_output).should == valid_analizo_hash(expected)
     end
+    
+    it "should not have metric name accm" do
+      project = Project.new valid_project_attributes
+      hash = project.analizo_hash(HELLO_WORLD_OUTPUT)
+      hash[:accm].should be_nil
+      
+    end
   end
 
   context "finding if metrics are already calculated" do

@@ -38,8 +38,17 @@ class Project < ActiveRecord::Base
 
   def analizo_hash analizo_output
     hash = {}
+    first_line = true
 
     analizo_output.lines.each do |line|
+      if line =~ /---/
+        if first_line
+          first_line = false
+        else
+          break
+        end
+      end
+         
       if line =~ /(\S+): (~|(\d+)(\.\d+)?).*/
         hash[$1.to_sym] = $2
       end
