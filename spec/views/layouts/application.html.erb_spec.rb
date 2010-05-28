@@ -105,7 +105,7 @@ describe "/layouts/application" do
     
     it "should have a link to user profile" do
       response.should have_tag("div[id=?]", 'static_links') do
-        with_tag("a[href=?]", user_path(users(:viviane).id))
+        with_tag("a[href=?]", user_path(users(:viviane).login))
       end
     end
   end

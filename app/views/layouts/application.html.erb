@@ -9,7 +9,7 @@
       <div id="static_links">
         <% if current_user %>
           <span class="float-right">
-            <%= link_to current_user.login, user_path(current_user.id) %>
+            <%= link_to current_user.login, user_path(current_user.login) %>
           </span>
           <br />
         <% end %>

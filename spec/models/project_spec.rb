@@ -52,7 +52,7 @@ describe Project do
   end
 
   context "validating identifier" do
-    it "should not create a new instance given invalid description" do
+    it "should not create a new instance given invalid identifier" do
       project = Project.new(valid_project_attributes(:identifier => nil))
       project.save.should == false
 
