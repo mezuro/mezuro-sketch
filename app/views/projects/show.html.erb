@@ -17,14 +17,29 @@
 </table>
 
 <br />
-<h3> Metric Results </h3>
+
 
 <% if @svn_error %>
+  <h3>ERROR</h3>
   <div id="svn_error">
     <%= @svn_error %>
   </div>
+  <br/>
+  <br/>
+  <p>
+    Possible causes:
+    <ul>
+      <li>
+        Server is down
+      </li>
+      <li>
+        URL invalid, in this case create another project with the correct URL
+        (Sorry for the incovenience, we're working for a better solution)
+      </li>
+    </ul>
+  </p>
 <%else%>
-
+  <h3> Metric Results </h3>
   <% if @project.metrics_calculated? %>
     <table>
       <% @metrics.each_with_index do |metric, index| %>
@@ -37,7 +52,8 @@
 
   <% else %>
     <div id="progress_message">
-      Wait a moment while the metrics are calculated
+      Wait a moment while the metrics are calculated.<br/>
+      Reload the page manually in a few moment.
     </div>
   <% end %>
 <% end %>

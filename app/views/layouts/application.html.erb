@@ -28,9 +28,6 @@
     </div>
 
     <div id="mezuro-info">
-      <p id="flash_messages">
-        <%=  flash[:message] %>
-      </p>
 
       <h2 id="number_of_created_projects">
         <%= "#{@projects_count} projects" %>
@@ -49,6 +46,9 @@
     </div>
 
     <div id="content">
+      <p id="flash_messages">
+        <%=  flash[:message] %>
+      </p>
       <%= yield %>
     </div>
 
