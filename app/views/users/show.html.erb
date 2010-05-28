@@ -9,6 +9,10 @@
     <td><%= label_tag "Email" %></td>
     <td><%= @user.email %></td>
   </tr> 
+  <tr id="tr_user_creation_date">
+    <td><%= label_tag "Created at" %></td>
+    <td><%= @user.created_at.to_date.gregorian.inspect.gsub /.*,\s*/, "" %></td>
+  </tr> 
 </table>
 
 <button type="button">Edit</button>

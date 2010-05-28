@@ -272,7 +272,6 @@ Then /^show me the page$/ do
   save_and_open_page
 end
 
-
 Given /^I visit (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -342,9 +341,22 @@ Then /^I should see the error message "(.*)"$/ do |error_message|
   response.should have_tag("div[id=?]", "svn_error", error_message)
 end
 
-def login
-  visit path_to("login")
-  fill_in("Login", :with => "viviane")
-  fill_in("Password", :with => "minhasenha")
-  click_button("Login")
+Then /^I should see the user name '(.*)'$/ do |user_name|
+  puts response.body
+  response.should have_tag("table") do
+    with_tag("tr[id=?]", "tr_user_login") do
+      with_tag("td", "Login") 
+      with_tag("td", user_name)
+    end        
+  end
 end
+
+Then /^I should see the user e-mail '(.*)'$/ do |user_email|
+  response.should have_tag("table") do
+    with_tag("tr[id=?]", "tr_user_email") do
+      with_tag("td", "Email") 
+      with_tag("td", user_email)
+    end        
+  end
+end
+

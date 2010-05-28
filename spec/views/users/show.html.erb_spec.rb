@@ -1,12 +1,9 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
 describe "/users/show" do
-  fixtures :projects
+  fixtures :projects, :users
   before :each do
-    assigns[:user] = User.new(:login => "pika",
-      :password => "gordo",
-      :password_confirmation => "gordo",
-      :email => "pika@agilbits.com")
+    assigns[:user] = users(:viviane)
     assigns[:projects] = [projects(:my_project), projects(:analizo)]
     render
   end
@@ -19,13 +16,17 @@ describe "/users/show" do
     response.should have_tag("table") do
       with_tag("tr[id=?]", "tr_user_login") do
         with_tag("td", "Login")
-        with_tag("td", "pika")
+        with_tag("td", "viviane")
       end
     end
     with_tag("tr[id=?]", "tr_user_email") do
       with_tag("td", "Email")
-      with_tag("td", "pika@agilbits.com")
+      with_tag("td", "vivi@qualquercoisa.com")
     end   
+    with_tag("tr[id=?]", "tr_user_creation_date") do
+      with_tag("td", "Created at")
+      with_tag("td", "28 May 2010")
+    end
   end
 
   it "should have a edit button" do
