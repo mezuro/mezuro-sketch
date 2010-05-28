@@ -28,10 +28,6 @@ describe "/users/show" do
     end   
   end
 
-  it "should have a edit button" do
-    with_tag("button", "Edit")
-  end  
-
   it "should have a title for user projects list" do
     response.should have_tag("h3", "List of User Projects")
   end
