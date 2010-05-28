@@ -17,10 +17,10 @@ describe "/projects/index" do
     it "should have a list of projects" do
       response.should have_tag("ul") do
         with_tag("li") do
-          with_tag("a", projects(:my_project).name, project_path(projects(:my_project).identifier))
+          with_tag("a", projects(:my_project).identifier, project_path(projects(:my_project).identifier))
         end
         with_tag("li") do
-          with_tag("a", projects(:analizo).name, project_path(projects(:analizo).identifier))
+          with_tag("a", projects(:analizo).identifier, project_path(projects(:analizo).identifier))
         end
       end
     end
