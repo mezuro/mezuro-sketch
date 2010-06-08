@@ -26,7 +26,23 @@
 
 <ul>
   <%  @projects.each do |project| %>
-  <li> <%= link_to project.name, project_path(project.identifier) %> </li>
+  <li>
+    <p class="project_name"> <%= project.name %> </p>
+    <div class="project_description">
+      <%= project.description %>
+    </div>
+    <div class="project_status">
+      <% if project.metrics_calculated? %>
+        <%= link_to "Metrics calculated", project_path(project.identifier) %>
+      <% else %>
+        <% if project.svn_error %>
+          <%= link_to "Error found", project_path(project.identifier) %>
+        <% else %>
+          <p> Metrics are being calculated </p>
+        <% end %>
+      <% end %>
+    </div>
+  </li>
   <% end %>
 </ul>
 

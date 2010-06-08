@@ -6,7 +6,7 @@ describe "/users/show" do
     fixtures :projects, :users
     before :each do
       assigns[:user] = users(:viviane)
-      assigns[:projects] = [projects(:my_project), projects(:analizo)]
+      assigns[:projects] = [projects(:my_project), projects(:in_progress), projects(:project_with_error)]
       render
     end
   
@@ -38,10 +38,28 @@ describe "/users/show" do
     it "should have a list of user projects" do
       response.should have_tag("ul") do
         with_tag("li") do
-          with_tag("a", projects(:my_project).name, project_path(projects(:my_project).identifier))
+          project = projects(:my_project)
+          with_tag("p[class=?]", "project_name", project.name)
+          with_tag("div[class=?]", "project_status") do
+            with_tag("a", "Metrics calculated", project_path(project.identifier))
+          end
+          with_tag("div[class=?]", "project_description", project.description)
         end
         with_tag("li") do
-          with_tag("a", projects(:analizo).name, project_path(projects(:analizo).identifier))
+          project = projects(:in_progress)
+          with_tag("p[class=?]", "project_name", project.name)
+          with_tag("div[class=?]", "project_status") do
+            with_tag("p", "Metrics are being calculated")
+          end
+          with_tag("div[class=?]", "project_description", project.description)
+        end
+        with_tag("li") do
+          project = projects(:project_with_error)
+          with_tag("p[class=?]", "project_name", project.name)
+          with_tag("div[class=?]", "project_status") do
+            with_tag("a", "Error found",  project_path(project.identifier))
+          end
+          with_tag("div[class=?]", "project_description", project.description)
         end
       end
     end 
