@@ -45,4 +45,13 @@ describe Metric do
       found_metric.value.should == nil
     end
   end
+
+  context "rounding decimal numbers" do
+    it "should round the value before save" do
+      metric = Metric.new(valid_metric_attributes(:value => "123.4567"))
+      metric.save
+      found_metric = Metric.find metric.id
+      found_metric.value.should == 123.46
+    end
+  end
 end

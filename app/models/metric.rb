@@ -2,9 +2,18 @@ class Metric < ActiveRecord::Base
   validates_presence_of :name, :project_id
 
   belongs_to :project
+  before_save :round_value
   
   def initialize params
     params[:value] = nil if params[:value] == '~'
     super params
+  end
+
+  def round_value
+    if self.value
+      multiplied = self.value * 100
+      rounded = multiplied.round
+      self.value = rounded / 100.0
+    end
   end
 end
