@@ -1,30 +1,18 @@
-<h1> New Project </h1>      
+<h1 class="for_form"> New Project </h1>      
 <% form_for @project do |form| %>
-        <%= hidden_field_tag 'project[user_id]', current_user.id %>
-        <%= error_messages_for 'project' %>
+  <%= hidden_field_tag 'project[user_id]', current_user.id %>
+  <%= error_messages_for 'project' %>
 
-<table cellspacing=0% cellpadding=0>
-  <tr align=left cellspacing=0 cellpadding=0>             
-        <td><%= form.label :name, "Project Name" %></td>
-  </tr>
-  <tr align=left cellspacing=0 cellpadding=0>
-       <td><%= form.text_field :name %><td>
-  </tr>  
-  <tr align=left>
-        <td><%= form.label :repository_url, "Repository URL" %><td>
-  </tr> 
-  <tr align=left>
-        <td><%= form.text_field :repository_url %><td>
-  </tr>  
-  <tr align=left>
-        <td><%= form.label :identifier, "Identifier" %><td>
-  </tr>  
-  <tr align=left>
-        <td><%= form.text_field :identifier %><td>
-  </tr>   
-</table>
+  <%= form.label :name, "Project Name" %>
+  <%= form.text_field :name %>
 
-  <%= form.submit "Register Project" %><td>
+  <%= form.label :repository_url, "Repository URL" %>
+  <%= form.text_field :repository_url %>
+
+  <%= form.label :identifier, "Identifier" %>
+  <%= form.text_field :identifier %>
+
+  <%= form.submit "Register Project", :class => "submit" %>
 <% end %>
 
 <%= button_to "Back", :back, :method => :get %>
