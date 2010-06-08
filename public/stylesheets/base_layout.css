@@ -118,6 +118,7 @@ label {
     display: block;
     width: 150px;
     margin: 1em 0 0;
+    vertical-align: "middle";    
 }
 
 ul.info {
@@ -184,4 +185,8 @@ tr.d0 td {
 tr.d1 td {
     background-color: #FFFFFF; 
     color: black;
+}
+
+#show_info td {
+    padding: 10px 10px 10px 0px;
 }

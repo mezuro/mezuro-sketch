@@ -1,17 +1,17 @@
 <h1> <%= @project.name %>'s Info</h1>
-<table>
+<table id="show_info">
   <tr id="tr_project_name">
-    <td><%= label_tag "Name" %></td>
+    <td>Name</td>
     <td><%= @project.name %></td>
   </tr>
   <% if (@project.description != nil && @project.description != "" ) %>
   <tr id="tr_project_description">
-    <td><%= label_tag "Description" %></td>
+    <td>Description</td>
     <td><%= @project.description %></td>
   </tr>
   <% end %>
   <tr id="tr_project_repository_url">
-    <td><%= label_tag "Repository address" %></td>
+    <td>Repository address</td>
     <td><%= @project.repository_url %></td>
   </tr>
 </table>
