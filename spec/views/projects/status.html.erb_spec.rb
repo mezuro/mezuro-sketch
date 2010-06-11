@@ -6,7 +6,7 @@ describe "/projects/status" do
   it "should return a message telling that metrics are being calculated" do
     assigns[:project] = projects(:in_progress)
     render
-    response.should include_text("Metrics are being calculated")
+    response.should include_text("Analysis in progress")
   end
   
   it "should return a link to open the project if metrics are already calculated" do

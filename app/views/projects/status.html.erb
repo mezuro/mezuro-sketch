@@ -15,7 +15,7 @@
   <%= link_to "Metrics calculated", project_path(@project.identifier) %>
 
 <%else%>
-  Metrics are being calculated
+  <p> Analysis in progress </p>
   <%= periodically_call_remote :update => "project_status_#{@project.id}",
                                :url => "/projects/#{@project.identifier}/status", 
                                :condition => "not_finished_#{ @project.id }" %>

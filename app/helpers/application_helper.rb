@@ -11,9 +11,15 @@ module ApplicationHelper
   
   def value_of preffix, suffix, metric_list
     searched = preffix.to_s + '_' + suffix.to_s
-    metric_list.each do |metric|  
-      return metric.value if metric.name == searched
+    value = ""
+    metric_list.each do |metric|
+      value = metric.value if metric.name == searched
     end
+    return value
+  end
+
+  def formated unformated_date
+    return unformated_date.to_date.gregorian.inspect.gsub /.*,\s*/, ""
   end
 
 end
