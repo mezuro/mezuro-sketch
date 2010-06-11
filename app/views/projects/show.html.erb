@@ -1,17 +1,32 @@
+<script>
+  function toggle(id, image_id){
+	  var span = document.getElementById(id)
+	  var image = document.getElementById(image_id)
+	  
+	  if (span.style.display == 'none') {
+		  span.style.display = ''
+		  image.src = "/images/minus.png"
+	  } else {
+		  span.style.display = 'none'
+      image.src = "/images/plus.png"
+	  }
+  }
+</script>
+
 <h1> <%= @project.name %>'s Info</h1>
-<table>
+<table id="show_info">
   <tr id="tr_project_name">
-    <td><%= label_tag "Name" %></td>
+    <td>Name</td>
     <td><%= @project.name %></td>
   </tr>
   <% if (@project.description != nil && @project.description != "" ) %>
   <tr id="tr_project_description">
-    <td><%= label_tag "Description" %></td>
+    <td>Description</td>
     <td><%= @project.description %></td>
   </tr>
   <% end %>
   <tr id="tr_project_repository_url">
-    <td><%= label_tag "Repository address" %></td>
+    <td>Repository address</td>
     <td><%= @project.repository_url %></td>
   </tr>
 </table>
@@ -52,14 +67,32 @@
     </table>
     
     <h3> Statistical Metrics </h3>
-    <table id="metrics_stats">
-      <% @metrics_stats.each_with_index do |metric, index| %>
-        <tr id="tr_<%= metric.name %>" class="d<%= index % 2 %>">
-          <td class="metric_name"> <%= metric.name %> </td>
-          <td class="metric_value"> <%= metric.value %> </td>
-        </tr>
+    <div id="metrics_stats">
+      <% module_metrics_names.each do |metric_name| %> 
+        <div id="div_<%= metric_name %>">
+          <p>
+            <a href='javascript: toggle("span_<%= metric_name %>", "image_<%= metric_name %>")'>
+              <%= image_tag "/images/plus.png", :id => "image_#{metric_name}" %>
+            </a>
+            <%= "#{metric_name}_average #{value_of(metric_name, 'average', @metrics_stats)}" %>
+          </p>
+          
+          <span id="span_<%= metric_name %>" style="display: none">
+            <table>
+              <% statistical_value.each do |stat| %>
+                <tr id="tr_<%= metric_name %>_<%= stat %>">
+                  <% value = value_of(metric_name, stat, @metrics_stats) %>
+                  <% if value %>
+                    <td class="metric_name"> <%= metric_name %>_<%= stat %> </td>
+                    <td class="metric_value"> <%= value %> </td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </table>
+          </span>
+        </div>
       <% end %>
-    </table>
+    </div>
 
   <% else %>
     <div id="progress_message">

@@ -1,21 +1,21 @@
-<h1> New User </h1>
+<h1 class="for_form"> New User </h1>
 
 <% form_for @user do |form| %>
   <%= error_messages_for 'user' %>
 
   <%= form.label :login, "User Login" %>
   <%= form.text_field :login %>
-  <br/>
+
   <%= form.label :email, "e-mail" %>
   <%= form.text_field :email %>
-  <br/>
+
   <%= form.label :password, "Password" %>
   <%= form.password_field :password %>
-  <br/>
+
   <%= form.label :password_confirmation, "Password Confirmation" %>
   <%= form.password_field :password_confirmation %>
-  <br/>
-  <%= form.submit "Create User" %>
+
+  <%= form.submit "Create User", :class => "submit" %>
 <% end %>
 
 <%= button_to "Back", :back, :method => :get %>

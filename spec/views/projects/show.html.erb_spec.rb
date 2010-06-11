@@ -46,7 +46,8 @@ describe "/projects/show" do
                                   metrics(:total_nom_jmeter),
                                   metrics(:total_tloc_jmeter)]
       assigns[:metrics_stats] = [metrics(:accm_median_jmeter),
-                                 metrics(:accm_average_jmeter)]
+                                 metrics(:accm_average_jmeter),
+                                 metrics(:accm_mode_jmeter)]
       render
     end
     
@@ -77,14 +78,22 @@ describe "/projects/show" do
 
     
     it "should have a table with statistical metrics results" do
-      response.should have_tag("table[id=?]", "metrics_stats") do
-        with_tag("tr[id=?]", "tr_accm_median") do
-          with_tag("td[class=?]", "metric_name", "accm_median")
-          with_tag("td[class=?]", "metric_value", "1.45")
-        end
-        with_tag("tr[id=?]", "tr_accm_average") do
-          with_tag("td[class=?]", "metric_name", "accm_average")
-          with_tag("td[class=?]", "metric_value", "0.45")
+      response.should have_tag("div[id=?]", "metrics_stats") do
+        with_tag("div[id=?]", "div_accm") do
+          with_tag("img")
+          with_tag("p", "accm_average 0.45")
+          with_tag("span[id=?]", "span_accm") do
+            with_tag("table") do
+              with_tag("tr[id=?]", "tr_accm_median") do
+                with_tag("td[class=?]", "metric_name", "accm_median")
+                with_tag("td[class=?]", "metric_value", "1.45")
+              end
+              with_tag("tr[id=?]", "tr_accm_mode") do
+                with_tag("td[class=?]", "metric_name", "accm_mode")
+                with_tag("td[class=?]", "metric_value", "2.0")
+              end
+            end
+          end
         end
       end
     end

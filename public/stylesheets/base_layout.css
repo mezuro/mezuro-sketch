@@ -115,17 +115,36 @@ img {
 }
 
 label {
-    float: left;
+    display: block;
     width: 150px;
-    margin: 5px 0;
+    margin: 1em 0 0;
+    vertical-align: "middle";    
+}
+
+ul.info {
+    list-style-type: none;
+}
+
+ul.info label{
+    font-weight: bold;  
 }
 
 input {
-    margin: 5px 0px;    
+    margin: 0 0 0;    
+    display: block;
+}
+
+input.submit {
+    display: inline;
+    margin: 2em 0 0;
 }
 
 form {
     width: 600px;
+    margin-left: 100px;
+}
+
+.for_form {
     margin-left: 100px;
 }
 
@@ -166,4 +185,8 @@ tr.d0 td {
 tr.d1 td {
     background-color: #FFFFFF; 
     color: black;
+}
+
+#show_info td {
+    padding: 10px 10px 10px 0px;
 }

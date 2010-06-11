@@ -63,6 +63,12 @@ accm_median_jmeter:
     name: accm_median
     project: jmeter
     value: 1.45
+    
+accm_mode_jmeter:
+    name: accm_median
+    project: jmeter
+    value: 2.0
+
 
 accm_average_jmeter:
     name: accm_average

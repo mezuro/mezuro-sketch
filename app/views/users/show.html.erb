@@ -1,16 +1,16 @@
 <h1>User Info</h1>
 
-<table>
+<table id="show_info">
   <tr id="tr_user_login">
-    <td><%= label_tag "Login" %></td>
+    <td>Login</td>
     <td><%= @user.login %></td>
   </tr>
   <tr id="tr_user_email">
-    <td><%= label_tag "Email" %></td>
+    <td>Email</td>
     <td><%= @user.email %></td>
-  </tr> 
+  </tr>
   <tr id="tr_user_creation_date">
-    <td><%= label_tag "Member since" %></td>
+    <td>Member since</td>
     <td><%= @user.created_at.to_date.gregorian.inspect.gsub /.*,\s*/, "" %></td>
   </tr> 
 </table>
