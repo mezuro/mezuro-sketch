@@ -42,8 +42,7 @@ total_tloc_sorted_project:
     name: total_tloc
     project: sorted_project
     value: 26
-    
-    
+      
 total_modules_jmeter:
     name: total_modules
     project: jmeter

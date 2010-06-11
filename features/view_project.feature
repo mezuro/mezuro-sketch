@@ -7,12 +7,12 @@ periodicity. Also view the project metrics, if it is already calculated,
 or a progress message, when the system is calculating it.
 
   Scenario: Viewing a project with its information and calculated metrics
-  When I visit /projects/analizo
-  Then I should see the name 'Analizo'
-  And I should see the url 'git@github.com/analizo'
-  And I should see the description 'Calculate metrics'
-  And I should see metric 'loc' with value 5.0
-  And I should see metric 'noc' with value 10.0
+  When I visit /projects/jmeter
+  Then I should see the name 'Jmeter'
+  And I should see the url 'git@github.com/jmeter'
+  And I should see the description 'Jmeter project description'
+  And I should see metric 'total_tloc' with value 26.0
+  And I should see metric 'accm_mode' with value 2.0
 
   Scenario: Viewing a project with svn error
   When I visit /projects/error-project
