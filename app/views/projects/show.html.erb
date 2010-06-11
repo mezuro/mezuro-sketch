@@ -39,8 +39,8 @@
   <div id="svn_error">
     <%= @svn_error %>
   </div>
-  <br/>
-  <br/>
+  <br />
+  <br />
   <p>
     Possible causes:
     <ul>
@@ -71,10 +71,11 @@
       <% module_metrics_names.each do |metric_name| %> 
         <div id="div_<%= metric_name %>">
           <p>
-            <a href='javascript: toggle("span_<%= metric_name %>", "image_<%= metric_name %>")'>
+            <a href="javascript: toggle('span_<%= metric_name %>', 'image_<%= metric_name %>')">
               <%= image_tag "/images/plus.png", :id => "image_#{metric_name}" %>
             </a>
-            <%= "#{metric_name}_average #{value_of(metric_name, 'average', @metrics_stats)}" %>
+            <% value = value_of(metric_name, 'average', @metrics_stats) %>
+            <%= "#{metric_name}_average #{value}" %>
           </p>
           
           <span id="span_<%= metric_name %>" style="display: none">
@@ -83,8 +84,8 @@
                 <tr id="tr_<%= metric_name %>_<%= stat %>">
                   <% value = value_of(metric_name, stat, @metrics_stats) %>
                   <% if value %>
-                    <td class="metric_name"> <%= metric_name %>_<%= stat %> </td>
-                    <td class="metric_value"> <%= value %> </td>
+                     <td class="metric_name"> <%= "#{metric_name}_#{stat}" %> </td>
+                     <td class="metric_value"> <%= value %> </td>
                   <% end %>
                 </tr>
               <% end %>

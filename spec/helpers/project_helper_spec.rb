@@ -2,11 +2,6 @@ require 'spec_helper'
 
 describe ProjectHelper do
   fixtures :projects
-  
-  before :each do
-    assigns[:project] = projects(:analizo)
-    render
-  end
 
   #Delete this example and add some real ones or delete this file
   it "should be included in the object returned by #helper" do
@@ -14,8 +9,4 @@ describe ProjectHelper do
     included_modules.should include(ProjectHelper)
   end
   
-  it "should have a paragraph with metric average" do
-    response.should_have
-  end
-
 end
