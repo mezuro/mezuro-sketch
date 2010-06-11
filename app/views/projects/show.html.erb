@@ -72,7 +72,7 @@
         <div id="div_<%= metric_name %>">
           <p>
             <a href="javascript: toggle('span_<%= metric_name %>', 'image_<%= metric_name %>')">
-              <%= image_tag "/images/plus.png", :id => "image_#{metric_name}" %>
+              <%= image_tag "/images/plus.png", :id => "image_#{metric_name}", :border => "0", :style => "border: 0px; padding: 1px;" %>
             </a>
             <% value = value_of(metric_name, 'average', @metrics_stats) %>
             <%= "#{metric_name}_average #{value}" %>

@@ -81,24 +81,13 @@ describe ProjectsController do
 
   context "GET show" do
     before :each do
-      require 'resources/hello_world_output'
-      @expected = [metrics(:npv)]
+      require 'resources/hello_world_output'     
       @expected_totals = [metrics(:total_modules_sorted_project),
                           metrics(:total_nom_sorted_project),
                           metrics(:total_tloc_sorted_project)]
       @expected_stats = [metrics(:loc_sorted_project),
                          metrics(:noc_sorted_project),
                          metrics(:npv_sorted_project)]
-    end
-
-    it "should assign to @metrics the metrics hash" do
-      get :show, :identifier => projects(:my_project).identifier
-      assigns[:metrics].should == @expected
-    end
-
-    it "should assign nil to @metrics when project is unknown" do
-      get :show, :identifier => 'unknown'
-      assigns[:metrics].should be_nil
     end
 
     it "should assign the total group metrics to @metrics_totals" do
