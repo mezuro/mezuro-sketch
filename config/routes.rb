@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :projects, :except => [:show]
   map.project "/projects/:identifier", {:controller => 'projects', :action => 'show'}
+  map.status "/projects/:identifier/status", {:controller => 'projects', :action => 'status'}
 
   map.root :controller => "projects", :action => "index"
 

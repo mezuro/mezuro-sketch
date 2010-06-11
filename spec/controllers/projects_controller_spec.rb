@@ -140,4 +140,11 @@ describe ProjectsController do
     get :index
     assigns[:projects_count].should == (Project.find :all).size
   end
+
+  context "GET status" do
+    it "should return 'metrics are being calculated' if no metrics were found" do
+      get :status, :identifier => projects(:in_progress).identifier
+      assigns[:project].should == projects(:in_progress)
+    end 
+  end
 end

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ProjectsController do
-
   it "should map index of new ProjectController to '/projects/new'" do
     params_from(:get, '/projects/new').should == {:controller => 'projects', :action => 'new'}
 
@@ -18,4 +17,7 @@ describe ProjectsController do
     params_from(:get, "/").should == {:controller => "projects", :action => "index"}
   end
   
+  it "should route status of a project" do
+    params_from(:get, "/projects/analizo/status").should == {:controller => "projects", :action => "status", :identifier => 'analizo'}
+  end
 end
