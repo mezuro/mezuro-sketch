@@ -14,13 +14,6 @@ or a progress message, when the system is calculating it.
   And I should see metric 'loc' with value 5.0
   And I should see metric 'noc' with value 10.0
 
-  Scenario: Viewing a project with its information without calculated metrics
-  When I visit /projects/in_progress
-  Then I should see the name 'Project In Progress' 
-  And I should see the url 'git@github.com/in_progress'
-  And I should see the description 'Project with metrics in progress'
-  And I should see a progress message
-
   Scenario: Viewing a project with svn error
   When I visit /projects/error-project
   Then I should see the name 'Error Project' 
@@ -28,5 +21,10 @@ or a progress message, when the system is calculating it.
   And I should see the description 'Error!!!'
   And I should see the error message "Blue screen of death"
   
-
+  Scenario: Viewing a project with its information without calculated metrics
+  When I visit /projects/in-progress
+  Then I should see the name 'Project In Progress' 
+  And I should see the url 'git@github.com/in_progress'
+  And I should see the description 'Project with metrics in progress'
+  And I should see a progress message
 

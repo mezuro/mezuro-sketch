@@ -276,8 +276,8 @@ Given /^I visit (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-Given /^I am logged in/ do
-  login
+Given /^I am logged in as '(.*)'/ do |user|
+  login_as user
 end
 
 When /^I fill the project form with '(.*?)', '(.*?)' and '(.*)'$/ do |project_name, repository_url , identifier|
@@ -302,11 +302,9 @@ When /^I fill the user form with '(.*?)', '(.*?)', '(.*?)' and '(.*)'$/ do |logi
 end
 
 Then /^I should see the name '(.*)'$/ do |project_name|
-  response.should have_tag("table") do
-    with_tag("tr[id=?]", "tr_project_name") do
-      with_tag("td", "Name") 
-      with_tag("td", project_name)
-    end        
+  response.should have_tag("tr[id=?]", "tr_project_name") do
+    with_tag("td", "Name") 
+    with_tag("td", project_name)
   end
 end
 
@@ -317,14 +315,12 @@ Then /^I should see the url '(.*)'$/ do |project_url|
   end
 end
 
-
 Then /^I should see the description '(.*)'$/ do |project_description|
   response.should have_tag("tr[id=?]", "tr_project_description") do
       with_tag("td", "Description")
       with_tag("td", project_description)
     end
 end
-
 
 Then /^I should see metric '(.*)' with value (\d+\.\d+)$/ do |metric, value| 
   response.should have_tag("tr[id=?]", "tr_#{metric}") do
@@ -342,7 +338,6 @@ Then /^I should see the error message "(.*)"$/ do |error_message|
 end
 
 Then /^I should see the user name '(.*)'$/ do |user_name|
-  puts response.body
   response.should have_tag("table") do
     with_tag("tr[id=?]", "tr_user_login") do
       with_tag("td", "Login") 
@@ -359,4 +354,29 @@ Then /^I should see the user e-mail '(.*)'$/ do |user_email|
     end        
   end
 end
+
+Then /^I should see the membership since '(.*)'$/ do |membership_date|
+  response.should have_tag("table") do
+    with_tag("tr[id=?]", "tr_user_creation_date") do
+      with_tag("td", "Member since") 
+      with_tag("td", membership_date)
+    end        
+  end
+end
+
+Then /^I should see a '(.*)' heading$/ do |heading|
+  response.should have_tag("h3", heading)
+end
+
+Then /^I should see project '(.*)' with last analysis '(.*)' and status '(.*)'$/ do |project_name, project_last_analysis, project_status|
+  response.should have_tag("ul") do
+    with_tag("li") do
+      with_tag("p[class=?]", "project_name", project_name)
+      with_tag("p[class=?]", "project_last_analysis", "Last analysis: #{project_last_analysis}")
+      with_tag("div[class=?]", "project_status", project_status)
+    end        
+  end
+end
+
+
 

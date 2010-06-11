@@ -68,3 +68,8 @@ accm_average_jmeter:
     name: accm_average
     project: jmeter
     value: 0.45
+
+kalibro_loc:
+    name: loc_average
+    project: kalibro
+    value: 123
