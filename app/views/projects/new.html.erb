@@ -12,6 +12,10 @@
   <%= form.label :identifier, "Identifier" %>
   <%= form.text_field :identifier %>
 
+  <%= form.label :description, "Description" %>
+  <%= form.text_area :description, :size => "30x3" %>
+  <br/>
+  
   <%= form.submit "Register Project", :class => "submit" %>
 <% end %>
 

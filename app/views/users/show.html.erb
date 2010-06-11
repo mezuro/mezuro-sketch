@@ -11,7 +11,7 @@
   </tr>
   <tr id="tr_user_creation_date">
     <td>Member since</td>
-    <td><%= @user.created_at.to_date.gregorian.inspect.gsub /.*,\s*/, "" %></td>
+    <td><%= formated @user.created_at %></td>
   </tr> 
 </table>
 
@@ -28,24 +28,18 @@
   <%  @projects.each do |project| %>
   <li>
     <p class="project_name"> <%= project.name %> </p>
-    <p class="project_last_analysis"> <%= "Last analysis: #{project.created_at.to_date.gregorian.inspect.gsub /.*,\s*/, ""}" %></p>
+    <p class="project_last_analysis"> <%= "Last analysis: #{formated project.created_at}" %></p>
     <div class="project_description">
       <%= project.description %>
     </div>
     <div class="project_status">
-      <% if project.metrics_calculated? %>
-        <%= link_to "Metrics calculated", project_path(project.identifier) %>
-      <% else %>
-        <% if project.svn_error %>
-          <%= link_to "Error found", project_path(project.identifier) %>
-        <% else %>
-          <p> Analysis in progress </p>
-        <% end %>
-      <% end %>
+      <span id="project_status_<%= project.id %>">
+        <% @project = project %>
+        <%= render :file => "app/views/projects/status.html.erb", :layout => false %>
+      </span>
     </div>
   </li>
   <% end %>
 </ul>
-
 
 

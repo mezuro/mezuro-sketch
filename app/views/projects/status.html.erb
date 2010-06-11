@@ -1,0 +1,22 @@
+<script>
+  not_finished_<%= @project.id %> = true
+</script>
+
+<% if @project.svn_error %>
+  <script>
+    not_finished_<%= @project.id %> = false
+  </script>
+  <%= link_to "Error Found", project_path(@project.identifier) %>
+
+<% elsif @project.metrics_calculated? %>
+  <script>
+    not_finished_<%= @project.id %> = false
+  </script>
+  <%= link_to "Metrics calculated", project_path(@project.identifier) %>
+
+<%else%>
+  <p> Analysis in progress </p>
+  <%= periodically_call_remote :update => "project_status_#{@project.id}",
+                               :url => "/projects/#{@project.identifier}/status", 
+                               :condition => "not_finished_#{ @project.id }" %>
+<% end %>
