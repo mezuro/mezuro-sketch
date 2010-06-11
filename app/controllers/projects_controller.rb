@@ -30,4 +30,8 @@ class ProjectsController < ApplicationController
     @projects = Project.find :all
   end
 
+  def status
+    @project = Project.find_by_identifier params[:identifier]
+    render :layout => false
+  end
 end
