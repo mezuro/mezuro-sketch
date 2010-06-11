@@ -80,8 +80,6 @@ describe "/projects/show" do
     it "should have a table with statistical metrics results" do
       response.should have_tag("div[id=?]", "metrics_stats") do
         with_tag("div[id=?]", "div_accm") do
-          with_tag("img")
-          with_tag("p", "accm_average 0.45")
           with_tag("span[id=?]", "span_accm") do
             with_tag("table") do
               with_tag("tr[id=?]", "tr_accm_median") do
