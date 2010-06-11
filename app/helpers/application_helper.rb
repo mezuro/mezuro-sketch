@@ -16,4 +16,8 @@ module ApplicationHelper
     end
   end
 
+  def formated unformated_date
+    return unformated_date.to_date.gregorian.inspect.gsub /.*,\s*/, ""
+  end
+
 end
