@@ -11,7 +11,7 @@ I want to register an user giving my login, password and e-mail
     
   Examples:
     |  my_login    | my_password | my_password_confirmation |      my_email          |          message                        |
-    |  paulormm    | paulinho123 |      paulinho123         |  paulormm@american.com | User successfully created               |
+    |  paulorm    | paulinho123 |      paulinho123         |  paulorm@american.com | User successfully created               |
     |  terceiro    | jogueduro   |     wrong_password       |   terceiro@teste.com   | Password doesn't match confirmation     |
     |  terceiro    | jogueduro   |     jogueduro            |                        | Email is too short                      |
     |  terceiro    | jogueduro   |     jogueduro            |       terceiro         | Email should look like an email address |

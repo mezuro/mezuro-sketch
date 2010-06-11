@@ -8,15 +8,15 @@
   <tr id="tr_user_email">
     <td>Email</td>
     <td><%= @user.email %></td>
-  </tr> 
+  </tr>
   <tr id="tr_user_creation_date">
-    <td>Created at</td>
+    <td>Member since</td>
     <td><%= @user.created_at.to_date.gregorian.inspect.gsub /.*,\s*/, "" %></td>
   </tr> 
 </table>
 
 <% unless @projects == [] %>
-  <h3>List of User Projects</h3>
+  <h3>Public Projects</h3>
 <% else %>
   <h3>
     <%= link_to "New Project", new_project_path %> 
@@ -28,6 +28,7 @@
   <%  @projects.each do |project| %>
   <li>
     <p class="project_name"> <%= project.name %> </p>
+    <p class="project_last_analysis"> <%= "Last analysis: #{project.created_at.to_date.gregorian.inspect.gsub /.*,\s*/, ""}" %></p>
     <div class="project_description">
       <%= project.description %>
     </div>
@@ -38,7 +39,7 @@
         <% if project.svn_error %>
           <%= link_to "Error found", project_path(project.identifier) %>
         <% else %>
-          <p> Metrics are being calculated </p>
+          <p> Analysis in progress </p>
         <% end %>
       <% end %>
     </div>

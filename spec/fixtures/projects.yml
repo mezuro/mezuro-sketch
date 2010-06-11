@@ -2,6 +2,7 @@ my_project:
   name: 'My Project Name'
   identifier: 'my-project'
   repository_url: 'git@github.com/my-project'
+  created_at: "2010-05-28 15:34:50"
   user_id: 1
 
 analizo:
@@ -17,14 +18,24 @@ project_with_error:
   repository_url: 'error'
   description: 'Error!!!'
   svn_error: 'Blue screen of death'
-  user_id: 2
+  created_at: "2010-05-30 15:34:50"
+  user_id: 11
 
 in_progress:
   name: 'Project In Progress'
-  identifier: 'in_progress'
+  identifier: 'in-progress'
   repository_url: 'git@github.com/in_progress'
   description: 'Project with metrics in progress'
-  user_id: 3
+  created_at: "2010-06-08 15:34:50"
+  user_id: 11
+
+kalibro:
+  name: 'Kalibro'
+  identifier: 'kalibro'
+  repository_url: 'svn://ccsl.ime.usp.br/kalibro/trunk/Kalibro/src'
+  description: 'Paulos favorite svn project'
+  created_at: "2010-05-28 15:34:50"
+  user_id: 11
   
 sorted_project:
   name: 'My Sorted Project Name'

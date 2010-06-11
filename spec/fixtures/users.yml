@@ -15,5 +15,14 @@ marcio:
   persistence_token: <%= Authlogic::Random.hex_token %>
   id: 10
 
+paulormm:
+  login: paulormm
+  email: paulormm@qualquercoisa.com
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("minhasenha" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  created_at: "2010-05-28 15:34:50"
+  id: 11
+
 
 
