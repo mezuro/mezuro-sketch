@@ -15,4 +15,4 @@ a progress message, or an erro message.
   And I should see a 'Public Projects' heading
   And I should see project 'Kalibro' with last analysis '28 May 2010' and status 'Metrics calculated'
   And I should see project 'Project In Progress' with last analysis '08 Jun 2010' and status 'Analysis in progress'
-  And I should see project 'Error Project' with last analysis '30 May 2010' and status 'Error found'
+  And I should see project 'Error Project' with last analysis '30 May 2010' and status 'Error Found'
