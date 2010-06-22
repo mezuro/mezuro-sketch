@@ -144,103 +144,6 @@ describe Project do
     end
   end
 
-  context "running analizo with existent project" do
-    before :each do
-      @source = "#{RAILS_ROOT}/spec/resources/hello-world"
-      @destination = "#{RAILS_ROOT}/tmp/hello-world"
-      FileUtils.cp_r @source, @destination
-    end
-
-    after :each do
-      FileUtils.rm_rf @destination
-    end
-
-    it "should run analizo and get its output" do
-      project = Project.new valid_project_attributes
-      project.run_analizo.should == HELLO_WORLD_OUTPUT
-    end
-  end
-
-  context "running analizo without project folder" do
-    it "should not run analizo when project folder doesnt exist" do
-      project = Project.new valid_project_attributes
-      lambda {project.run_analizo}.should raise_error("Missing project folder")
-    end
-  end
-
-  context "giving Analizo output" do
-    before :each do
-      @valid_analizo_output_without_average = "
-                      acc_kurtosis: 0
-                      acc_maximum: 1
-                      acc_median: 0.5
-                      acc_mininum: 0"
-
-      @valid_analizo_output_without_kurtosis = "
-                      acc_average: 0.5
-                      acc_maximum: 1
-                      acc_median: 0.5
-                      acc_mininum: 0"
-
-      @valid_analizo_output_extended = "
-                      acc_average: 0.5
-                      acc_kurtosis: 0
-                      acc_maximum: 1
-                      acc_median: 0.5
-                      acc_mininum: 0
-                      acc_mode: ~"
-    end
-
-    it "should return a hash metric_name => value" do
-      project = Project.new valid_project_attributes
-      test_average = "acc_average: 0.5#{@valid_analizo_output_without_average}"
-      expected = { :acc_average => "0.5" }
-      project.analizo_hash(test_average).should == valid_analizo_hash(expected)
-    end
-
-    it "should return a hash in metric_name => value with a different acc_average value" do
-      project = Project.new valid_project_attributes
-      test_average = "acc_average: 0.9#{@valid_analizo_output_without_average}"
-      expected = { :acc_average => "0.9" }
-      project.analizo_hash(test_average).should == valid_analizo_hash(expected)
-    end
-
-    it "should return a hash in metric_name => value with another different acc_average value" do
-      project = Project.new valid_project_attributes
-      test_average = "acc_average: 0.7#{@valid_analizo_output_without_average}"
-      expected = { :acc_average => "0.7" }
-      project.analizo_hash(test_average).should == valid_analizo_hash(expected)
-    end
-
-    it "should return a hash in metric_name => value with a '~' as acc_average value" do
-      project = Project.new valid_project_attributes
-      test_average = "acc_average: ~#{@valid_analizo_output_without_average}"
-      expected = { :acc_average => "~" }
-      project.analizo_hash(test_average).should == valid_analizo_hash(expected)
-    end
-
-    it "should return a hash in metric_name => value with a different acc_kurtosis value" do
-      project = Project.new valid_project_attributes
-      test_kurtosis = "acc_kurtosis: 0.7#{@valid_analizo_output_without_kurtosis}"
-      expected = { :acc_kurtosis => "0.7" }
-      project.analizo_hash(test_kurtosis).should == valid_analizo_hash(expected)
-    end
-
-    it "should return a hash in metric_name => value from a bigger analizo output" do
-      project = Project.new valid_project_attributes
-      test_bigger_output = @valid_analizo_output_extended
-      expected = { :acc_mode => "~" }
-      project.analizo_hash(test_bigger_output).should == valid_analizo_hash(expected)
-    end
-    
-    it "should not have metric name accm" do
-      project = Project.new valid_project_attributes
-      hash = project.analizo_hash(HELLO_WORLD_OUTPUT)
-      hash[:accm].should be_nil
-      
-    end
-  end
-
   context "finding if metrics are already calculated" do
     fixtures :projects, :metrics
     it "should not find results if metrics were not created" do
@@ -259,12 +162,6 @@ describe Project do
     project_mock = ProjectMock.new valid_project_attributes
     project_mock.save
     project_mock.called_asynchronous_calculate_metrics
-  end
-
-  it "should save in database metrics calculated" do
-    project = Project.create valid_project_attributes
-    project.calculate_metrics
-    Metric.find_by_project_id(project.id).should_not be_nil
   end
 
   it "should have many metrics" do

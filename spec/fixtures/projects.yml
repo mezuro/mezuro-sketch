@@ -49,3 +49,9 @@ jmeter:
   repository_url: 'git@github.com/jmeter'
   description: 'Jmeter project description'
   user_id: 43
+
+hello:
+  name: 'Hello'
+  identifier: 'hello'
+  repository_url: 'git@github.com/hello'
+  user_id: 100
