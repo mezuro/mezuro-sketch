@@ -90,14 +90,14 @@ describe ProjectsController do
                          metrics(:npv_sorted_project)]
     end
 
-    it "should assign the total group metrics to @metrics_totals" do
+    it "should assign the total group metrics to @total_metrics" do
       get :show, :identifier => projects(:sorted_project).identifier
-      assigns[:metrics_totals].should == @expected_totals
+      assigns[:total_metrics].should == @expected_totals
     end
 
-    it "should assign the statistics group metrics to @metrics_stats" do
+    it "should assign the statistics group metrics to @statistical_metrics" do
       get :show, :identifier => projects(:sorted_project).identifier
-      assigns[:metrics_stats].should == @expected_stats
+      assigns[:statistical_metrics].should == @expected_stats
     end
 
     it "should assign to @project the project" do

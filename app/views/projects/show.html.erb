@@ -57,8 +57,8 @@
   <h3> Metric Results </h3>
   <% if @project.metrics_calculated? %>
     <h3> Total Metrics </h3>
-    <table id="metrics_totals">
-      <% @metrics_totals.each_with_index do |metric, index| %>
+    <table id="total_metrics">
+      <% @total_metrics.each_with_index do |metric, index| %>
         <tr id="tr_<%= metric.name %>" class="d<%= index % 2 %>">
           <td class="metric_name"> <%= metric.name %> </td>
           <td class="metric_value"> <%= metric.value %> </td>
@@ -67,14 +67,14 @@
     </table>
     
     <h3> Statistical Metrics </h3>
-    <div id="metrics_stats">
+    <div id="statistical_metrics">
       <% module_metrics_names.each do |metric_name| %> 
         <div id="div_<%= metric_name %>">
           <p>
             <a href="javascript: toggle('span_<%= metric_name %>', 'image_<%= metric_name %>')">
               <%= image_tag "/images/plus.png", :id => "image_#{metric_name}", :border => "0", :style => "border: 0px; padding: 1px;" %>
             </a>
-            <% value = value_of(metric_name, 'average', @metrics_stats) %>
+            <% value = value_of(metric_name, 'average', @statistical_metrics) %>
             <%= "#{metric_name}_average #{value}" %>
           </p>
           
@@ -82,7 +82,7 @@
             <table>
               <% statistical_value.each do |stat| %>
                 <tr id="tr_<%= metric_name %>_<%= stat %>">
-                  <% value = value_of(metric_name, stat, @metrics_stats) %>
+                  <% value = value_of(metric_name, stat, @statistical_metrics) %>
                   <% if value %>
                      <td class="metric_name"> <%= "#{metric_name}_#{stat}" %> </td>
                      <td class="metric_value"> <%= value %> </td>
