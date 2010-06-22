@@ -7,8 +7,8 @@ describe "/projects/show" do
   
     before :each do
       assigns[:project] = projects(:analizo)
-      assigns[:metrics_totals] = [metrics(:noc), metrics(:loc)]
-      assigns[:metrics_stats] = [metrics(:noc), metrics(:loc)]
+      assigns[:total_metrics] = [metrics(:noc), metrics(:loc)]
+      assigns[:statistical_metrics] = [metrics(:noc), metrics(:loc)]
     end
   
     it "should have a table with project info" do
@@ -42,10 +42,10 @@ describe "/projects/show" do
   context "Metrics calculated" do
     before :each do
       assigns[:project] = projects(:jmeter)
-      assigns[:metrics_totals] = [metrics(:total_modules_jmeter),
+      assigns[:total_metrics] = [metrics(:total_modules_jmeter),
                                   metrics(:total_nom_jmeter),
                                   metrics(:total_tloc_jmeter)]
-      assigns[:metrics_stats] = [metrics(:accm_median_jmeter),
+      assigns[:statistical_metrics] = [metrics(:accm_median_jmeter),
                                  metrics(:accm_average_jmeter),
                                  metrics(:accm_mode_jmeter)]
       render
@@ -56,7 +56,7 @@ describe "/projects/show" do
     end
     
     it "should have a table with total metrics results" do
-      response.should have_tag("table[id=?]", "metrics_totals") do
+      response.should have_tag("table[id=?]", "total_metrics") do
         with_tag("tr[id=?]", "tr_total_modules") do
           with_tag("td[class=?]", "metric_name", "total_modules")
           with_tag("td[class=?]", "metric_value", "2.0")
@@ -78,7 +78,7 @@ describe "/projects/show" do
 
     
     it "should have a table with statistical metrics results" do
-      response.should have_tag("div[id=?]", "metrics_stats") do
+      response.should have_tag("div[id=?]", "statistical_metrics") do
         with_tag("div[id=?]", "div_accm") do
           with_tag("span[id=?]", "span_accm") do
             with_tag("table") do
@@ -100,10 +100,10 @@ describe "/projects/show" do
   context "General layout components" do
     before :each do
       assigns[:project] = projects(:jmeter)
-      assigns[:metrics_totals] = [metrics(:total_modules_jmeter),
+      assigns[:total_metrics] = [metrics(:total_modules_jmeter),
                                   metrics(:total_nom_jmeter),
                                   metrics(:total_tloc_jmeter)]
-      assigns[:metrics_stats] = [metrics(:accm_median_jmeter),
+      assigns[:statistical_metrics] = [metrics(:accm_median_jmeter),
                                  metrics(:accm_average_jmeter)]
       assigns[:metrics] = [metrics(:noc), metrics(:loc)]
       assigns[:svn_error] = nil
