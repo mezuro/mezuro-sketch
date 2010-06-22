@@ -239,6 +239,12 @@ describe Project do
       hash[:accm].should be_nil
       
     end
+
+    it "should have a hash of statistical metrics hashs" do         
+      project = projects(:jmeter) 
+      project.statistical_metrics.should == {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45}}
+    end
+
   end
 
   context "finding if metrics are already calculated" do
