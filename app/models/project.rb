@@ -12,15 +12,12 @@ class Project < ActiveRecord::Base
   def calculate_metrics
     begin
         download_source_code
-        output = run_analizo
-        analizo_hash(output).each do | key, value |
-          Metric.create(:name => key.to_s, :value => value.to_f, :project => self)
-        end
+        extractor = AnalizoExtractor.new self
+        extractor.perform
       rescue Svn::Error => error
         update_attribute :svn_error, error.error_message
       end
   end
-  
 
   def asynchronous_calculate_metrics
     Delayed::Job.enqueue CalculateMetricsJob.new(id)
@@ -34,33 +31,6 @@ class Project < ActiveRecord::Base
   def download_prepare
     project_path = "#{RAILS_ROOT}/tmp/#{identifier}"
     FileUtils.rm_r project_path if (File.exists? project_path)
-  end
-
-  def analizo_hash analizo_output
-    hash = {}
-    first_line = true
-
-    analizo_output.lines.each do |line|
-      if line =~ /---/
-        if first_line
-          first_line = false
-        else
-          break
-        end
-      end
-         
-      if line =~ /(\S+): (~|(\d+)(\.\d+)?).*/
-        hash[$1.to_sym] = $2
-      end
-    end
-
-    hash
-  end
-
-  def run_analizo
-    project_path = "#{RAILS_ROOT}/tmp/#{identifier}"
-    raise "Missing project folder" unless File.exists? project_path
-    `analizo-metrics #{project_path}`
   end
 
   def metrics_calculated?

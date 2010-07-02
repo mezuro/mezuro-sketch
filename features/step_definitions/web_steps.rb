@@ -373,9 +373,11 @@ Then /^I should see project '(.*)' with last analysis '(.*)' and status '(.*)'$/
     with_tag("li") do
       with_tag("p[class=?]", "project_name", project_name)
       with_tag("p[class=?]", "project_last_analysis", "Last analysis: #{project_last_analysis}")
-      with_tag("div[class=?]", "project_status", project_status)
+      with_tag("div[class=?]", "project_status")
     end        
   end
+  response.should include_text(project_status)
+  
 end
 
 
