@@ -37,10 +37,6 @@ class Project < ActiveRecord::Base
     return !metrics.empty?
   end
 
-  def sorted_metrics
-    return metrics.sort_by {|metric| metric.name}
-  end
-
   def total_metrics
     total_metrics = metrics.select do |metric|
       metric.name.start_with?("total")

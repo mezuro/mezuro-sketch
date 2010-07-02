@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by_identifier params[:identifier]
-       
+    
     @total_metrics = @project.total_metrics if @project != nil
     @statistical_metrics = @project.statistical_metrics if @project != nil
     
