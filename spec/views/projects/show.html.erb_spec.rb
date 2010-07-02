@@ -8,7 +8,7 @@ describe "/projects/show" do
     before :each do
       assigns[:project] = projects(:analizo)
       assigns[:total_metrics] = [metrics(:noc), metrics(:loc)]
-      assigns[:statistical_metrics] = [metrics(:noc), metrics(:loc)]
+      assigns[:statistical_metrics] = {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45}}
     end
   
     it "should have a table with project info" do
@@ -45,9 +45,8 @@ describe "/projects/show" do
       assigns[:total_metrics] = [metrics(:total_modules_jmeter),
                                   metrics(:total_nom_jmeter),
                                   metrics(:total_tloc_jmeter)]
-      assigns[:statistical_metrics] = [metrics(:accm_median_jmeter),
-                                 metrics(:accm_average_jmeter),
-                                 metrics(:accm_mode_jmeter)]
+      assigns[:statistical_metrics] = {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45},
+                                       "nom" => {"median" => 1.5, "mode" => 2.5, "average" => 0.2}}
       render
     end
     
@@ -80,18 +79,36 @@ describe "/projects/show" do
     it "should have a table with statistical metrics results" do
       response.should have_tag("div[id=?]", "statistical_metrics") do
         with_tag("div[id=?]", "div_accm") do
-          with_tag("span[id=?]", "span_accm") do
-            with_tag("table") do
-              with_tag("tr[id=?]", "tr_accm_median") do
-                with_tag("td[class=?]", "metric_name", "accm_median")
-                with_tag("td[class=?]", "metric_value", "1.45")
-              end
-              with_tag("tr[id=?]", "tr_accm_mode") do
-                with_tag("td[class=?]", "metric_name", "accm_mode")
-                with_tag("td[class=?]", "metric_value", "2.0")
-              end
+          with_tag("p", "accm_average: 0.45")
+        end
+        with_tag("span[id=?]", "span_accm") do
+          with_tag("table") do
+            with_tag("tr[id=?]", "tr_accm_median") do
+              with_tag("td[class=?]", "metric_name", "accm_median")
+              with_tag("td[class=?]", "metric_value", "1.45")
             end
-          end
+            with_tag("tr[id=?]", "tr_accm_mode") do
+              with_tag("td[class=?]", "metric_name", "accm_mode")
+              with_tag("td[class=?]", "metric_value", "2.0")
+            end
+            without_tag("tr[id=?]", "tr_accm_average")
+          end 
+        end
+        with_tag("div[id=?]", "div_nom") do
+          with_tag("p", "nom_average: 0.2")
+        end
+        with_tag("span[id=?]", "span_nom") do
+          with_tag("table") do
+            with_tag("tr[id=?]", "tr_nom_median") do
+              with_tag("td[class=?]", "metric_name", "nom_median")
+              with_tag("td[class=?]", "metric_value", "1.5")
+            end
+            with_tag("tr[id=?]", "tr_nom_mode") do
+              with_tag("td[class=?]", "metric_name", "nom_mode")
+              with_tag("td[class=?]", "metric_value", "2.5")
+            end
+            without_tag("tr[id=?]", "tr_nom_average")
+          end 
         end
       end
     end
@@ -103,8 +120,7 @@ describe "/projects/show" do
       assigns[:total_metrics] = [metrics(:total_modules_jmeter),
                                   metrics(:total_nom_jmeter),
                                   metrics(:total_tloc_jmeter)]
-      assigns[:statistical_metrics] = [metrics(:accm_median_jmeter),
-                                 metrics(:accm_average_jmeter)]
+      assigns[:statistical_metrics] = {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45}}
       assigns[:metrics] = [metrics(:noc), metrics(:loc)]
       assigns[:svn_error] = nil
       render

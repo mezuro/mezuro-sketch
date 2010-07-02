@@ -85,9 +85,8 @@ describe ProjectsController do
       @expected_totals = [metrics(:total_modules_sorted_project),
                           metrics(:total_nom_sorted_project),
                           metrics(:total_tloc_sorted_project)]
-      @expected_stats = [metrics(:loc_sorted_project),
-                         metrics(:noc_sorted_project),
-                         metrics(:npv_sorted_project)]
+      @expected_stats =  {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45}}
+
     end
 
     it "should assign the total group metrics to @total_metrics" do
@@ -96,7 +95,7 @@ describe ProjectsController do
     end
 
     it "should assign the statistics group metrics to @statistical_metrics" do
-      get :show, :identifier => projects(:sorted_project).identifier
+      get :show, :identifier => projects(:jmeter).identifier
       assigns[:statistical_metrics].should == @expected_stats
     end
 
