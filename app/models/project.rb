@@ -50,21 +50,28 @@ class Project < ActiveRecord::Base
   end
 
   def statistical_metrics
+    statistical_metrics = collect_statistical_metrics
+
+    hash = {}    
+    statistical_metrics.each do |metric| 
+      insert_metric_in_hash metric, hash
+    end
+    hash
+  end
+  
+  def collect_statistical_metrics
     statistical_metrics = metrics.select do |metric|
       not metric.name.start_with?("total")
     end
-    statistical_metrics = statistical_metrics.sort_by {|metric| metric.name}
-
-    statistical_metrics_hash = {}    
-    statistical_metrics.each do |metric| 
-      metric_name, metric_statistic = metric.name.split("_")     
-      unless statistical_metrics_hash.key?(metric_name) 
-        statistical_metrics_hash[metric_name] = {metric_statistic => metric.value}
-      else
-        statistical_metrics_hash[metric_name][metric_statistic] = metric.value  
-      end   
-    end
-    return statistical_metrics_hash
+    statistical_metrics.sort_by {|metric| metric.name}
   end
-  
+
+  def insert_metric_in_hash metric, hash
+    metric_name, metric_statistic = metric.name.split("_")
+    unless hash.key?(metric_name) 
+      hash[metric_name] = {metric_statistic => metric.value}
+    else
+      hash[metric_name][metric_statistic] = metric.value  
+    end
+  end
 end

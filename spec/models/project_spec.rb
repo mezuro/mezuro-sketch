@@ -144,12 +144,12 @@ describe Project do
     end
   end
 
-
-  it "should have a hash of statistical metrics hashs" do         
-    project = projects(:jmeter) 
-    project.statistical_metrics.should == {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45}}
+  context "giving a hash of statistical metrics" do
+    it "should have a hash of statistical metrics hashs" do         
+      project = projects(:jmeter) 
+      project.statistical_metrics.should == {"accm" => {"median" => 1.45, "mode" => 2.0, "average" => 0.45}}
+    end
   end
-
 
   context "finding if metrics are already calculated" do
     fixtures :projects, :metrics
