@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   belongs_to :user
-  has_many :metrics
+  has_many :metrics, :as => :metricable
   validates_presence_of :name, :repository_url, :identifier
 
   validates_format_of :identifier, :with => /^[a-z0-9|\-|\.]+$/, :message => "can only have a combination of lower case, number, hyphen and dot!"
@@ -34,8 +34,7 @@ class Project < ActiveRecord::Base
   end
 
   def metrics_calculated?
-    metric = Metric.find_by_project_id(id)
-    return metric ? true : false
+    return !metrics.empty?
   end
 
   def sorted_metrics

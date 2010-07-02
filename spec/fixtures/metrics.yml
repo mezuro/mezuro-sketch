@@ -1,80 +1,96 @@
 noc:
     name: noc
-    project: analizo
+    metricable: analizo
+    metricable_type: Project
     value: 10.0
 
 loc:
     name: loc
-    project: analizo
+    metricable: analizo
+    metricable_type: Project
     value: 5.0
 
 npv:
     name: npv
-    project: my_project
+    metricable: my_project
+    metricable_type: Project
     value: 12.0
 
 noc_sorted_project:
     name: noc
-    project: sorted_project
+    metricable: sorted_project
+    metricable_type: Project
     value: 10.0
 
 loc_sorted_project:
     name: loc
-    project: sorted_project
+    metricable: sorted_project
+    metricable_type: Project
     value: 5.0
     
 npv_sorted_project:
     name: npv
-    project: sorted_project
+    metricable: sorted_project
+    metricable_type: Project
     value: 12.0
 
 total_modules_sorted_project:
     name: total_modules
-    project: sorted_project
+    metricable: sorted_project
+    metricable_type: Project
     value: 2
 
 total_nom_sorted_project:
     name: total_nom
-    project: sorted_project
+    metricable: sorted_project
+    metricable_type: Project
     value: 5
 
 total_tloc_sorted_project:
     name: total_tloc
-    project: sorted_project
+    metricable: sorted_project
+    metricable_type: Project
     value: 26
       
 total_modules_jmeter:
     name: total_modules
-    project: jmeter
+    metricable: jmeter
+    metricable_type: Project
     value: 2
 
 total_nom_jmeter:
     name: total_nom
-    project: jmeter
+    metricable: jmeter
+    metricable_type: Project
     value: 5
 
 total_tloc_jmeter:
     name: total_tloc
-    project: jmeter
+    metricable: jmeter
+    metricable_type: Project
     value: 26
 
 accm_median_jmeter:
     name: accm_median
-    project: jmeter
+    metricable: jmeter
+    metricable_type: Project
     value: 1.45
     
 accm_mode_jmeter:
     name: accm_mode
-    project: jmeter
+    metricable: jmeter
+    metricable_type: Project
     value: 2.0
 
 
 accm_average_jmeter:
     name: accm_average
-    project: jmeter
+    metricable: jmeter
+    metricable_type: Project
     value: 0.45
 
 kalibro_loc:
     name: loc_average
-    project: kalibro
+    metricable: kalibro
+    metricable_type: Project
     value: 123

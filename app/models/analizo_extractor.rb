@@ -37,7 +37,7 @@ class AnalizoExtractor
 
   def save_metrics
     @hash_output.each do | key, value |
-      Metric.create(:name => key.to_s, :value => value.to_f, :project => @project)    
+      Metric.create(:name => key.to_s, :value => value.to_f, :metricable => @project)    
     end
   end
 end

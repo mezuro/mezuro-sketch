@@ -1,7 +1,7 @@
 class Metric < ActiveRecord::Base
-  validates_presence_of :name, :project_id
+  validates_presence_of :name, :metricable_id, :metricable_type
 
-  belongs_to :project
+  belongs_to :metricable, :polymorphic => true
   before_save :round_value
   
   def initialize params

@@ -7,7 +7,7 @@ describe Metric do
     {
       :name => "acc",
       :value => "10",
-      :project_id => projects(:my_project).id
+      :metricable => projects(:my_project)
     }.merge attributes
   end
 
@@ -20,9 +20,9 @@ describe Metric do
     metric.save.should == true
   end
 
-  it "should belongs to a project" do
+  it "should belongs to a metricable" do
     metric = Metric.create!(valid_metric_attributes)
-    metric.project.should == projects(:my_project)
+    metric.metricable.should == projects(:my_project)
   end
 
   context "creating instances with invalid attributes" do
@@ -31,8 +31,8 @@ describe Metric do
       metric.save.should == false
     end
 
-    it "should not save a metric without project_id" do
-      metric = Metric.new(valid_metric_attributes(:project_id => nil))
+    it "should not save a metric without metricable" do
+      metric = Metric.new(valid_metric_attributes(:metricable => nil))
       metric.save.should == false
     end
   end
